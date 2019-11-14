@@ -1,43 +1,29 @@
-// const host = 'https://andthetimeis.com';
+import fetch from 'isomorphic-unfetch';
 
-// const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
-//   if (typeof action === 'function') {
-//     return action(dispatch, getState);
-//   }
+const host = 'https://andthetimeis.com';
 
-//   if (!action.meta || !action.meta.url) {
-//     return next(action);
-//   }
+const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
+  if (typeof action === 'function') {
+    return action(dispatch, getState);
+  }
 
-//   const { endpoint, type, method, data, ...rest } = action;
+  if (!action || !action.endpoint) {
+    return next(action);
+  }
 
-//   if (!endpoint) return next(action);
+  const { endpoint, type, method, data, ...rest } = action;
 
-//   next({ ...rest, type: `${type}_REQUEST` });
+  next({ ...rest, type: `${type}_REQUEST` });
 
-//   // const actionPromise = axios({
-//   //   method,
-//   //   url: host + endpoint,
-//   //   data
-//   //   // responseType: 'stream'
-//   // });
-//   axios.request({
-//     url: `${host}${endpoint}`,
-//     method,
-//     // headers,
-//     params: data
-//   });
+  const actionPromise = fetch(`${host}${endpoint}`, {
+    method,
+    body: JSON.stringify(data)
+  });
 
-//   actionPromise
-//     .then(
-//       result => next({ ...rest, result, type: `${type}_SUCCESS` }),
-//       error => next({ ...rest, error, type: `${type}_FAILURE` })
-//     )
-//     .catch(error => {
-//       next({ ...rest, error, type: `${type}_FAILURE` });
-//     });
+  return actionPromise
+    .then(response => response.json())
+    .then(result => next({ ...rest, result, type: `${type}_SUCCESS` }))
+    .catch(error => next({ ...rest, error, type: `${type}_FAILURE` }));
+};
 
-//   return actionPromise;
-// };
-
-// export default callAPIMiddleware;
+export default callAPIMiddleware;

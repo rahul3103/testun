@@ -16,6 +16,7 @@ const Page = ({ title, linkTo, lastUpdate, light }) => {
 
 const mapStateToProps = ({ clock }) => ({
   lastUpdate: clock.lastUpdate,
-  count: clock.count
+  count: clock.count,
+  light: clock.light
 });
 export default connect(mapStateToProps)(Page);
