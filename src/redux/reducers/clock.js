@@ -9,11 +9,11 @@ const exampleInitialState = {
 
 const reducer = (state = exampleInitialState, action) => {
   switch (action.type) {
-    case actionTypes.TICK:
+    case actionTypes?.TICK:
       return { ...state, lastUpdate: action.ts, light: !!action.light };
-    case actionTypes.ADD:
+    case actionTypes?.ADD:
       return { ...state, count: state.count + 1 };
-    case `${timeTypes.FETCH_NEW_TIME}_SUCCESS`:
+    case `${timeTypes?.FETCH_NEW_TIME}_SUCCESS`:
       return { ...state, currentTime: action.result.dateString };
     default:
       return state;

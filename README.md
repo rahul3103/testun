@@ -13,3 +13,4 @@
 13. npx mrm lint-staged
 14. yarn add swr
 15. yarn upgrade-interactive --latest
+16. yarn add @babel/core babel-eslint @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-optional-chaining -D
