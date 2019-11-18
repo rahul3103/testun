@@ -7,7 +7,7 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
     return action(dispatch, getState);
   }
 
-  if (!action || !action.endpoint) {
+  if (!action || !action.endpoint || !action.method) {
     return next(action);
   }
 
