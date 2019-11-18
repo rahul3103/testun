@@ -9,7 +9,7 @@ import {
 
 import { Page, Links, Test } from '../components';
 
-import Layout from '../Layout';
+import Layout from '../layout';
 
 class Counter extends Component {
   static async getInitialProps({ store, isServer }) {
