@@ -1,22 +1,28 @@
-## To install packages
+### Clone git repo
+
+```sh
+git clone git@github.com:Unacademy/unacademy-web-learning.git
+```
+
+### To install packages
 
 ```sh
 yarn
 ```
 
-## To start dev server
+### To start dev server
 
 ```sh
 yarn dev
 ```
 
-## To update packages
+### To update packages
 
 ```sh
 yarn upgrade-interactive --latest
 ```
 
-## To analyze bundle
+### To analyze bundle
 
 ```sh
 ANALYZE=true yarn build
