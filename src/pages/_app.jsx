@@ -1,19 +1,33 @@
 import App from 'next/app';
 import React from 'react';
-import { ThemeProvider } from 'styled-components'; // createGlobalStyle
+import { ThemeProvider, createGlobalStyle } from 'styled-components'; // createGlobalStyle
 import { Normalize } from 'styled-normalize';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
-import AppContainer from '../Layout/AppContainer/AppContainer';
+import AppContainer from '../layout/AppContainer/AppContainer';
 import theme from '../styleConstants';
 import initStore from '../redux';
 
-// const GlobalStyle = createGlobalStyle`
-//   body {
-
-//   }
-// `;
+const GlobalStyle = createGlobalStyle`
+  body {
+    @font-face {
+      font-family: "Averta";
+      src: url("/static/fonts/AvertaStd-Regular.otf");
+    }
+    @font-face {
+      font-family: "Averta";
+      font-weight: bold;
+      src: url("/static/fonts/AvertaStd-Bold.otf");
+    }
+    @font-face {
+      font-family: "Averta";
+      font-weight: 600;
+      src: url("/static/fonts/AvertaStd-SemiBold.otf");
+    }
+    font-family: Averta, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+`;
 
 export default withRedux(initStore)(
   class UNApp extends App {
@@ -34,7 +48,7 @@ export default withRedux(initStore)(
             <AppContainer>
               <Component {...pageProps} />
             </AppContainer>
-            {/* <GlobalStyle /> */}
+            <GlobalStyle />
           </ThemeProvider>
         </Provider>
       );
