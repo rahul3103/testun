@@ -1,4 +1,4 @@
-### Install `yarn` [link](https://yarnpkg.com/lang/en/docs/install/#mac-stable){:target="\_blank"}
+### Install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
 ```
 brew install yarn
