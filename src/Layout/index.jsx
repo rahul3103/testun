@@ -1,4 +1,6 @@
-import { Header, NavBar, Content } from '../components';
+import Header from './Header/Header';
+import NavBar from './NavBar/NavBar';
+import Content from './Content/Content';
 
 const Layout = ({ children }) => (
   <>

@@ -5,7 +5,7 @@ import { Normalize } from 'styled-normalize';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
-import { AppContainer } from '../components';
+import AppContainer from '../Layout/AppContainer/AppContainer';
 import theme from '../styleConstants';
 import initStore from '../redux';
 

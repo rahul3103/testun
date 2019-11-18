@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import styled from 'styled-components';
 import {
   startClock,
   addCount,
@@ -8,10 +7,9 @@ import {
   fetchNewTime
 } from '../redux/actions';
 
-import { Page, Links } from '../components';
+import { Page, Links, Test } from '../components';
 
-// import { Button } from '@material-ui/core';
-import Layout from '../layout/Layout';
+import Layout from '../Layout';
 
 class Counter extends Component {
   static async getInitialProps({ store, isServer }) {
@@ -37,6 +35,7 @@ class Counter extends Component {
         <Page title="Index Page" linkTo="/other" />
         <Links linkTo="/other" />
         {currentTime}
+        <Test />
       </Layout>
     );
   }
