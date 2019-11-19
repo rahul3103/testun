@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 import Link from 'next/link';
 import React from 'react';
 
