@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   startClock,
   addCount,
@@ -7,7 +8,7 @@ import {
   fetchNewTime
 } from '../redux/actions';
 
-import { Page, Links, Test } from '../components';
+import { Page, Links, Test, H4, H5, H6 } from '../components';
 
 import Layout from '../layout';
 
@@ -36,6 +37,9 @@ class Counter extends Component {
         <Links linkTo="/other" />
         {currentTime}
         <Test />
+        <H4 text="Unacademy H4" />
+        <H5 text="Unacademy H5" />
+        <H6 text="Unacademy H6" />
       </Layout>
     );
   }
@@ -46,5 +50,10 @@ const mapDispatchToProps = { startClock, fetchNewTime };
 const mapStateToProps = ({ clock }) => ({
   currentTime: clock.currentTime
 });
+
+Counter.propTypes = {
+  startClock: PropTypes.objectOf(PropTypes.object()).isRequired,
+  currentTime: PropTypes.objectOf(PropTypes.object()).isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
