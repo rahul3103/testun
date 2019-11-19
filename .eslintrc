@@ -49,7 +49,6 @@
         "exceptions": ["Component", "App"]
       }
     ],
-    "react/prop-types": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
