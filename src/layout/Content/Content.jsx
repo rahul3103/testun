@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Content = styled.div`
-  background-color: yellow;
   grid-column: 7/25;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
