@@ -1,4 +1,5 @@
 import { authorTypes } from '../constants';
+import { mergeDeep } from '../../utils';
 
 const initialState = {
   data: {}
@@ -6,7 +7,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   const dataGenerator = {
-    [authorTypes.UPDATE_AUTHORS]: { data: { ...state.data, ...action.data } },
+    [authorTypes.UPDATE_AUTHORS]: { data: mergeDeep(action.data, state.data) },
     default: state
   };
 
