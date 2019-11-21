@@ -22,7 +22,7 @@
     "redux": "^4.0.4",
     "styled-components": "^5.0.0-rc.2",
     "styled-normalize": "^8.0.6",
-    "swr": "^0.1.10"
+    "swr": "^0.1.12"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
