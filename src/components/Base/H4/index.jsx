@@ -1,16 +1,20 @@
+/* eslint-disable no-unused-vars */
+/* eslint react/prop-types: 0 */
+
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { TextColors, Fonts, Spacings } from '../../../styleConstants';
 
 const StyledH4 = styled.h4`
-  font-family: Averta, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
-  color: #000000;
-  display: 'flex';
+  font-weight: ${Fonts.BOLD};
+  font-size: ${Fonts.H4};
+  line-height: ${Fonts.HEADER_LINE_HEIGHT};
+  color: ${TextColors.TEXT_PRIMARY};
 `;
 
-const H4 = ({ text }) => <StyledH4>{text}</StyledH4>;
+const H4 = ({ text, color }) => {
+  return <StyledH4>{text}</StyledH4>;
+};
 
 export default H4;
 
