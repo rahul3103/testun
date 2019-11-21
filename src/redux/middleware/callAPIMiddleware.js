@@ -1,6 +1,14 @@
 import fetch from 'isomorphic-unfetch';
+import { normalize } from 'normalizr';
 
-const host = 'https://andthetimeis.com';
+const host = 'https://unacademy.com/api/';
+
+const getQueryString = params => {
+  if (!params) return null;
+  return Object.keys(params)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+    .join('&');
+};
 
 const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
   if (typeof action === 'function') {
@@ -11,18 +19,29 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
     return next(action);
   }
 
-  const { endpoint, type, method, data, ...rest } = action;
-
+  const { endpoint, type, method, data, params, schema, ...rest } = action;
   next({ ...rest, type: `${type}_REQUEST` });
 
-  const actionPromise = fetch(`${host}${endpoint}`, {
+  let url = `${host}${endpoint}`;
+  const queryString = getQueryString(params);
+  if (queryString) url = `${url}?${queryString}`;
+
+  const actionPromise = fetch(url, {
     method,
     body: JSON.stringify(data)
   });
 
   return actionPromise
     .then(response => response.json())
-    .then(result => next({ ...rest, result, type: `${type}_SUCCESS` }))
+    .then(result => {
+      const normalizedData = normalize(result.results, schema);
+      next({ ...rest, entities: normalizedData.entities });
+      return next({
+        ...rest,
+        data: normalizedData.results,
+        type: `${type}_SUCCESS`
+      });
+    })
     .catch(error => next({ ...rest, error, type: `${type}_FAILURE` }));
 };
 

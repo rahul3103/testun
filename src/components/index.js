@@ -1,7 +1,5 @@
-import Test from './BaseComponent/TestComponent/TestComponent';
-import Clock from './Clock';
-import Page from './Page';
-import AddCount from './AddCount';
-import Links from './Links';
+/* eslint-disable import/prefer-default-export */
 
-export { Clock, Page, AddCount, Links, Test };
+import Test from './BaseComponent/TestComponent/TestComponent';
+
+export { Test };
