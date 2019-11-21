@@ -1,42 +1,55 @@
+/* eslint react/prop-types: 0 */
+
 import React from 'react';
-import { H4, H5, H6, H1, H2, H3, P1, P2, Button } from '../components';
+// import  { PureComponent } from 'react';
+import { useSelector } from 'react-redux';
+// import { connect  } from 'react-redux';
+import { fetchFreeCourses } from '../redux/actions';
+
 import Layout from '../layout';
 
-export default function Counter() {
+const Index = () => {
+  const authors = useSelector(state => state.authors.data);
+  const goals = useSelector(state => state.goals.data);
   return (
     <Layout>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H1 text="Unacademy H1" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H2 text="Unacademy H2" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H3 text="Unacademy H3" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H4 text="Unacademy H4" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H5 text="Unacademy H5" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <H6 text="Unacademy H6" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <P1 text="Unacademy P1" />
-      </div>
-      <div style={{ gridColumn: 'span 3' }}>
-        <P2 text="Unacademy P2" />
-      </div>
-      <div style={{ gridColumn: 'span 6' }}>
-        <Button
-          label="Unacademy button"
-          onClick={() => {
-            console.log('Button is clicked');
-          }}
-        />
-      </div>
+      Authors
+      <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(authors)}</div>
+      Goals
+      <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(goals)}</div>
     </Layout>
   );
-}
+};
+
+Index.getInitialProps = async ({ store, isServer }) => {
+  await store.dispatch(fetchFreeCourses());
+  return { isServer };
+};
+
+// class Index extends PureComponent {
+//   componentDidMount() {
+//     const { fetchFreeCourses: fetchFreeCoursesAction } = this.props;
+//     fetchFreeCoursesAction();
+//   }
+
+//   render() {
+//     const { authors } = this.props;
+//     return (
+//       <Layout>
+//         {JSON.stringify(authors)}
+//       </Layout>
+//     );
+//   }
+// }
+
+// const mapDispatchToProps = { fetchFreeCourses, fetchNewTime };
+
+// const mapStateToProps = ({ clock, authors }) => {
+//   return {
+//     currentTime: clock.currentTime,
+//     authors: authors.data
+//   };
+// };
+
+export default Index;
+// export default connect(mapStateToProps, mapDispatchToProps)(Index);
