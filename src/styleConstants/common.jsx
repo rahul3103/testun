@@ -4,20 +4,20 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 body {
   @font-face {
-    font-family: "UN-Regular";
+    font-family: "UN-Font";
     src: url("/static/fonts/AvertaStd-Regular.otf");
   }
   @font-face {
-    font-family: "UN-Bold";
+    font-family: "UN-Font";
     font-weight: bold;
     src: url("/static/fonts/AvertaStd-Bold.otf");
   }
   @font-face {
-    font-family: "UN-SemiBold";
-    font-weight: 600;
+    font-family: "UN-Font";
+    font-weight: 500;
     src: url("/static/fonts/AvertaStd-SemiBold.otf");
   }
-  font-family: UN-Regular, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   @font-face {
     font-family: 'Unacademy-Icons';
     src:  url('/static/fonts/Unacademy-Icons.eot?c1lx2d');
