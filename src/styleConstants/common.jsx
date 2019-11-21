@@ -14,7 +14,7 @@ body {
   }
   @font-face {
     font-family: "UN-Font";
-    font-weight: 500;
+    font-weight: 600;
     src: url("/static/fonts/AvertaStd-SemiBold.otf");
   }
   font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
