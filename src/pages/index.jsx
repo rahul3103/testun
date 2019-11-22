@@ -5,7 +5,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 // import { connect  } from 'react-redux';
 import { fetchFreeCourses } from '../redux/actions';
-
+import Button from '../components/Base/Button/Button';
 import Layout from '../layout';
 
 const Index = () => {
@@ -13,6 +13,9 @@ const Index = () => {
   const goals = useSelector(state => state.goals.data);
   return (
     <Layout>
+      <div style={{ gridColumn: 'span 6' }}>
+        <Button label="Unacademy button" />
+      </div>
       Authors
       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(authors)}</div>
       Goals
