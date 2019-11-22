@@ -10,9 +10,7 @@ const StyledH4 = styled.h4`
   color: ${props => TextColors[props.color]};
 `;
 
-const H4 = ({ text, color }) => {
-  return <StyledH4 color={color}>{text}</StyledH4>;
-};
+const H4 = ({ text, color }) => <StyledH4 color={color}>{text}</StyledH4>;
 
 export default H4;
 

@@ -10,9 +10,7 @@ const StyledP1 = styled.p`
   color: ${props => TextColors[props.color]};
 `;
 
-const P1 = ({ text, color }) => {
-  return <StyledP1 color={color}>{text}</StyledP1>;
-};
+const P1 = ({ text, color }) => <StyledP1 color={color}>{text}</StyledP1>;
 
 export default P1;
 

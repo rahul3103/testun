@@ -9,33 +9,21 @@ import {
   BUTTON_BORDER_STYLE
 } from '../../../styleConstants';
 
-const setBackgroundColor = (type, theme, disabled) => {
-  if (type === 'disabled' || disabled) {
-    return BgColors.BUTTON_DISABLED;
-  }
-  if (type === 'hollow') {
-    return BgColors.WHITE;
-  }
-  if (theme === 'red') {
-    return BgColors.BUTTON_THEME_RED;
-  }
-  return BgColors.BUTTON_THEME_GREEN;
+const getBackgroundColor = {
+  disabled: BgColors.BUTTON_DISABLED,
+  hollow: BgColors.WHITE,
+  red: BgColors.BUTTON_THEME_RED,
+  green: BgColors.BUTTON_THEME_GREEN
 };
 
-const setColor = (type, theme, disabled) => {
-  if (type === 'disabled' || disabled) {
-    return TextColors.BUTTON_TEXT_DISABLED;
-  }
-  if (type === 'filled') {
-    return TextColors.BUTTON_TEXT_FILLED;
-  }
-  if (theme === 'red') {
-    return TextColors.BUTTON_TEXT_RED;
-  }
-  return TextColors.BUTTON_TEXT_GREEN;
+const getTextColor = {
+  disabled: TextColors.BUTTON_TEXT_DISABLED,
+  filled: TextColors.BUTTON_TEXT_FILLED,
+  red: TextColors.BUTTON_TEXT_RED,
+  green: TextColors.BUTTON_TEXT_GREEN
 };
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
   border-width: ${BUTTON_BORDER_WIDTH};
   border-style: ${BUTTON_BORDER_STYLE};
   border-color: ${BorderColors.BORDER_PRIMARY};
@@ -43,15 +31,19 @@ const StyledButton = styled.div`
   border-radius: ${Spacings.SPACING_1B};
   cursor: pointer;
   background-color: ${props =>
-    setBackgroundColor(props.type, props.theme, props.disabled)};
-  color: ${props => setColor(props.type, props.theme, props.disabled)};
+    getBackgroundColor[(props.type !== 'hollow' && props.theme) || props.type]};
+  color: ${props =>
+    getTextColor[(props.type !== 'filled' && props.theme) || props.type]};
+  &:hover {
+    background-image: url(http://tineye.com/images/widgets/mona.jpg);
+    background-repeat: no-repeat;
+  }
 `;
 
-const Button = ({ label, type, disabled, theme, onClick, icon, style }) => {
+const Button = ({ label, type, theme, onClick, icon, style }) => {
   return (
     <StyledButton
       onClick={onClick}
-      disabled={disabled}
       type={type}
       theme={theme}
       icon={icon}
@@ -67,7 +59,6 @@ export default Button;
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['hollow', 'filled', 'disabled']),
-  disabled: PropTypes.bool,
   theme: PropTypes.oneOf(['red', 'green']),
   onClick: PropTypes.func.isRequired,
   icon: PropTypes.string,
@@ -76,7 +67,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'filled',
-  disabled: false,
   theme: 'green',
   icon: '',
   style: {}

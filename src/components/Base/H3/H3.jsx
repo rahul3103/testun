@@ -10,9 +10,7 @@ const StyledH3 = styled.h3`
   color: ${props => TextColors[props.color]};
 `;
 
-const H3 = ({ text, color }) => {
-  return <StyledH3 color={color}>{text}</StyledH3>;
-};
+const H3 = ({ text, color }) => <StyledH3 color={color}>{text}</StyledH3>;
 
 export default H3;
 
