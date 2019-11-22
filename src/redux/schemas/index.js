@@ -10,13 +10,13 @@ const goalSchema = new schema.Entity('goals', {}, { idAttribute: 'uid' });
 const peekCourseSchema = new schema.Entity(
   'peekCourses',
   { course: courseSchema },
-  { idAttribute: 'rank' }
+  { idAttribute: value => value.course.uid }
 );
 
 const peekCourseListSchema = new schema.Array(peekCourseSchema);
 
-const topologySchema = new schema.Entity(
-  'topologies',
+const listSchema = new schema.Entity(
+  'lists',
   {
     author: authorSchema,
     goal: goalSchema,
@@ -25,4 +25,4 @@ const topologySchema = new schema.Entity(
   { idAttribute: 'uid' }
 );
 
-export const topologyListSchema = new schema.Array(topologySchema);
+export const topologyListSchema = new schema.Array(listSchema);
