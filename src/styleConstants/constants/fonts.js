@@ -8,9 +8,9 @@ export const H6 = '12px';
 export const P1 = '14px';
 export const P2 = '12px';
 
-export const HEADER_LINE_HEIGHT = 1.5;
-export const PARA_LINE_HEIGHT = 1.2;
+export const HEADER_LINE_HEIGHT = '150%';
+export const PARA_LINE_HEIGHT = '120%';
 
 export const BOLD = 'bold';
-export const SEMIBOLD = '500';
+export const SEMIBOLD = '600';
 export const REGULAR = 'normal';

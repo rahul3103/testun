@@ -5,7 +5,7 @@ import { PureComponent } from 'react';
 // import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 import { fetchFreeCourses } from '../redux/actions';
-
+import Button from '../components/Base/Button/Button';
 import Layout from '../layout';
 
 // const Index = () => {
@@ -25,6 +25,8 @@ import Layout from '../layout';
 //   await store.dispatch(fetchFreeCourses());
 //   return { isServer };
 // };
+
+// export default Index;
 
 class Index extends PureComponent {
   componentDidMount() {
@@ -47,5 +49,4 @@ const mapStateToProps = ({ clock, authors }) => {
   };
 };
 
-// export default Index;
 export default connect(mapStateToProps, mapDispatchToProps)(Index);
