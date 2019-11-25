@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
 
-import Test from './Base/TestComponent/TestComponent';
-
-export { Test };
+export { default as Logo } from './Base/Logo/Logo';
+export { default as Test } from './Base/TestComponent/TestComponent';
