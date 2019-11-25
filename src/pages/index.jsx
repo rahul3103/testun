@@ -5,7 +5,7 @@ import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
-import { Tags } from '../components';
+import { Like, Liked } from '../components/Icons';
 
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
@@ -39,11 +39,9 @@ class Index extends PureComponent {
     // const { authors } = this.props;
     return (
       <Layout>
-        <div>
-          <Tags label="Unacademy" type="filled" />
-          <Tags label="Unacademy" type="hollow" />
-          <Tags label="Unacademy" type="transparent" />
-          <Tags label="Live" type="live" />
+        <div style={{ gridColumn: 'span 6' }}>
+          <Like />
+          <Liked />
         </div>
       </Layout>
     );
@@ -55,9 +53,8 @@ const mapDispatchToProps = {
   fetchEducatorLeaderboard
 };
 
-const mapStateToProps = ({ clock, authors }) => {
+const mapStateToProps = ({ authors }) => {
   return {
-    currentTime: clock.currentTime,
     authors: authors.data
   };
 };
