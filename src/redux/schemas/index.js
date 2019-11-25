@@ -2,7 +2,7 @@
 import { schema } from 'normalizr';
 import { getEntityData } from '../../models';
 
-const authorSchema = new schema.Entity(
+export const authorSchema = new schema.Entity(
   'authors',
   {},
   {
@@ -11,7 +11,7 @@ const authorSchema = new schema.Entity(
   }
 );
 
-const courseSchema = new schema.Entity(
+export const courseSchema = new schema.Entity(
   'courses',
   {},
   {
@@ -20,36 +20,10 @@ const courseSchema = new schema.Entity(
   }
 );
 
-const goalSchema = new schema.Entity(
+export const goalSchema = new schema.Entity(
   'goals',
   {},
   {
     idAttribute: 'uid'
   }
-);
-
-const topologyPeekSchema = new schema.Entity(
-  'topologyPeeks',
-  {
-    author: authorSchema,
-    goal: goalSchema,
-    // peek_courses: peekCourseListSchema,
-    peek_courses: [
-      {
-        course: courseSchema
-      }
-    ]
-  },
-  {
-    idAttribute: 'uid'
-  }
-);
-
-export const topologyPeekListSchema = new schema.Array(topologyPeekSchema);
-
-export const educatorLeaderBoardSchema = new schema.Array(
-  {
-    authors: authorSchema
-  },
-  value => value.uid
 );
