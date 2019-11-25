@@ -1,5 +1,5 @@
 import { courseTypes } from '../constants';
-import { topologyPeekListSchema } from '../schemas';
+import { topologyPeekListSchema } from '../schemas/courses';
 
 // eslint-disable-next-line import/prefer-default-export
 export const fetchFreeCourses = () => dispatch =>
