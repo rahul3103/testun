@@ -1,11 +1,32 @@
 /* eslint-disable import/prefer-default-export */
 import { schema } from 'normalizr';
+import { getEntityData } from '../../models';
 
-const authorSchema = new schema.Entity('authors', {}, { idAttribute: 'uid' });
+const authorSchema = new schema.Entity(
+  'authors',
+  {},
+  {
+    idAttribute: 'uid',
+    processStrategy: value => getEntityData('User', value)
+  }
+);
 
-const courseSchema = new schema.Entity('courses', {}, { idAttribute: 'uid' });
+const courseSchema = new schema.Entity(
+  'courses',
+  {},
+  {
+    idAttribute: 'uid'
+  }
+);
 
-const goalSchema = new schema.Entity('goals', {}, { idAttribute: 'uid' });
+const goalSchema = new schema.Entity(
+  'goals',
+  {},
+  {
+    idAttribute: 'uid',
+    processStrategy: value => getEntityData('Course', value)
+  }
+);
 
 // const peekCourseSchema = new schema.Entity(
 //   'peekCourses',
@@ -21,9 +42,22 @@ const topologyPeekSchema = new schema.Entity(
     author: authorSchema,
     goal: goalSchema,
     // peek_courses: peekCourseListSchema,
-    peek_courses: [{ course: courseSchema }]
+    peek_courses: [
+      {
+        course: courseSchema
+      }
+    ]
   },
-  { idAttribute: 'uid' }
+  {
+    idAttribute: 'uid'
+  }
 );
 
 export const topologyPeekListSchema = new schema.Array(topologyPeekSchema);
+
+export const educatorLeaderBoardSchema = new schema.Array(
+  {
+    authors: authorSchema
+  },
+  value => value.uid
+);
