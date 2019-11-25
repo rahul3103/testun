@@ -1,50 +1,52 @@
-import React, { Component } from 'react';
+/* eslint react/prop-types: 0 */
+
+import { PureComponent } from 'react';
+
+// import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
-import {
-  startClock,
-  addCount,
-  serverRenderClock,
-  fetchNewTime
-} from '../redux/actions';
-
-import { Page, Links, Test } from '../components';
-
+import { fetchFreeCourses } from '../redux/actions';
+import Button from '../components/Base/Button/Button';
 import Layout from '../layout';
 
-class Counter extends Component {
-  static async getInitialProps({ store, isServer }) {
-    store.dispatch(serverRenderClock(isServer));
-    store.dispatch(addCount());
-    await store.dispatch(fetchNewTime());
-    return { isServer };
-  }
+// const Index = () => {
+//   const authors = useSelector(state => state.authors.data);
+//   const goals = useSelector(state => state.goals.data);
+//   return (
+//     <Layout>
+//       Authors
+//       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(authors)}</div>
+//       Goals
+//       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(goals)}</div>
+//     </Layout>
+//   );
+// };
 
+// Index.getInitialProps = async ({ store, isServer }) => {
+//   await store.dispatch(fetchFreeCourses());
+//   return { isServer };
+// };
+
+// export default Index;
+
+class Index extends PureComponent {
   componentDidMount() {
-    const { startClock: startClockAction } = this.props;
-    this.timer = startClockAction();
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
+    const { fetchFreeCourses: fetchFreeCoursesAction } = this.props;
+    fetchFreeCoursesAction();
   }
 
   render() {
-    const { currentTime } = this.props;
-    return (
-      <Layout>
-        <Page title="Index Page" linkTo="/other" />
-        <Links linkTo="/other" />
-        {currentTime}
-        <Test />
-      </Layout>
-    );
+    const { authors } = this.props;
+    return <Layout>{JSON.stringify(authors)}</Layout>;
   }
 }
 
-const mapDispatchToProps = { startClock, fetchNewTime };
+const mapDispatchToProps = { fetchFreeCourses };
 
-const mapStateToProps = ({ clock }) => ({
-  currentTime: clock.currentTime
-});
+const mapStateToProps = ({ clock, authors }) => {
+  return {
+    currentTime: clock.currentTime,
+    authors: authors.data
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

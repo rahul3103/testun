@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint:css": "stylelint './src/**/*.jsx'",
-    "debug": "NODE_OPTIONS=--inspect next"
+    "debug": "NODE_OPTIONS=--inspect next dev -p 8080"
   },
   "dependencies": {
-    "@material-ui/core": "^4.6.1",
+    "@material-ui/core": "^4.7.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.4",
     "next-redux-wrapper": "^4.0.1",
+    "normalizr": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
@@ -21,17 +22,17 @@
     "redux": "^4.0.4",
     "styled-components": "^5.0.0-rc.2",
     "styled-normalize": "^8.0.6",
-    "swr": "^0.1.10"
+    "swr": "^0.1.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.4",
     "@next/bundle-analyzer": "^9.1.4",
     "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.6",
-    "eslint": "6.6.0",
-    "eslint-config-airbnb": "18.0.1",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -42,10 +43,9 @@
     "lint-staged": ">=9.4.3",
     "prettier": "^1.19.1",
     "redux-devtools-extension": "^2.13.8",
-    "stylelint": "11.0.0",
+    "stylelint": "^12.0.0",
     "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0"
+    "stylelint-config-styled-components": "^0.1.1"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [

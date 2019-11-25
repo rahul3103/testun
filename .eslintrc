@@ -49,6 +49,12 @@
         "exceptions": ["Component", "App"]
       }
     ],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      { "props": "never", "children": "never" }
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "consistent-return": "off"
   }
 }
