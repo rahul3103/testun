@@ -15,7 +15,8 @@ const courseSchema = new schema.Entity(
   'courses',
   {},
   {
-    idAttribute: 'uid'
+    idAttribute: 'uid',
+    processStrategy: value => getEntityData('Course', value)
   }
 );
 
@@ -23,8 +24,7 @@ const goalSchema = new schema.Entity(
   'goals',
   {},
   {
-    idAttribute: 'uid',
-    processStrategy: value => getEntityData('Course', value)
+    idAttribute: 'uid'
   }
 );
 
