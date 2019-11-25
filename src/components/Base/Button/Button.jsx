@@ -30,6 +30,8 @@ const StyledButton = styled.button`
   border-width: ${BUTTON_BORDER_WIDTH};
   border-style: ${BUTTON_BORDER_STYLE};
   border-color: ${BorderColors.BORDER_PRIMARY};
+  min-width: ${props =>
+    props.size === 'small' ? Spacings.SPACING_20B : Spacings.SPACING_28B};
   padding: ${props =>
     props.size === 'large'
       ? `${Spacings.SPACING_4B} ${Spacings.SPACING_6B}`
