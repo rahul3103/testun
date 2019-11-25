@@ -47,8 +47,7 @@ const StyledButton = styled.button`
       (props.type !== 'filled' && props.type !== 'disabled' && props.theme) ||
         props.type
     ]};
-  transition: box-shadow 0.2s ease, -ms-transform 0.1s ease,
-    -webkit-transform 0.1s ease, transform 0.1s ease;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
   &:hover {
     background: ${props =>
       props.type === 'filled' &&
@@ -58,7 +57,7 @@ const StyledButton = styled.button`
 
 const StyledSpan = styled.span.attrs(props => ({
   style: {
-    backgroundPosition: `${100 - props.posX}% ${100 - props.posY}%`
+    backgroundPosition: `${props.posX}% ${props.posY}%`
   }
 }))`
   display: block;
@@ -113,8 +112,8 @@ const Button = ({ label, type, theme, onClick, icon, style, size }) => {
     const parentRect = e.target.parentNode.getBoundingClientRect();
     const x = (e?.clientX - rect.left) / (parentRect.width / 100);
     const y = (e?.clientY - rect.top) / (parentRect.height / 100);
-    setPosX(x);
-    setPosY(y);
+    setPosX(100 - x);
+    setPosY(100 - y);
   };
 
   return (
