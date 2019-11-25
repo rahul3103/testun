@@ -3,7 +3,7 @@
 // import { useSelector } from 'react-redux';
 import { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { fetchFreeCourses } from '../redux/actions';
+import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
 
 // const Index = () => {
@@ -27,8 +27,12 @@ import Layout from '../layout';
 // export default Index;
 class Index extends PureComponent {
   componentDidMount() {
-    const { fetchFreeCourses: fetchFreeCoursesAction } = this.props;
+    const {
+      fetchFreeCourses: fetchFreeCoursesAction,
+      fetchEducatorLeaderboard: fetchEducatorLeaderboardAction
+    } = this.props;
     fetchFreeCoursesAction();
+    fetchEducatorLeaderboardAction();
   }
 
   render() {
@@ -37,7 +41,10 @@ class Index extends PureComponent {
   }
 }
 
-const mapDispatchToProps = { fetchFreeCourses };
+const mapDispatchToProps = {
+  fetchFreeCourses,
+  fetchEducatorLeaderboard
+};
 
 const mapStateToProps = ({ clock, authors }) => {
   return {

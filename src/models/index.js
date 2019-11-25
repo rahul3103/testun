@@ -4,10 +4,10 @@ import Course from './Course';
 const models = { User, Course };
 
 // factory functions
-export function modelsFactory(name) {
+export const modelsFactory = name => {
   return models[name];
-}
+};
 
-export function getEntityData(name, data) {
+export const getEntityData = (name, data) => {
   return models[name].getEntityData(data);
-}
+};

@@ -15,7 +15,8 @@ const courseSchema = new schema.Entity(
   'courses',
   {},
   {
-    idAttribute: 'uid'
+    idAttribute: 'uid',
+    processStrategy: value => getEntityData('Course', value)
   }
 );
 
@@ -23,18 +24,9 @@ const goalSchema = new schema.Entity(
   'goals',
   {},
   {
-    idAttribute: 'uid',
-    processStrategy: value => getEntityData('Course', value)
+    idAttribute: 'uid'
   }
 );
-
-// const peekCourseSchema = new schema.Entity(
-//   'peekCourses',
-//   { course: courseSchema },
-//   { idAttribute: value => value.course.uid }
-// );
-
-// const peekCourseListSchema = new schema.Array(peekCourseSchema);
 
 const topologyPeekSchema = new schema.Entity(
   'topologyPeeks',
