@@ -27,11 +27,10 @@ const getTextColor = {
 
 const StyledButton = styled.button`
   position: relative;
-  border-width: ${BUTTON_BORDER_WIDTH};
-  border-style: ${BUTTON_BORDER_STYLE};
-  border-color: ${BorderColors.BORDER_PRIMARY};
-  min-width: ${props =>
-    props.size === 'small' ? Spacings.SPACING_20B : Spacings.SPACING_28B};
+  border-width: ${props => props.type !== 'filled' && BUTTON_BORDER_WIDTH};
+  border-style: ${props => props.type !== 'filled' && BUTTON_BORDER_STYLE};
+  border-color: ${props =>
+    props.type !== 'filled' && BorderColors.BORDER_PRIMARY};
   padding: ${props =>
     props.size === 'large'
       ? `${Spacings.SPACING_4B} ${Spacings.SPACING_6B}`
@@ -59,7 +58,7 @@ const StyledButton = styled.button`
 
 const StyledSpan = styled.span.attrs(props => ({
   style: {
-    backgroundPosition: `${100 - props.posX}% ${props.posY}%`
+    backgroundPosition: `${100 - props.posX}% ${100 - props.posY}%`
   }
 }))`
   display: block;
