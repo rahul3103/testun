@@ -5,6 +5,7 @@ import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
+import { Avatar } from '../components';
 
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
@@ -36,8 +37,15 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { authors } = this.props;
-    return <Layout>{JSON.stringify(authors)}</Layout>;
+    // const { authors } = this.props;
+    return (
+      <Layout>
+        <div style={{ gridColumn: 'span 6' }}>
+          <Avatar imageUrl="https://edge.uacdn.net/static/thumbnail/user/9ccde2d9973b47d1bc64d98c36eaa987.jpg?q=100&w=512&fm=webp" />
+        </div>
+        {/* {JSON.stringify(authors)} */}
+      </Layout>
+    );
   }
 }
 
