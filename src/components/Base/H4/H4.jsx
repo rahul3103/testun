@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { TextColors, Fonts } from '../../../styleConstants';
-import { textColorValidator } from '../../../utils/propsValidation';
+import { textColorValidator } from '../../../utils';
 
 const StyledH4 = styled.h4`
   font-weight: ${Fonts.BOLD};

@@ -5,13 +5,13 @@ import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
+import { Tags } from '../components';
 
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
 //   const goals = useSelector(state => state.goals.data);
 //   return (
 //     <Layout>
-//       Authors
 //       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(authors)}</div>
 //       Goals
 //       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(goals)}</div>
@@ -36,8 +36,17 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { authors } = this.props;
-    return <Layout>{JSON.stringify(authors)}</Layout>;
+    // const { authors } = this.props;
+    return (
+      <Layout>
+        <div>
+          <Tags label="Unacademy" type="filled" />
+          <Tags label="Unacademy" type="hollow" />
+          <Tags label="Unacademy" type="transparent" />
+          <Tags label="Live" type="live" />
+        </div>
+      </Layout>
+    );
   }
 }
 
