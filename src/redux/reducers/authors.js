@@ -1,4 +1,4 @@
-import { authorTypes } from '../constants';
+import { educatorTypes } from '../constants';
 import { mergeDeep } from '../../utils';
 
 const initialState = {
@@ -7,7 +7,9 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   const dataGenerator = {
-    [authorTypes.UPDATE_AUTHORS]: { data: mergeDeep(action.data, state.data) },
+    [educatorTypes.UPDATE_AUTHORS]: {
+      data: mergeDeep(action.data, state.data)
+    },
     default: state
   };
 

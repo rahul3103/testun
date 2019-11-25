@@ -28,14 +28,6 @@ const goalSchema = new schema.Entity(
   }
 );
 
-// const peekCourseSchema = new schema.Entity(
-//   'peekCourses',
-//   { course: courseSchema },
-//   { idAttribute: value => value.course.uid }
-// );
-
-// const peekCourseListSchema = new schema.Array(peekCourseSchema);
-
 const topologyPeekSchema = new schema.Entity(
   'topologyPeeks',
   {

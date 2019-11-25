@@ -13,9 +13,9 @@ class Course {
   }
 }
 
-function getEntityData(data) {
+const getEntityData = data => {
   const course = new Course(data);
   return course;
-}
+};
 
 export default { Course, getEntityData };

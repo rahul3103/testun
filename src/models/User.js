@@ -44,12 +44,12 @@ class User {
   }
 }
 
-function getEntityData(data) {
+const getEntityData = data => {
   const user = new User(data);
   return user;
-}
+};
 
-function getPlusSubscriptionsUids(user) {
+const getPlusSubscriptionsUids = user => {
   if (user.plusSubscription) {
     const plusSubscriptionsValid = user.plusSubscription.filter(
       plusSubscription => {
@@ -62,9 +62,9 @@ function getPlusSubscriptionsUids(user) {
     return arrayIds;
   }
   return [];
-}
+};
 
-function getExpiredSubscriptionUids(user) {
+const getExpiredSubscriptionUids = user => {
   if (user.plusSubscription) {
     const plusSubscriptionsExpired = user.plusSubscription.filter(
       plusSubscription => {
@@ -77,6 +77,6 @@ function getExpiredSubscriptionUids(user) {
     return arrayIds;
   }
   return [];
-}
+};
 
 export default { User, getEntityData };
