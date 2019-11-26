@@ -7,11 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint:css": "stylelint './src/**/*.jsx'",
-    "debug": "NODE_OPTIONS=--inspect next dev -p 8080"
+    "debug": "NODE_OPTIONS=--inspect next dev -p 8080",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "@material-ui/styles": "^4.6.0",
+    "docz": "^2.0.0-rc.77",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.4",
     "next-redux-wrapper": "^4.0.1",
