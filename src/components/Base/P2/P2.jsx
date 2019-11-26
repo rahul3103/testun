@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import { TextColors, Fonts } from '../../../styleConstants';
 import { textColorValidator } from '../../../utils';
 
-const P2 = styled.p.attrs(props => ({
-  className: props.className
-}))`
+const P2 = styled.p`
   font-weight: ${Fonts.REGULAR};
   font-size: ${Fonts.P2};
   line-height: ${Fonts.HEADER_LINE_HEIGHT};
