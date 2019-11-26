@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { TextColors, Fonts } from '../../../styleConstants';
-import { textColorValidator } from '../../../utils/propsValidation';
+import { textColorValidator } from '../../../utils';
 
 const StyledH5 = styled.h5`
   font-weight: ${Fonts.SEMIBOLD};

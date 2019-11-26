@@ -9,3 +9,4 @@ export { default as P2 } from './Base/P2/P2';
 export { default as Button } from './Base/Button/Button';
 export { default as Logo } from './Base/Logo/Logo';
 export { default as Avatar } from './Base/Avatar/Avatar';
+export { default as Tags } from './Base/Tags/Tags';

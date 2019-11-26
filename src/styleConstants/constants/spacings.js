@@ -1,6 +1,7 @@
 export const BASE = 4;
 
 export const SPACING_1B = `${BASE}px`;
+export const SPACING_6 = '6px'; // exception for tag, thus not to be used anywhere else
 export const SPACING_2B = `${2 * BASE}px`;
 export const SPACING_3B = `${3 * BASE}px`;
 export const SPACING_4B = `${4 * BASE}px`;

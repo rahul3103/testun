@@ -5,3 +5,4 @@ export const BUTTON_TEXT_FILLED = '#fff';
 export const BUTTON_TEXT_GREEN = '#08BD80';
 export const BUTTON_TEXT_RED = '#FF0000';
 export const BUTTON_TEXT_DISABLED = '#9AAFBF';
+export const TRANSPARENT_TAG_TEXT = '#2D81F7';
