@@ -28,5 +28,16 @@ body {
     font-weight: normal;
     font-style: normal;
   }
+
+  * {
+    font-kerning: none;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    word-break: break-word;
+    outline: none;
+    text-decoration: none;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 `;
