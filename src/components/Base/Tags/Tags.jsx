@@ -16,7 +16,7 @@ const styling = {
   transparent: {
     Bg: BgColors.WHITE,
     Text: TextColors.TRANSPARENT_TAG_TEXT,
-    paddingHorizontal: '0px'
+    paddingHorizontal: Spacings.SPACING_0B
   },
   live: {
     Bg: BgColors.LIVE_TAG,
@@ -25,7 +25,7 @@ const styling = {
   }
 };
 
-const StyledTags = styled.span`
+const Tags = styled.span`
   background-color: ${props => styling[props.type].Bg};
   color: ${props => styling[props.type].Text};
   font-size: ${props =>
@@ -38,13 +38,9 @@ const StyledTags = styled.span`
   padding: ${props =>
     `${Spacings.SPACING_6} ${styling[props.type].paddingHorizontal}`};
   border-radius: ${Spacings.SPACING_1B};
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  text-transform: uppercase;
 `;
-
-const Tags = ({ label, type }) => {
-  return <StyledTags type={type}>{label.toUpperCase()}</StyledTags>;
-};
 
 export default Tags;
 

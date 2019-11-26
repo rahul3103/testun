@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Logo } from '../../components';
+import { Logo } from '../../components/Base';
 
 const StyledHeader = styled.header`
   grid-column: 1/25;
