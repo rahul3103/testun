@@ -5,7 +5,6 @@ import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
-import { Like, Liked } from '../components/Icons';
 
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
@@ -36,13 +35,9 @@ class Index extends PureComponent {
   }
 
   render() {
-    // const { authors } = this.props;
     return (
       <Layout>
-        <div style={{ gridColumn: 'span 6' }}>
-          <Like />
-          <Liked />
-        </div>
+        <div style={{ gridColumn: 'span 6' }}>yexy</div>
       </Layout>
     );
   }

@@ -64,8 +64,8 @@ const StyledSpan = styled.span.attrs(props => ({
   background-size: 200% 200%;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
+  left: ${Spacings.SPACING_0B};
+  top: ${Spacings.SPACING_0B};
   opacity: 0;
   transition: opacity 1.25s;
   background-image: radial-gradient(
@@ -84,10 +84,10 @@ const StyledSpan = styled.span.attrs(props => ({
 
 const ParentSpan = styled.span`
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: ${Spacings.SPACING_0B};
+  left: ${Spacings.SPACING_0B};
+  right: ${Spacings.SPACING_0B};
+  bottom: ${Spacings.SPACING_0B};
   width: 100%;
   height: 100%;
   overflow: hidden;
