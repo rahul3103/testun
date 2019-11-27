@@ -10,9 +10,15 @@ const StyledSvgIcon = styled(SvgIcon)`
   color: ${({ bg }) => bg};
 `;
 
-const Icon = ({ path, size, color }) => (
+const Icon = ({ path, size, color, className, onClick }) => (
   <StylesProvider injectFirst>
-    <StyledSvgIcon size={size} bg={color} viewBox="0 0 32 32">
+    <StyledSvgIcon
+      onClick={onClick}
+      size={size}
+      bg={color}
+      className={className}
+      viewBox="0 0 32 32"
+    >
       <path d={path} />
     </StyledSvgIcon>
   </StylesProvider>
@@ -23,10 +29,14 @@ export default Icon;
 Icon.propTypes = {
   path: PropTypes.string.isRequired,
   size: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 Icon.defaultProps = {
   color: 'black',
-  size: Spacings.SPACING_3B
+  size: Spacings.SPACING_3B,
+  className: '',
+  onClick: () => {}
 };

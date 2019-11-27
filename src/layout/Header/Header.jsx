@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { Logo } from '../../components/Base';
+import Notification from './Notification';
+import SearchTab from './SearchTab';
+import HeaderUser from './HeaderUser';
 
 const StyledHeader = styled.header`
   grid-column: 1/25;
@@ -13,6 +16,9 @@ const StyledHeader = styled.header`
 const Header = () => (
   <StyledHeader>
     <Logo />
+    <SearchTab />
+    <Notification />
+    <HeaderUser />
   </StyledHeader>
 );
 
