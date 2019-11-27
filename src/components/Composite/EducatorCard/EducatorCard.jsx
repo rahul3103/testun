@@ -12,7 +12,7 @@ import {
 const Wrapper = styled.div`
   height: ${Spacings.SPACING_24B};
   background-color: ${BgColors.WHITE};
-  grid-column: ${({ gridColumn }) => gridColumn};
+  grid-column: ${({ gridColumn }) => `span ${gridColumn}`};
   padding: ${Spacings.SPACING_6B} ${Spacings.SPACING_4B};
   display: flex;
   box-shadow: 0px ${Spacings.SPACING_4B} ${Spacings.SPACING_8B}
@@ -58,7 +58,7 @@ const EducatorCard = ({
           <H5>{name}</H5>
           {verified}
         </AuthorNameWrapper>
-        <WatchTimeWrapper>{mins}</WatchTimeWrapper>
+        <WatchTimeWrapper color="TEXT_SECONDARY">{mins}</WatchTimeWrapper>
       </InfoWrapper>
     </Wrapper>
   );
