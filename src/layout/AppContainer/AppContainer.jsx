@@ -4,7 +4,6 @@ const AppContainer = styled.div`
   width: 1136px;
   min-height: 100vh;
   background-color: #fff;
-  text-align: center;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
