@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Icon from './Icon';
+import { Spacings } from '../../styleConstants';
 
 const Verified = ({ size, color }) => (
   <Icon
@@ -16,7 +17,7 @@ Verified.propTypes = {
 
 Verified.defaultProps = {
   color: 'black',
-  size: '24px'
+  size: Spacings.SPACING_3B
 };
 
 export default Verified;
