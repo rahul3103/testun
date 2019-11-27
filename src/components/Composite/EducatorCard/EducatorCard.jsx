@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Avatar, H5, P2 } from '../../Base';
 import { Verified } from '../../Icons';
-import { Spacings, BgColors } from '../../../styleConstants';
+import {
+  Spacings,
+  BgColors,
+  ShadowColors,
+  TextColors
+} from '../../../styleConstants';
 
 const Wrapper = styled.div`
   height: ${Spacings.SPACING_24B};
@@ -10,6 +15,9 @@ const Wrapper = styled.div`
   grid-column: ${({ gridColumn }) => gridColumn};
   padding: ${Spacings.SPACING_6B} ${Spacings.SPACING_4B};
   display: flex;
+  box-shadow: 0px ${Spacings.SPACING_4B} ${Spacings.SPACING_8B}
+    ${ShadowColors.EDUCATOR_CARD_SHADOW};
+  border-radius: ${Spacings.SPACING_2B};
 `;
 
 const InfoWrapper = styled.div`
@@ -39,7 +47,7 @@ const EducatorCard = ({
   const mins = `${watchMins} watch mins`;
   const verified = isVerified ? (
     <VerifiedIconWrapper>
-      <Verified />
+      <Verified color={TextColors.VERIFIED_EDUCATOR_ICON} />
     </VerifiedIconWrapper>
   ) : null;
   return (
