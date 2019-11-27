@@ -2,6 +2,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import { StylesProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Spacings } from '../../styleConstants';
 
 const StyledSvgIcon = styled(SvgIcon)`
   width: ${({ size }) => size};
@@ -27,5 +28,5 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   color: 'black',
-  size: '24px'
+  size: Spacings.SPACING_3B
 };
