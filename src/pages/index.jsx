@@ -48,8 +48,7 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { leaderboard, users, profileInfo } = this.props;
-    console.log('dataGenerator dataGenerator', users[profileInfo.PriyaPandian]);
+    const { leaderboard, users } = this.props;
     return (
       <Layout>
         <div style={{ gridColumn: 'span 6' }} />
