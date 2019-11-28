@@ -5,7 +5,6 @@ import { Normalize } from 'styled-normalize';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
-import AppContainer from '../layout/AppContainer/AppContainer';
 import theme from '../styleConstants';
 import initStore from '../redux';
 import { GlobalStyle } from '../styleConstants/common';
@@ -26,9 +25,7 @@ export default withRedux(initStore)(
         <Provider store={store}>
           <ThemeProvider theme={theme}>
             <Normalize />
-            <AppContainer>
-              <Component {...pageProps} />
-            </AppContainer>
+            <Component {...pageProps} />
             <GlobalStyle />
           </ThemeProvider>
         </Provider>
