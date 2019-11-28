@@ -1,2 +1,2 @@
-export { fetchFreeCourses } from './courses';
-export { fetchEducatorLeaderboard } from './educator';
+export { fetchFreeCourses, fetchFreeGoalCourses } from './courses';
+export { fetchEducatorLeaderboard, fetchFollowingUsers } from './educator';

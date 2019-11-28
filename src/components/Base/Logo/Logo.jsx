@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledImg = styled.img`
+const Logo = styled.img.attrs(({ className }) => ({
+  src: 'static/images/logo.svg',
+  alt: 'Company Logo',
+  className
+}))`
   grid-column: ${({ column }) => column};
   align-self: ${({ align }) => align};
 `;
-
-const Logo = ({ align, column }) => (
-  <StyledImg align={align} column={column} src="static/images/logo.svg" />
-);
 
 Logo.propTypes = {
   align: PropTypes.string,

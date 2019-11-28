@@ -11,3 +11,5 @@ export { default as Logo } from './Logo/Logo';
 export { default as Tags } from './Tags/Tags';
 export { default as Thumbnail } from './Thumbnail/Thumbnail';
 export { default as IconButton } from './IconButtons/IconButtons';
+export { default as Avatar } from './Avatar/Avatar';
+// export { default as UNTextField } from './UNTextField/UNTextField';

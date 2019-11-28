@@ -17,6 +17,7 @@
     "@material-ui/styles": "^4.6.0",
     "docz": "^2.0.0-rc.77",
     "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
     "next": "9.1.4",
     "next-redux-wrapper": "^4.0.1",
     "normalizr": "^3.4.1",
