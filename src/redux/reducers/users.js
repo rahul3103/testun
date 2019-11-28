@@ -7,7 +7,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   const dataGenerator = {
-    [educatorTypes.UPDATE_AUTHORS]: {
+    [educatorTypes.UPDATE_USERS]: {
       data: mergeDeep(action.data, state.data)
     },
     default: state
