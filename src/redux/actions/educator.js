@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import { educatorTypes } from '../constants';
 import { paginateAction } from '../../utils';
-import { paginatorListSchema } from '../schemas';
+import { paginatorListSchema, userSchema } from '../schemas';
 
 const getEducatorLeaderBoard = (goalUid, resetWithoutEmpty) => {
   return next => {
@@ -54,3 +54,12 @@ export const fetchFollowingUsers = (username, nextPage, resetWithoutEmpty) => {
     resetWithoutEmpty
   )(nextPage);
 };
+
+export const fetchProfileInfo = username => dispatch =>
+  dispatch({
+    type: educatorTypes.FETCH_PROFILE_INFO,
+    endpoint: `v1/user/${username}/info`,
+    method: 'get',
+    username,
+    schema: userSchema
+  });

@@ -8,6 +8,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   const dataGenerator = {
     [courseTypes.UPDATE_COURSES]: {
+      ...state,
       data: mergeDeep(action.data, state.data)
     },
     default: state

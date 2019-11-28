@@ -6,8 +6,9 @@ import { connect } from 'react-redux';
 import {
   fetchEducatorLeaderboard,
   fetchFollowingUsers,
-  fetchFreeGoalCourses
-} from '../redux/actions';
+  fetchProfileInfo
+} from '../redux/actions/educator';
+import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
 import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
 
@@ -34,10 +35,12 @@ class Index extends PureComponent {
     const {
       fetchEducatorLeaderboard: fetchEducatorLeaderboardAction,
       fetchFollowingUsers: fetchFollowingUsersAction,
-      fetchFreeGoalCourses: fetchFreeGoalCoursesAction
+      fetchFreeGoalCourses: fetchFreeGoalCoursesAction,
+      fetchProfileInfo: fetchProfileInfoAction
     } = this.props;
     // fetchFreeCoursesAction();
     fetchEducatorLeaderboardAction('KSCGY', true, false);
+    fetchProfileInfoAction('PriyaPandian');
     fetchFreeGoalCoursesAction('KSCGY', true, false).then(() => {
       fetchFreeGoalCoursesAction('KSCGY', true, false);
     });
@@ -45,7 +48,8 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { leaderboard, users } = this.props;
+    const { leaderboard, users, profileInfo } = this.props;
+    console.log('dataGenerator dataGenerator', users[profileInfo.PriyaPandian]);
     return (
       <Layout>
         <div style={{ gridColumn: 'span 6' }} />
@@ -72,14 +76,16 @@ class Index extends PureComponent {
 const mapDispatchToProps = {
   fetchEducatorLeaderboard,
   fetchFollowingUsers,
-  fetchFreeGoalCourses
+  fetchFreeGoalCourses,
+  fetchProfileInfo
 };
 
 const mapStateToProps = ({ users, courses, paginator }) => {
   return {
     users: users.data,
     courses: courses.data,
-    leaderboard: paginator.educatorLeaderboard
+    leaderboard: paginator.educatorLeaderboard,
+    profileInfo: users.profileInfo
   };
 };
 
