@@ -5,6 +5,7 @@ import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchFreeCourses, fetchEducatorLeaderboard } from '../redux/actions';
 import Layout from '../layout';
+import { CourseCard } from '../components/Composite';
 
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
@@ -37,7 +38,9 @@ class Index extends PureComponent {
   render() {
     return (
       <Layout>
-        <div style={{ gridColumn: 'span 6' }}>yexy</div>
+        <div style={{ gridColumn: 'span 6' }}>
+          <CourseCard />
+        </div>
       </Layout>
     );
   }

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { BgColors, Spacings, ShadowColors } from '../../../styleConstants';
-import { Thumbnail, Tags } from '../../Base';
-import CourseCardDetails from './CourseCardDetails';
+import { Thumbnail, Tags, IconButton } from '../../Base';
+import CourseCardDetails from './PlusCourseCardDetails';
+import { Enroll } from '../../Icons';
 
-const StyledCourseCard = styled.div`
+const StyledPlusCourseCard = styled.div`
   background-color: ${BgColors.WHITE};
   border-radius: ${Spacings.SPACING_2B};
   box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
@@ -13,17 +14,26 @@ const StyledCourseCard = styled.div`
 
 const TimeTags = styled(Tags)`
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: ${Spacings.SPACING_4B};
+  bottom: ${Spacings.SPACING_2B};
 `;
 
-const CourseCard = () => (
-  <StyledCourseCard>
+const EnrollButton = styled(IconButton)`
+  position: absolute;
+  right: ${Spacings.SPACING_4B};
+  top: ${Spacings.SPACING_4B};
+`;
+
+const PlusCourseCard = () => (
+  <StyledPlusCourseCard>
     <Thumbnail imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png">
       <TimeTags type="filled">10:30 pm</TimeTags>
+      <EnrollButton>
+        <Enroll />
+      </EnrollButton>
     </Thumbnail>
     <CourseCardDetails />
-  </StyledCourseCard>
+  </StyledPlusCourseCard>
 );
 
-export default CourseCard;
+export default PlusCourseCard;

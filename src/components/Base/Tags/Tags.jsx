@@ -45,7 +45,6 @@ const Tags = styled.span`
 export default Tags;
 
 Tags.propTypes = {
-  label: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['filled', 'hollow', 'transparent', 'live'])
 };
 
