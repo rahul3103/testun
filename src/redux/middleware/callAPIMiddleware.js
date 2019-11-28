@@ -19,10 +19,21 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
     return next(action);
   }
 
-  const { endpoint, type, method, data, params, schema, ...rest } = action;
+  const {
+    endpoint,
+    type,
+    method,
+    data,
+    params,
+    schema,
+    entityType,
+    directPaginatedEntity,
+    ...rest
+  } = action;
   next({ ...rest, type: `${type}_REQUEST` });
 
-  let url = `${host}${endpoint}`;
+  let url =
+    endpoint.indexOf('unacademy.com/') > -1 ? endpoint : `${host}${endpoint}`;
   const queryString = getQueryString(params);
   if (queryString) url = `${url}?${queryString}`;
 
@@ -34,11 +45,22 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
   return actionPromise
     .then(response => response.json())
     .then(result => {
-      const normalizedData = normalize(result.results, schema);
+      let formattedResults = result;
+      if (directPaginatedEntity && !!entityType) {
+        formattedResults = {
+          ...result,
+          results: result.results.map(item => {
+            return {
+              [entityType]: item
+            };
+          })
+        };
+      }
+      const normalizedData = normalize(formattedResults, schema);
       next({ ...rest, entities: normalizedData.entities });
       return next({
         ...rest,
-        data: normalizedData.results,
+        result: normalizedData.result,
         type: `${type}_SUCCESS`
       });
     })

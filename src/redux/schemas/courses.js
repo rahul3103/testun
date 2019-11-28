@@ -1,22 +1,29 @@
 /* eslint-disable import/prefer-default-export */
 import { schema } from 'normalizr';
 
-import { authorSchema, courseSchema, goalSchema } from './index';
+import { userSchema, courseSchema, goalSchema } from './index';
 
-export const topologyPeekListSchema = new schema.Array(
-  new schema.Entity(
-    'topologyPeeks',
-    {
-      author: authorSchema,
-      goal: goalSchema,
-      peek_courses: [
+export const topologyPeekListSchema = new schema.Values(
+  {
+    results: new schema.Array(
+      new schema.Entity(
+        'list',
         {
-          course: courseSchema
+          author: userSchema,
+          goal: goalSchema,
+          peek_courses: [
+            {
+              course: courseSchema
+            }
+          ]
+        },
+        {
+          idAttribute: 'uid'
         }
-      ]
-    },
-    {
-      idAttribute: 'uid'
-    }
-  )
+      )
+    )
+  },
+  (value, parent, key) => {
+    return key;
+  }
 );

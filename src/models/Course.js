@@ -3,7 +3,7 @@ class Course {
     // Let's keep these as common keys for all the models
     /* Common Keys */
     this.uid = course.uid;
-    this.name = `${this.firstName} ${this.lastName}`;
+    this.name = course.name;
     this.thumbnail = course.thumbnail || course.cover_photo || null;
     this.description = course.description || null;
     this.permalink = course.permalink;

@@ -2,8 +2,8 @@
 import { schema } from 'normalizr';
 import { getEntityData } from '../../models';
 
-export const authorSchema = new schema.Entity(
-  'authors',
+export const userSchema = new schema.Entity(
+  'users',
   {},
   {
     idAttribute: 'uid',
@@ -13,10 +13,17 @@ export const authorSchema = new schema.Entity(
 
 export const courseSchema = new schema.Entity(
   'courses',
-  {},
+  {
+    author: userSchema
+  },
   {
     idAttribute: 'uid',
-    processStrategy: value => getEntityData('Course', value)
+    processStrategy: value => {
+      return {
+        ...getEntityData('Course', value),
+        author: getEntityData('User', value.author)
+      };
+    }
   }
 );
 
@@ -26,4 +33,20 @@ export const goalSchema = new schema.Entity(
   {
     idAttribute: 'uid'
   }
+);
+
+const schemaDictionary = {
+  user: userSchema,
+  course: courseSchema
+};
+
+const paginatorItemSchema = new schema.Object(schemaDictionary);
+
+const paginatorResultsSchema = new schema.Array(paginatorItemSchema);
+
+export const paginatorListSchema = new schema.Object(
+  {
+    results: paginatorResultsSchema
+  },
+  (value, parent, key) => key
 );

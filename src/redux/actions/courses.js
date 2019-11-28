@@ -1,5 +1,6 @@
 import { courseTypes } from '../constants';
-import { topologyPeekListSchema } from '../schemas/courses';
+import { paginatorListSchema } from '../schemas';
+import { paginateAction } from '../../utils';
 
 // eslint-disable-next-line import/prefer-default-export
 export const fetchFreeCourses = () => dispatch =>
@@ -8,5 +9,30 @@ export const fetchFreeCourses = () => dispatch =>
     endpoint: 'v1/topology/users/KSCGY/lists/',
     method: 'get',
     params: { sort: 'popularity_score', language: 'english' },
-    schema: topologyPeekListSchema
+    schema: paginatorListSchema
   });
+
+const getFreeGoalCourses = (goalUid, resetWithoutEmpty) => {
+  return next => {
+    return {
+      type: courseTypes.FETCH_FREE_GOAL_COURSES,
+      endpoint: next,
+      method: 'get',
+      key: goalUid,
+      resetWithoutEmpty,
+      schema: paginatorListSchema,
+      directPaginatedEntity: true,
+      entityType: 'course'
+    };
+  };
+};
+
+export const fetchFreeGoalCourses = (goalUid, nextPage, resetWithoutEmpty) => {
+  return paginateAction(
+    `v1/topology/users/${goalUid}/courses/?&limit=25`,
+    getFreeGoalCourses(goalUid, resetWithoutEmpty),
+    'freeGoalCourses',
+    goalUid,
+    resetWithoutEmpty
+  )(nextPage);
+};

@@ -1,35 +1,15 @@
 import { courseTypes } from '../constants';
+import { mergeDeep } from '../../utils';
 
-const exampleInitialState = {
-  courses: {},
-  loading: false
+const initialState = {
+  data: {}
 };
 
-// const reducer = (state = exampleInitialState, action) => {
-//   switch (action.type) {
-//     case `${courseTypes?.FETCH_FREE_COURSES}_REQUEST`:
-//       return { ...state, loading: true };
-//     case `${courseTypes?.FETCH_FREE_COURSES}_SUCCESS`:
-//       return {
-//         ...state,
-//         currentTime: action.result.dateString,
-//         loading: false
-//       };
-//     case `${courseTypes?.FETCH_FREE_COURSES}_FAIL`:
-//       return { ...state, loading: false };
-//     default:
-//       return state;
-//   }
-
-const reducer = (state = exampleInitialState, action) => {
+const reducer = (state = initialState, action) => {
   const dataGenerator = {
-    [`${courseTypes?.FETCH_FREE_COURSES}_REQUEST`]: { ...state, loading: true },
-    [`${courseTypes?.FETCH_FREE_COURSES}_SUCCESS`]: {
-      ...state,
-      courses: action.result,
-      loading: false
+    [courseTypes.UPDATE_COURSES]: {
+      data: mergeDeep(action.data, state.data)
     },
-    [`${courseTypes?.FETCH_FREE_COURSES}_FAIL`]: { ...state, loading: false },
     default: state
   };
 
