@@ -10,8 +10,7 @@ import {
 } from '../redux/actions/educator';
 import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
-import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
-
+import { PaperCard } from '../components/Base';
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
 //   const goals = useSelector(state => state.goals.data);
@@ -48,25 +47,12 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { leaderboard, users } = this.props;
+    // const { leaderboard, users } = this.props;
     return (
       <Layout>
-        <div style={{ gridColumn: 'span 6' }} />
-        {leaderboard.KSCGY
-          ? leaderboard.KSCGY.results.map(item => {
-              const user = users[item.user];
-              return (
-                // eslint-disable-next-line react/jsx-key
-                <EducatorCard
-                  watchMins="55M"
-                  name={user.name}
-                  isVerified
-                  gridColumn="6"
-                  key={`user-${user.uid}`}
-                />
-              );
-            })
-          : null}
+        <div style={{ gridColumn: 'span 24' }}>
+          <PaperCard label="Manage Goals" />
+        </div>
       </Layout>
     );
   }

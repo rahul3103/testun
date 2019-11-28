@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TextColors, Fonts } from '../../../styleConstants';
+import { TextColors, Fonts, Spacings } from '../../../styleConstants';
 import { textColorValidator } from '../../../utils';
 
 const H1 = styled.h1`
@@ -7,6 +7,7 @@ const H1 = styled.h1`
   font-size: ${Fonts.H1};
   line-height: ${Fonts.HEADER_LINE_HEIGHT};
   color: ${props => TextColors[props.color]};
+  margin: ${Spacings.SPACING_0B};
 `;
 
 export default H1;
