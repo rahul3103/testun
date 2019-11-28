@@ -41,7 +41,7 @@ const SearchTextField = styled(OutlinedInput)`
 `;
 
 const MainWrapper = styled.div`
-  grid-column: 12/20;
+  grid-column: 11/19;
   align-self: center;
 `;
 

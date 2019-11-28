@@ -4,7 +4,7 @@ import { NotificationBell } from '../../components/Icons';
 import { BgColors, TextColors } from '../../styleConstants';
 
 const StyledBadge = styled(Badge)`
-  grid-column: 20/21;
+  grid-column: 19/20;
   align-self: center;
   place-self: center;
   &.MuiBadge-root .MuiBadge-badge {
