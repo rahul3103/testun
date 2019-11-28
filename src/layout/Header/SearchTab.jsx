@@ -7,6 +7,7 @@ const SearchTextField = styled(OutlinedInput)`
   float: right;
   color: red;
   width: 100px;
+  font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &.MuiOutlinedInput-root {
     &.Mui-focused {
@@ -20,12 +21,14 @@ const SearchTextField = styled(OutlinedInput)`
       font-weight: 600;
       font-size: 14px;
       line-height: 150%;
+      font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
     }
     color: #3c4852;
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
     padding-left: 8px;
+    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   }
   &.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-color: ${({ value }) => (value ? '#f0f4f7' : '#fff')};
