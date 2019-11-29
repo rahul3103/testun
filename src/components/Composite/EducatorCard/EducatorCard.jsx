@@ -27,14 +27,12 @@ const InfoWrapper = styled.div`
 
 const AuthorNameWrapper = styled.div`
   margin-bottom: ${Spacings.SPACING_1B};
+  display: flex;
+  align-items: center;
 `;
 
-const VerifiedIconWrapper = styled.div`
+const VerifiedIcon = styled(Verified)`
   margin-left: ${Spacings.SPACING_1B};
-`;
-
-const WatchTimeWrapper = styled(P2)`
-  text-align: left;
 `;
 
 const EducatorCard = ({
@@ -45,20 +43,17 @@ const EducatorCard = ({
   watchMins
 }) => {
   const mins = `${watchMins} watch mins`;
-  const verified = isVerified ? (
-    <VerifiedIconWrapper>
-      <Verified color={TextColors.VERIFIED_EDUCATOR_ICON} />
-    </VerifiedIconWrapper>
-  ) : null;
   return (
     <Wrapper gridColumn={gridColumn}>
       <Avatar src={imageSrc} width="48px" height="48px" />
       <InfoWrapper>
-        <AuthorNameWrapper style={{ display: 'flex' }}>
+        <AuthorNameWrapper>
           <H5>{name}</H5>
-          {verified}
+          {isVerified && (
+            <VerifiedIcon color={TextColors.VERIFIED_EDUCATOR_ICON} />
+          )}
         </AuthorNameWrapper>
-        <WatchTimeWrapper color="TEXT_SECONDARY">{mins}</WatchTimeWrapper>
+        <P2 color="TEXT_SECONDARY">{mins}</P2>
       </InfoWrapper>
     </Wrapper>
   );

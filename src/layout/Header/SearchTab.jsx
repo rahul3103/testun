@@ -5,18 +5,12 @@ import { Search, Close } from '../../components/Icons';
 
 const SearchTextField = styled(OutlinedInput)`
   float: right;
-  color: red;
-  width: 100px;
+  width: 100%;
   font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
-  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  &.MuiOutlinedInput-root {
-    &.Mui-focused {
-      width: 100%;
-    }
-  }
+  justify-content: flex-end;
   &.MuiOutlinedInput-root .MuiInputBase-input {
     ::placeholder {
-      color: #808080;
+      color: #3c4852;
       opacity: 1;
       font-weight: 600;
       font-size: 14px;
@@ -29,6 +23,19 @@ const SearchTextField = styled(OutlinedInput)`
     line-height: 150%;
     padding-left: 8px;
     font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
+    width: 50px;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  &.MuiOutlinedInput-root {
+    &.Mui-focused .MuiInputBase-input {
+      width: 100%;
+      ::placeholder {
+        color: #808080;
+      }
+    }
+  }
+  &.MuiOutlinedInput-adornedStart {
+    padding-left: 24px;
   }
   &.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-color: ${({ value }) => (value ? '#f0f4f7' : '#fff')};
@@ -48,6 +55,17 @@ const MainWrapper = styled.div`
   align-self: center;
 `;
 
+const SearchIconWrapper = styled.div`
+  width: 24px;
+  height: 24px;
+`;
+
+const SearchIcon = () => (
+  <SearchIconWrapper>
+    <Search size="24px" />
+  </SearchIconWrapper>
+);
+
 const SearchTab = () => {
   const inputRef = useRef();
   const [searchText, setsearchText] = useState('');
@@ -60,12 +78,12 @@ const SearchTab = () => {
     <MainWrapper>
       <SearchTextField
         placeholder="Search"
-        startAdornment={<Search size="17.5px" />}
+        startAdornment={<SearchIcon />}
         fullWidth={!!searchText}
         onChange={handleChange}
         value={searchText}
         endAdornment={
-          !!searchText && <Close size="17.5px" onClick={handleClick} />
+          !!searchText && <Close size="24px" onClick={handleClick} />
         }
         inputRef={inputRef}
       />

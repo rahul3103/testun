@@ -16,5 +16,5 @@ H2.propTypes = {
 };
 
 H2.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

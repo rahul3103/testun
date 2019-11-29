@@ -6,6 +6,7 @@ const Content = styled.div`
   grid-template-columns: repeat(18, 1fr);
   grid-column-gap: 16px;
   grid-auto-rows: max-content;
+  grid-row-gap: 16px;
 `;
 
 export default Content;

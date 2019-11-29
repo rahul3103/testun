@@ -16,5 +16,5 @@ H6.propTypes = {
 };
 
 H6.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

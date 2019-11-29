@@ -16,5 +16,5 @@ H4.propTypes = {
 };
 
 H4.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

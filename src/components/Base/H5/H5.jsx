@@ -16,5 +16,5 @@ H5.propTypes = {
 };
 
 H5.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

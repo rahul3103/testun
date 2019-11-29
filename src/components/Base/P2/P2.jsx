@@ -16,5 +16,5 @@ P2.propTypes = {
 };
 
 P2.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

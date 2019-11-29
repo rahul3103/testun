@@ -16,5 +16,5 @@ H3.propTypes = {
 };
 
 H3.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

@@ -7,3 +7,5 @@ export { default as Bell } from './Bell';
 export { default as NotificationBell } from './NotificationBell';
 export { default as Search } from './Search';
 export { default as Close } from './Close';
+export { default as KeyboardArrowDown } from './KeyboardArrowDown';
+export { default as KeyboardArrowUp } from './KeyboardArrowUp';

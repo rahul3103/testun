@@ -10,7 +10,7 @@ const styling = {
   },
   hollow: {
     Bg: BgColors.BUTTON_DISABLED,
-    Text: TextColors.TEXT_PRIMARY,
+    Text: TextColors.BLACK,
     paddingHorizontal: Spacings.SPACING_6
   },
   transparent: {

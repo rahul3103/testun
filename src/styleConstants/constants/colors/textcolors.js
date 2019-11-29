@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-export const TEXT_PRIMARY = '#3C4852';
+export const BLACK = '#3C4852';
 export const TEXT_SECONDARY = '#808080';
 export const WHITE = '#fff';
 export const BUTTON_TEXT_GREEN = '#08BD80';
