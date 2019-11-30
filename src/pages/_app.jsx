@@ -19,6 +19,12 @@ export default withRedux(initStore)(
       };
     }
 
+    componentDidMount() {
+      const jssStyles = document.querySelector('#jss-server-side');
+      if (jssStyles && jssStyles.parentNode)
+        jssStyles.parentNode.removeChild(jssStyles);
+    }
+
     render() {
       const { Component, pageProps, store } = this.props;
       return (
