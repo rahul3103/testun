@@ -6,7 +6,6 @@ import { Search, Close } from '../../components/Icons';
 const SearchTextField = styled(OutlinedInput)`
   float: right;
   width: 100%;
-  font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   justify-content: flex-end;
   &.MuiOutlinedInput-root .MuiInputBase-input {
     ::placeholder {
@@ -15,14 +14,12 @@ const SearchTextField = styled(OutlinedInput)`
       font-weight: 600;
       font-size: 14px;
       line-height: 150%;
-      font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
     }
     color: #3c4852;
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
     padding-left: 8px;
-    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
     width: 50px;
     transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }

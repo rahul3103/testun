@@ -47,7 +47,6 @@ const DropDownButton = styled(Button)`
     padding: 14px 20px;
     border-radius: 8px;
     border: 1px solid #f0f4f7;
-    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
@@ -64,7 +63,6 @@ const DropDownButton = styled(Button)`
     font-size: 14px;
     line-height: 150%;
     color: #3c4852;
-    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 `;
 
@@ -73,7 +71,7 @@ const StyledMenu = styled(Menu)`
     width: 176px;
     border: 1px solid #f0f4f7;
     border-radius: 8px;
-    top: 72px !important;
+    margin-top: 12px;
     background-color: #fff;
     box-shadow: 0px 16px 32px #f0f4f7;
     transition: none !important;
@@ -124,6 +122,7 @@ const Dropdown = () => {
           vertical: 'top',
           horizontal: 'center'
         }}
+        variant="menu"
       >
         <p>text</p>
         <p>text</p>
