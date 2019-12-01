@@ -4,10 +4,25 @@ import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
+import {
+  createMuiTheme,
+  ThemeProvider as MUIThemeProvider
+} from '@material-ui/core/styles';
 
 import theme from '../styleConstants';
 import initStore from '../redux';
-import { GlobalStyle } from '../styleConstants/common';
+import GlobalStyle from '../styleConstants/GlobalStyle';
+
+const MUITheme = createMuiTheme({
+  palette: {
+    // secondary: {
+    //   main: orange[500],
+    // },
+  },
+  typography: {
+    fontFamily: 'UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;'
+  }
+});
 
 export default withRedux(initStore)(
   class UNApp extends App {
@@ -31,7 +46,9 @@ export default withRedux(initStore)(
         <Provider store={store}>
           <ThemeProvider theme={theme}>
             <Normalize />
-            <Component {...pageProps} />
+            <MUIThemeProvider theme={MUITheme}>
+              <Component {...pageProps} />
+            </MUIThemeProvider>
             <GlobalStyle />
           </ThemeProvider>
         </Provider>
