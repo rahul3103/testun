@@ -6,9 +6,9 @@ import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 import {
   createMuiTheme,
-  ThemeProvider as MUIThemeProvider
+  ThemeProvider as MUIThemeProvider,
+  StylesProvider
 } from '@material-ui/core/styles';
-
 import theme from '../styleConstants';
 import initStore from '../redux';
 import GlobalStyle from '../styleConstants/GlobalStyle';
@@ -46,9 +46,11 @@ export default withRedux(initStore)(
         <Provider store={store}>
           <ThemeProvider theme={theme}>
             <Normalize />
-            <MUIThemeProvider theme={MUITheme}>
-              <Component {...pageProps} />
-            </MUIThemeProvider>
+            <StylesProvider injectFirst>
+              <MUIThemeProvider theme={MUITheme}>
+                <Component {...pageProps} />
+              </MUIThemeProvider>
+            </StylesProvider>
             <GlobalStyle />
           </ThemeProvider>
         </Provider>

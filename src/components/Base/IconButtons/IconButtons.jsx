@@ -4,16 +4,14 @@ import PropTypes from 'prop-types';
 import { BgColors, Spacings, ShadowColors } from '../../../styleConstants';
 
 const StyledIconButton = styled(IconButton)`
-  &.MuiIconButton-root {
-    background-color: ${BgColors.WHITE};
-    border-radius: ${Spacings.SPACING_2B};
-    height: ${Spacings.SPACING_8B};
-    width: ${Spacings.SPACING_8B};
-    box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
-      ${Spacings.SPACING_8B} ${ShadowColors.COURSE_CARD_SHADOW};
-    padding: ${Spacings.SPACING_0B};
-  }
-  &:hover.MuiIconButton-root {
+  background-color: ${BgColors.WHITE};
+  border-radius: ${Spacings.SPACING_2B};
+  height: ${Spacings.SPACING_8B};
+  width: ${Spacings.SPACING_8B};
+  box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
+    ${Spacings.SPACING_8B} ${ShadowColors.COURSE_CARD_SHADOW};
+  padding: ${Spacings.SPACING_0B};
+  &:hover {
     background-color: ${BgColors.WHITE};
   }
 `;
@@ -29,10 +27,10 @@ export default IconButtons;
 IconButtons.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  // eslint-disable-next-line react/require-default-props
   onClick: PropTypes.func
 };
 
 IconButtons.defaultProps = {
-  className: ''
+  className: '',
+  onClick: () => {}
 };
