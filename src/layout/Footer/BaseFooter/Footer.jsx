@@ -21,16 +21,13 @@ const UNInfo = styled.div`
   grid-column: 1/6;
 `;
 
-const StyledUNLogo = styled(Logo)`
-  margin-bottom: ${Spacings.SPACING_10B};
-`;
-
 const SocialImage = styled.img`
   margin-right: ${Spacings.SPACING_3B};
 `;
 
 const SocialImagesWrapper = styled.div`
   margin-bottom: ${Spacings.SPACING_4B};
+  margin-top: ${Spacings.SPACING_10B};
 `;
 
 const FooterLinksWrapper = styled.div`
@@ -38,30 +35,11 @@ const FooterLinksWrapper = styled.div`
   grid-column: 8/15;
   justify-content: space-between;
 `;
-const LeftLinksWrapper = styled.ul`
-  display: flex;
-  flex-direction: column;
-`;
-
-const RightLinksWrapper = styled.ul`
-  display: flex;
-  flex-direction: column;
-`;
 
 const DownloadAppsWrapper = styled.div`
   display: flex;
   grid-column: 18/25;
-`;
-
-const LearnerAppsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: ${Spacings.SPACING_12B};
-`;
-
-const EducatorAppsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const AppImage = styled.img`
@@ -117,13 +95,12 @@ const BaseFooter = () => {
       alt: 'linkedin'
     }
   ];
-  const socialIcons = socialIconsLink.map(social => {
-    return (
-      <a href={social.link} key={social.id}>
-        <SocialImage src={social.src} alt={social.alt} />
-      </a>
-    );
-  });
+  const socialIcons = socialIconsLink.map(social => (
+    <a href={social.link} key={social.id}>
+      <SocialImage src={social.src} alt={social.alt} />
+    </a>
+  ));
+
   const linksListLeft = [
     { label: 'About us', href: 'http://www.gie.com' },
     { label: 'Careers', href: 'http://www.gos.com' },
@@ -140,21 +117,17 @@ const BaseFooter = () => {
     { label: 'Plus subscriptions T&C', href: 'http://www.legalnotices.com' }
   ];
 
-  const linksLeft = linksListLeft.map(link => {
-    return (
-      <StyledList key={link.label}>
-        <StyledLink label={link.label} href={link.href} />
-      </StyledList>
-    );
-  });
+  const linksLeft = linksListLeft.map(link => (
+    <StyledList key={link.label}>
+      <StyledLink label={link.label} href={link.href} />
+    </StyledList>
+  ));
 
-  const linksRight = linksListRight.map(link => {
-    return (
-      <StyledList key={link.label}>
-        <StyledLink label={link.label} href={link.href} />
-      </StyledList>
-    );
-  });
+  const linksRight = linksListRight.map(link => (
+    <StyledList key={link.label}>
+      <StyledLink label={link.label} href={link.href} />
+    </StyledList>
+  ));
 
   const learnerAppInfo = [
     {
@@ -182,43 +155,39 @@ const BaseFooter = () => {
     }
   ];
 
-  const learnerApp = learnerAppInfo.map(app => {
-    return (
-      <a href={app.link} key={app.label}>
-        <AppImage src={app.src} alt={app.label} />
-      </a>
-    );
-  });
+  const learnerApp = learnerAppInfo.map(app => (
+    <a href={app.link} key={app.label}>
+      <AppImage src={app.src} alt={app.label} />
+    </a>
+  ));
 
-  const educatorApp = educatorAppInfo.map(app => {
-    return (
-      <a href={app.link} key={app.label}>
-        <AppImage src={app.src} alt={app.label} />
-      </a>
-    );
-  });
+  const educatorApp = educatorAppInfo.map(app => (
+    <a href={app.link} key={app.label}>
+      <AppImage src={app.src} alt={app.label} />
+    </a>
+  ));
 
   return (
     <FooterContainer>
       <FooterWrapper>
         <UNInfo>
-          <StyledUNLogo />
+          <Logo />
           <SocialImagesWrapper>{socialIcons}</SocialImagesWrapper>
           <P2> © 2019 Sorting Hat Technologies</P2>
         </UNInfo>
         <FooterLinksWrapper>
-          <LeftLinksWrapper>{linksLeft}</LeftLinksWrapper>
-          <RightLinksWrapper>{linksRight}</RightLinksWrapper>
+          <ul>{linksLeft}</ul>
+          <ul>{linksRight}</ul>
         </FooterLinksWrapper>
         <DownloadAppsWrapper>
-          <LearnerAppsWrapper>
+          <div>
             <StyledP2>LEARNER APP</StyledP2>
             {learnerApp}
-          </LearnerAppsWrapper>
-          <EducatorAppsWrapper>
+          </div>
+          <div>
             <StyledP2>EDUCATOR APP</StyledP2>
             {educatorApp}
-          </EducatorAppsWrapper>
+          </div>
         </DownloadAppsWrapper>
       </FooterWrapper>
     </FooterContainer>
