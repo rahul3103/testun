@@ -46,8 +46,6 @@ const AppImage = styled.img`
   margin-bottom: ${Spacings.SPACING_2B};
 `;
 
-const StyledLink = styled(Link)``;
-
 const StyledP2 = styled(P2)`
   margin-bottom: 16px;
 `;
@@ -60,35 +58,30 @@ const StyledList = styled.li`
 const BaseFooter = () => {
   const socialIconsLink = [
     {
-      id: '1',
       name: 'facebook',
       link: 'http://www.facebook.com',
       src: 'static/images/facebook.svg',
       alt: 'facebook'
     },
     {
-      id: '2',
       name: 'youtube',
       link: 'http://www.youtube.com',
       src: 'static/images/youtube.svg',
       alt: 'youtube'
     },
     {
-      id: '3',
       name: 'twitter',
       link: 'http://www.twitter.com',
       src: 'static/images/twitter.svg',
       alt: 'twitter'
     },
     {
-      id: '4',
       name: 'instagram',
       link: 'http://www.instagram.com',
       src: 'static/images/instagram.svg',
       alt: 'instagram'
     },
     {
-      id: '5',
       name: 'linkedin',
       link: 'http://www.linkedin.com',
       src: 'static/images/linkedin.svg',
@@ -96,7 +89,7 @@ const BaseFooter = () => {
     }
   ];
   const socialIcons = socialIconsLink.map(social => (
-    <a href={social.link} key={social.id}>
+    <a href={social.link} key={social.name}>
       <SocialImage src={social.src} alt={social.alt} />
     </a>
   ));
@@ -119,13 +112,13 @@ const BaseFooter = () => {
 
   const linksLeft = linksListLeft.map(link => (
     <StyledList key={link.label}>
-      <StyledLink label={link.label} href={link.href} />
+      <Link label={link.label} href={link.href} />
     </StyledList>
   ));
 
   const linksRight = linksListRight.map(link => (
     <StyledList key={link.label}>
-      <StyledLink label={link.label} href={link.href} />
+      <Link label={link.label} href={link.href} />
     </StyledList>
   ));
 

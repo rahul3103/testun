@@ -10,14 +10,11 @@ const Anchor = styled.a`
   font-weight: ${Fonts.REGULAR};
 `;
 
-const StyledLink = ({ href, label, className, prefetch }) => {
-  return (
-    <Link href={href} passHref prefetch={prefetch}>
-      <Anchor className={className}>{label}</Anchor>
-    </Link>
-  );
-};
-
+const StyledLink = ({ href, label, className, prefetch }) => (
+  <Link href={href} passHref prefetch={prefetch}>
+    <Anchor className={className}>{label}</Anchor>
+  </Link>
+);
 StyledLink.propTypes = {
   href: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,

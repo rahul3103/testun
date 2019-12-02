@@ -53,7 +53,7 @@ class Index extends PureComponent {
       <Layout>
         <div style={{ gridColumn: 'span 6' }} />
         {leaderboard.KSCGY
-          ? leaderboard.KSCGY.results.slice(0, 2).map(item => {
+          ? leaderboard.KSCGY.results.map(item => {
               const user = users[item.user];
               return (
                 // eslint-disable-next-line react/jsx-key
