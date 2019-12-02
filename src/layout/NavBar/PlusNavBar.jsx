@@ -49,7 +49,7 @@ const Item = styled(H5)`
 `;
 
 const PlusNavBar = () => {
-  const [selectedEl, setselectedEl] = useState(null);
+  const [selectedEl, setselectedEl] = useState('H4');
   const [selectedElPos, setselectedElPos] = useState(0);
 
   const handleClick = event => {
