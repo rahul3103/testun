@@ -6,7 +6,7 @@ const H1 = styled.h1`
   font-weight: ${Fonts.BOLD};
   font-size: ${Fonts.H1};
   line-height: ${Fonts.HEADER_LINE_HEIGHT};
-  color: ${props => TextColors[props.color]};
+  color: ${({ color }) => TextColors[color]};
   margin: ${Spacings.SPACING_0B};
 `;
 
@@ -17,5 +17,5 @@ H1.propTypes = {
 };
 
 H1.defaultProps = {
-  color: 'TEXT_PRIMARY'
+  color: 'BLACK'
 };

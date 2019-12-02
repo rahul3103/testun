@@ -1,33 +1,35 @@
-import SvgIcon from '@material-ui/core/SvgIcon';
-import { StylesProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Spacings } from '../../styleConstants';
+import { Spacings, TextColors } from '../../styleConstants';
 
-const StyledSvgIcon = styled(SvgIcon)`
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
-  color: ${({ bg }) => bg};
-`;
-
-const Icon = ({ path, size, color, className, onClick }) => (
-  <StylesProvider injectFirst>
-    <StyledSvgIcon
-      onClick={onClick}
-      size={size}
-      bg={color}
-      className={className}
-      viewBox="0 0 32 32"
-    >
-      <path d={path} />
-    </StyledSvgIcon>
-  </StylesProvider>
+const Icon = ({
+  width,
+  height,
+  color,
+  title,
+  onClick,
+  className,
+  path,
+  size
+}) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox="0 0 32 32"
+    onClick={onClick}
+    className={className}
+  >
+    <title>{title}</title>
+    <path d={path} fill={color} />
+  </svg>
 );
 
 export default Icon;
 
 Icon.propTypes = {
+  title: PropTypes.string,
   path: PropTypes.string.isRequired,
+  width: PropTypes.string,
+  height: PropTypes.string,
   size: PropTypes.string,
   color: PropTypes.string,
   className: PropTypes.string,
@@ -35,8 +37,11 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  color: 'black',
+  color: TextColors.BLACK,
   size: Spacings.SPACING_3B,
   className: '',
+  width: Spacings.SPACING_3B,
+  height: Spacings.SPACING_3B,
+  title: '',
   onClick: () => {}
 };
