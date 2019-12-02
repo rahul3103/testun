@@ -5,7 +5,7 @@ import { BgColors, TextColors, Spacings, Fonts } from '../../../styleConstants';
 const styling = {
   filled: {
     Bg: BgColors.TAG_FILLED,
-    Text: TextColors.BUTTON_TEXT_FILLED,
+    Text: TextColors.WHITE,
     paddingHorizontal: Spacings.SPACING_2B
   },
   hollow: {
@@ -20,23 +20,21 @@ const styling = {
   },
   live: {
     Bg: BgColors.LIVE_TAG,
-    Text: TextColors.BUTTON_TEXT_FILLED,
+    Text: TextColors.WHITE,
     paddingHorizontal: Spacings.SPACING_2B
   }
 };
 
 const Tags = styled.span`
-  background-color: ${props => styling[props.type].Bg};
-  color: ${props => styling[props.type].Text};
-  font-size: ${props =>
-    props.type === 'filled' ? Fonts.TAG_FONT_FILLED : Fonts.H6};
-  font-weight: ${props =>
-    props.type === 'filled' || props.type === 'live'
-      ? Fonts.SEMIBOLD
-      : Fonts.BOLD};
+  background-color: ${({ type }) => styling[type].Bg};
+  color: ${({ type }) => styling[type].Text};
+  font-size: ${({ type }) =>
+    type === 'filled' ? Fonts.TAG_FONT_FILLED : Fonts.H6};
+  font-weight: ${({ type }) =>
+    type === 'filled' || type === 'live' ? Fonts.SEMIBOLD : Fonts.BOLD};
   line-height: ${Fonts.BUTTON_LINE_HEIGHT};
-  padding: ${props =>
-    `${Spacings.SPACING_6} ${styling[props.type].paddingHorizontal}`};
+  padding: ${({ type }) =>
+    `${Spacings.SPACING_6} ${styling[type].paddingHorizontal}`};
   border-radius: ${Spacings.SPACING_1B};
   display: inline-block;
   text-transform: uppercase;
