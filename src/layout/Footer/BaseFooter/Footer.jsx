@@ -1,18 +1,24 @@
 import styled from 'styled-components';
-import { Spacings } from '../../styleConstants';
-import { Logo, P2, Link } from '../../components/Base';
+import { Spacings } from '../../../styleConstants';
+import { Logo, P2, Link } from '../../../components/Base';
+
+const FooterContainer = styled.footer`
+  background: #fff;
+  width: 100%;
+`;
 
 const FooterWrapper = styled.div`
-  display: flex;
   width: 1136px;
   padding: ${Spacings.SPACING_10B} 0px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-column-gap: 16px;
+  grid-template-rows: 72px 1fr;
 `;
 
 const UNInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: ${Spacings.SPACING_28B};
+  grid-column: 1/6;
 `;
 
 const StyledUNLogo = styled(Logo)`
@@ -29,22 +35,22 @@ const SocialImagesWrapper = styled.div`
 
 const FooterLinksWrapper = styled.div`
   display: flex;
-  margin-right: ${Spacings.SPACING_40B};
+  grid-column: 8/15;
+  justify-content: space-between;
 `;
 const LeftLinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: ${Spacings.SPACING_18B};
 `;
 
 const RightLinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: ${Spacings.SPACING_18B};
 `;
 
 const DownloadAppsWrapper = styled.div`
   display: flex;
+  grid-column: 18/25;
 `;
 
 const LearnerAppsWrapper = styled.div`
@@ -62,15 +68,18 @@ const AppImage = styled.img`
   margin-bottom: ${Spacings.SPACING_2B};
 `;
 
-const StyledLink = styled(Link)`
-  margin-bottom: 12px;
-`;
+const StyledLink = styled(Link)``;
 
 const StyledP2 = styled(P2)`
   margin-bottom: 16px;
 `;
 
-const Footer = () => {
+const StyledList = styled.li`
+  list-style-type: none;
+  margin-bottom: ${Spacings.SPACING_2B};
+`;
+
+const BaseFooter = () => {
   const socialIconsLink = [
     {
       id: '1',
@@ -132,11 +141,19 @@ const Footer = () => {
   ];
 
   const linksLeft = linksListLeft.map(link => {
-    return <StyledLink label={link.label} href={link.href} key={link.label} />;
+    return (
+      <StyledList key={link.label}>
+        <StyledLink label={link.label} href={link.href} />
+      </StyledList>
+    );
   });
 
   const linksRight = linksListRight.map(link => {
-    return <StyledLink label={link.label} href={link.href} key={link.label} />;
+    return (
+      <StyledList key={link.label}>
+        <StyledLink label={link.label} href={link.href} />
+      </StyledList>
+    );
   });
 
   const learnerAppInfo = [
@@ -182,28 +199,34 @@ const Footer = () => {
   });
 
   return (
-    <FooterWrapper>
-      <UNInfo>
-        <StyledUNLogo />
-        <SocialImagesWrapper>{socialIcons}</SocialImagesWrapper>
-        <P2> © 2019 Sorting Hat Technologies</P2>
-      </UNInfo>
-      <FooterLinksWrapper>
-        <LeftLinksWrapper>{linksLeft}</LeftLinksWrapper>
-        <RightLinksWrapper>{linksRight}</RightLinksWrapper>
-      </FooterLinksWrapper>
-      <DownloadAppsWrapper>
-        <LearnerAppsWrapper>
-          <StyledP2>LEARNER APP</StyledP2>
-          {learnerApp}
-        </LearnerAppsWrapper>
-        <EducatorAppsWrapper>
-          <StyledP2>EDUCATOR APP</StyledP2>
-          {educatorApp}
-        </EducatorAppsWrapper>
-      </DownloadAppsWrapper>
-    </FooterWrapper>
+    <FooterContainer>
+      <FooterWrapper>
+        <UNInfo>
+          <StyledUNLogo />
+          <SocialImagesWrapper>{socialIcons}</SocialImagesWrapper>
+          <P2> © 2019 Sorting Hat Technologies</P2>
+        </UNInfo>
+        <FooterLinksWrapper>
+          <LeftLinksWrapper>
+            <ul>{linksLeft}</ul>
+          </LeftLinksWrapper>
+          <RightLinksWrapper>
+            <ul>{linksRight}</ul>
+          </RightLinksWrapper>
+        </FooterLinksWrapper>
+        <DownloadAppsWrapper>
+          <LearnerAppsWrapper>
+            <StyledP2>LEARNER APP</StyledP2>
+            {learnerApp}
+          </LearnerAppsWrapper>
+          <EducatorAppsWrapper>
+            <StyledP2>EDUCATOR APP</StyledP2>
+            {educatorApp}
+          </EducatorAppsWrapper>
+        </DownloadAppsWrapper>
+      </FooterWrapper>
+    </FooterContainer>
   );
 };
 
-export default Footer;
+export default BaseFooter;

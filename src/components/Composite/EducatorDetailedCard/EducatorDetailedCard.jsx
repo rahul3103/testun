@@ -38,7 +38,7 @@ const AuthorNameWrapper = styled.div`
   display: flex;
 `;
 
-const VerifiedIconWrapper = styled.div`
+const VerifiedIcon = styled(Verified)`
   margin-left: ${Spacings.SPACING_1B};
 `;
 
@@ -71,11 +71,6 @@ const EducatorDetailedCard = ({
   followers,
   follow
 }) => {
-  const verified = isVerified ? (
-    <VerifiedIconWrapper>
-      <Verified color={TextColors.VERIFIED_EDUCATOR_ICON} />
-    </VerifiedIconWrapper>
-  ) : null;
   const authorRank = `#${eduRank} Educator in ${goalName}`;
   return (
     <Wrapper gridColumn={gridColumn}>
@@ -84,12 +79,13 @@ const EducatorDetailedCard = ({
         <AuthorWrapper>
           <AuthorNameWrapper>
             <H5>{name}</H5>
-            {verified}
+            {isVerified && (
+              <VerifiedIcon color={TextColors.VERIFIED_EDUCATOR_ICON} />
+            )}
           </AuthorNameWrapper>
           <AuthorRank color="TEXT_SECONDARY">{authorRank}</AuthorRank>
           <AuthorDetails>{eduDetails}</AuthorDetails>
         </AuthorWrapper>
-
         <FooterWrapper>
           <EducatorPropertiesWrapper>
             <EducatorProperties label="Total watch mins" stats={watchMins} />

@@ -1,0 +1,52 @@
+---
+name: EducatorDetailedCard
+date: 2019-11-29
+menu: Composite Components
+---
+import { Playground } from 'docz'
+import EducatorDetailedCard from './EducatorDetailedCard'
+
+
+# EducatorDetailedCard
+## Props
+Accepts 10 Prop
+
+gridColumn - width of card
+
+imageSrc - avatar image source
+
+name - name of educator
+
+isVerified - whether the user is verufied or not
+
+watchMins - Cumulative addition of all the minutes students have watched the educators video
+
+eduRank - Educator Rank
+
+goalName - Name of goal
+
+eduDetails - Educator Details
+
+followers - Number of followers educator have
+
+follow - When user clicks on follow button this function will be triggered
+
+
+
+<Playground>
+
+ <div style={{width: "450px"}}>
+   <EducatorDetailedCard
+          watchMins="55M"
+          name="Arjit Jindal"
+          isVerified="true"
+          eduRank="1"
+          goalName="IIT JEE"
+          eduDetails="Maths faculty for IIT JEE (Main and Advance), Maths Specialist for Calculus, Ex Senior faculty Vibrant Academy, Top notch online faculty"
+          gridColumn={9}
+          followers="542K"
+          follow={() => console.log('Write a follow function')}
+        />
+  </div>      
+     
+</Playground>

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import courses from './courses';
-import authors from './authors';
+import users from './users';
 import goals from './goals';
+import paginator from './paginator';
 
-export default combineReducers({ courses, authors, goals });
+export default combineReducers({ courses, users, goals, paginator });

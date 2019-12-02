@@ -3,6 +3,8 @@ import { Logo } from '../../components/Base';
 import Notification from './Notification';
 import SearchTab from './SearchTab';
 import HeaderUser from './HeaderUser';
+import Divider from './Divider';
+import Dropdown from './Dropdown';
 
 const HeaderContainer = styled.header`
   height: 72px;
@@ -24,8 +26,10 @@ const Header = () => (
   <HeaderContainer>
     <HeaderParent>
       <Logo />
+      <Dropdown />
       <SearchTab />
       <Notification />
+      <Divider />
       <HeaderUser />
     </HeaderParent>
   </HeaderContainer>

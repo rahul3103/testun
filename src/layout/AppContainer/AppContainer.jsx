@@ -8,6 +8,7 @@ const AppContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-column-gap: 16px;
+  grid-row-gap: 16px;
   grid-template-rows: 72px 1fr;
   background-size: ${process.env.isDev ? '96px 96px' : 'none'};
   background-image: ${process.env.isDev

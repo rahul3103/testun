@@ -2,7 +2,7 @@
 /* eslint-disable radix */
 class User {
   constructor(user) {
-    this.firstName = user.first_name ? user.first_name.toUpperCase() : '';
+    this.firstName = user.first_name ? user.first_name.toLocaleString() : '';
     this.lastName = user.last_name ? user.last_name : '';
 
     // Let's keep these as common keys for all the models

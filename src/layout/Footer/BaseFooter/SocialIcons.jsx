@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Spacings, BgColors } from '../../styleConstants';
+import { Spacings, BgColors } from '../../../styleConstants';
 
 const SocialIconWrapper = styled.div`
   border-radius: ${Spacings.SPACING_2B};

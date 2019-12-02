@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BgColors, Spacings } from '../../../styleConstants';
 import { Tags, H5, P2 } from '../../Base';
 
-const StyledCourseCardDetails = styled.div`
+const StyledPlusCourseCardDetails = styled.div`
   background-color: ${BgColors.WHITE};
   text-align: left;
   padding: ${Spacings.SPACING_4B};
@@ -15,21 +15,21 @@ const TopicGroupTag = styled(Tags)`
 const LanguageTag = styled(Tags)``;
 
 const CourseTitle = styled(H5)`
-  padding: ${Spacings.SPACING_2B} ${Spacings.SPACING_0B};
-  margin: ${Spacings.SPACING_0B};
+  padding-top: ${Spacings.SPACING_2B};
+  padding-bottom: ${Spacings.SPACING_1B};
 `;
 
 const CourseInfo = styled(P2)`
-  margin: ${Spacings.SPACING_0B};
+  padding-top: ${Spacings.SPACING_1B};
+  padding-bottom: ${Spacings.SPACING_1B};
 `;
 
-const EducatorName = styled(CourseInfo)`
-  margin: ${Spacings.SPACING_0B};
-  padding: ${Spacings.SPACING_2B} ${Spacings.SPACING_0B};
+const EducatorName = styled(P2)`
+  padding-top: ${Spacings.SPACING_1B};
 `;
 
-const CourseCardDetails = () => (
-  <StyledCourseCardDetails>
+const PlusCourseCardDetails = () => (
+  <StyledPlusCourseCardDetails>
     <LanguageTag type="hollow">English</LanguageTag>
     <TopicGroupTag type="transparent">Work, Energy & Power</TopicGroupTag>
     <CourseTitle>Course on Determinants and Matrices</CourseTitle>
@@ -37,7 +37,7 @@ const CourseCardDetails = () => (
       Starts on Oct 23, 2019 • 50 lessons
     </CourseInfo>
     <EducatorName>Manoj Chauhan</EducatorName>
-  </StyledCourseCardDetails>
+  </StyledPlusCourseCardDetails>
 );
 
-export default CourseCardDetails;
+export default PlusCourseCardDetails;

@@ -3043,10 +3043,10 @@ babel-plugin-emotion@^10.0.22, babel-plugin-emotion@^10.0.23:
     find-root "^1.1.0"
     source-map "^0.5.7"
 
-babel-plugin-export-metadata@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/babel-plugin-export-metadata/-/babel-plugin-export-metadata-2.0.0-rc.69.tgz#da0b32d687b4ca95b74f5b6d62c9b45f54dd2478"
-  integrity sha512-AhLs/MKnw8o8Qpd1o4A170HT65ldcb3PWIPekyYlmFc2PH4LzTXNn/UjNLdWaYsYPUHudDh/so/18v0QPIWXfQ==
+babel-plugin-export-metadata@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-export-metadata/-/babel-plugin-export-metadata-2.1.0.tgz#c840504fb0c7b687540e6dcc9c1f94c1d5b27bf8"
+  integrity sha512-ZvKKXm8ELufBR83+jDv8VW7i2kbzTgGqnNOChcb16ucM7UlAXStTP3OXTOHGg/0/IWQJIxq11jkv8L14ZLzAPQ==
   dependencies:
     "@babel/cli" "^7.5.5"
     "@babel/core" "^7.5.5"
@@ -5294,16 +5294,16 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-docz-core@2.0.0-rc.75:
-  version "2.0.0-rc.75"
-  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.0.0-rc.75.tgz#10f477beceb91101fd0ea20d9f5d00e6c0793654"
-  integrity sha512-eIvf2kpa7O3yzpIMxwJHafdGvqrxSpw0Rl/xBQeonOSi2Zq5kOIjFTL5MQ6ruJQsntKxOw2mPiCljeBHihuZFA==
+docz-core@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.1.1.tgz#2c74949db380860f2dd047aae46b27ab754b5160"
+  integrity sha512-fpBoyyqYA+bDAJF6QFoQaT0Hug4g5hlGwAho2Rh7CR8CrccnCfZ8nJrRu/8BUc5GkwEtR7gxIciSijfkIJe7KQ==
   dependencies:
     "@sindresorhus/slugify" "^0.9.1"
     chalk "^2.4.2"
     chokidar "^3.0.2"
     detect-port "^1.3.0"
-    docz-utils "2.0.0-rc.69"
+    docz-utils "^2.1.0"
     env-dot-prop "^2.0.1"
     fast-deep-equal "^2.0.1"
     fast-glob "^3.0.4"
@@ -5312,12 +5312,12 @@ docz-core@2.0.0-rc.75:
     get-pkg-repo "^4.1.0"
     humanize-string "^2.1.0"
     latest-version "^5.1.0"
-    load-cfg "2.0.0-rc.69"
+    load-cfg "^2.1.0"
     lodash "^4.17.14"
     minimatch "^3.0.4"
     ora "^3.4.0"
     react-docgen "^4.1.1"
-    react-docgen-actual-name-handler "2.0.0-rc.69"
+    react-docgen-actual-name-handler "^2.1.0"
     react-docgen-external-proptypes-handler "^1.0.3"
     react-docgen-typescript "^1.12.5"
     recast "^0.18.1"
@@ -5330,10 +5330,10 @@ docz-core@2.0.0-rc.75:
     xstate "^4.6.7"
     yargs "^13.3.0"
 
-docz-utils@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/docz-utils/-/docz-utils-2.0.0-rc.69.tgz#1e62d8e70ebae7798f307e23047e0343c8b05f2a"
-  integrity sha512-bIYeGZs+uC0ecfpB2Bks5a0NHdeU/+cvSLe7h4t+XKFDkWVMMgiNYt7vhLoyBHEtuCYXV/4j9x3TH6iqHfO5cA==
+docz-utils@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/docz-utils/-/docz-utils-2.1.0.tgz#648a7b28a2b8fc481483ee87e0fcc43a36b830ec"
+  integrity sha512-+GDl74VYExkiOJtM8iZ7GBRfkN5iC9UvESTQurA/sT/SwTFAxmbRdZs74r2vBkZofyCiQ+MLn2H2c9m5Q1D67A==
   dependencies:
     "@babel/generator" "^7.5.5"
     "@babel/parser" "^7.5.5"
@@ -5358,21 +5358,21 @@ docz-utils@2.0.0-rc.69:
     unist-util-is "^3.0.0"
     unist-util-visit "^1.4.1"
 
-docz@^2.0.0-rc.77:
-  version "2.0.0-rc.77"
-  resolved "https://registry.yarnpkg.com/docz/-/docz-2.0.0-rc.77.tgz#5976cc4c9d373698a5a9a648b27f470ae93a8832"
-  integrity sha512-TsFFNUE1SSnU5BRemU7ukPOWnXQhWrLL59KmOrv3Hibfdn2hJBW8Qi0Jux+PmUepVc+gVUWMNOpEycNfKulqXA==
+docz@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/docz/-/docz-2.1.1.tgz#9995cad42ac8e0053dfb9adf64ef760a23555626"
+  integrity sha512-R1Ibub9FLVvWV8NTzIxlsAXGGUcaOXDF6a3BBPGDHqoRg1WDfhyl/fzK44FCmlPORguY0VBTjNIOKq/fOJ8idw==
   dependencies:
     "@emotion/core" "^10.0.16"
     "@mdx-js/react" "^1.0.27"
     array-sort "^1.0.0"
     capitalize "^2.0.0"
-    docz-core "2.0.0-rc.75"
+    docz-core "^2.1.1"
     fast-deep-equal "^2.0.1"
     gatsby "^2.13.27"
     gatsby-plugin-eslint "^2.0.5"
     gatsby-plugin-typescript "^2.1.6"
-    gatsby-theme-docz "2.0.0-rc.77"
+    gatsby-theme-docz "^2.1.0"
     lodash "^4.17.14"
     marksy "^8.0.0"
     match-sorter "^3.1.1"
@@ -5839,6 +5839,11 @@ eslint-module-utils@^2.4.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
+eslint-plugin-eslint-plugin@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-plugin/-/eslint-plugin-eslint-plugin-2.1.0.tgz#a7a00f15a886957d855feacaafee264f039e62d5"
+  integrity sha512-kT3A/ZJftt28gbl/Cv04qezb/NQ1dwYIbi8lyf806XMxkus7DvOVCLIfTXMrorp322Pnoez7+zabXH29tADIDg==
+
 eslint-plugin-flowtype@^3.13.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.13.0.tgz#e241ebd39c0ce519345a3f074ec1ebde4cf80f2c"
@@ -5903,7 +5908,7 @@ eslint-plugin-react-hooks@^2.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.3.0.tgz#53e073961f1f5ccf8dd19558036c1fac8c29d99a"
   integrity sha512-gLKCa52G4ee7uXzdLiorca7JIQZPPXRAQDXV83J4bUEeUuc5pIEyZYAZ45Xnxe5IuupxEqHS+hUhSLIimK1EMw==
 
-eslint-plugin-react@^7.14.3, eslint-plugin-react@^7.16.0:
+eslint-plugin-react@^7.16.0:
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.16.0.tgz#9928e4f3e2122ed3ba6a5b56d0303ba3e41d8c09"
   integrity sha512-GacBAATewhhptbK3/vTP09CbFrgUJmBSaaRcWdbQLFvUZy9yVcQxigBNHGPU/KE2AyHpzj3AWXpxoMTsIDiHug==
@@ -5917,6 +5922,22 @@ eslint-plugin-react@^7.14.3, eslint-plugin-react@^7.16.0:
     object.values "^1.1.0"
     prop-types "^15.7.2"
     resolve "^1.12.0"
+
+eslint-plugin-react@^7.17.0:
+  version "7.17.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.17.0.tgz#a31b3e134b76046abe3cd278e7482bd35a1d12d7"
+  integrity sha512-ODB7yg6lxhBVMeiH1c7E95FLD4E/TwmFjltiU+ethv7KPdCwgiFuOZg9zNRHyufStTDLl/dEFqI2Q1VPmCd78A==
+  dependencies:
+    array-includes "^3.0.3"
+    doctrine "^2.1.0"
+    eslint-plugin-eslint-plugin "^2.1.0"
+    has "^1.0.3"
+    jsx-ast-utils "^2.2.3"
+    object.entries "^1.1.0"
+    object.fromentries "^2.0.1"
+    object.values "^1.1.0"
+    prop-types "^15.7.2"
+    resolve "^1.13.1"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -5946,10 +5967,53 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
-eslint@^6.6.0, eslint@^6.7.1:
+eslint@^6.6.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.7.1.tgz#269ccccec3ef60ab32358a44d147ac209154b919"
   integrity sha512-UWzBS79pNcsDSxgxbdjkmzn/B6BhsXMfUaOHnNwyE8nD+Q6pyT96ow2MccVayUTV4yMid4qLhMiQaywctRkBLA==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    ajv "^6.10.0"
+    chalk "^2.1.0"
+    cross-spawn "^6.0.5"
+    debug "^4.0.1"
+    doctrine "^3.0.0"
+    eslint-scope "^5.0.0"
+    eslint-utils "^1.4.3"
+    eslint-visitor-keys "^1.1.0"
+    espree "^6.1.2"
+    esquery "^1.0.1"
+    esutils "^2.0.2"
+    file-entry-cache "^5.0.1"
+    functional-red-black-tree "^1.0.1"
+    glob-parent "^5.0.0"
+    globals "^12.1.0"
+    ignore "^4.0.6"
+    import-fresh "^3.0.0"
+    imurmurhash "^0.1.4"
+    inquirer "^7.0.0"
+    is-glob "^4.0.0"
+    js-yaml "^3.13.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.3.0"
+    lodash "^4.17.14"
+    minimatch "^3.0.4"
+    mkdirp "^0.5.1"
+    natural-compare "^1.4.0"
+    optionator "^0.8.3"
+    progress "^2.0.0"
+    regexpp "^2.0.1"
+    semver "^6.1.2"
+    strip-ansi "^5.2.0"
+    strip-json-comments "^3.0.1"
+    table "^5.2.3"
+    text-table "^0.2.0"
+    v8-compile-cache "^2.0.3"
+
+eslint@^6.7.2:
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.7.2.tgz#c17707ca4ad7b2d8af986a33feba71e18a9fecd1"
+  integrity sha512-qMlSWJaCSxDFr8fBPvJM9kJwbazrhNcBU3+DszDW1OlEwKBBRWsJc7NJFelvwQpanHCR14cOLD41x8Eqvo3Nng==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -7006,10 +7070,10 @@ gatsby-telemetry@^1.1.39:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-docz@2.0.0-rc.77:
-  version "2.0.0-rc.77"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-docz/-/gatsby-theme-docz-2.0.0-rc.77.tgz#923a4ea747d86fb02a325d6fc8dbaeaa03ffbeb5"
-  integrity sha512-HMnG8nSoqQuFiVeMFceT01UaQ2J8Zm7/A5mnFXHgmudRddLSaeSzpaHhy9YFVdln84pVloyo1Pyz+FXmVGaV5A==
+gatsby-theme-docz@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-docz/-/gatsby-theme-docz-2.1.0.tgz#5033d2d4225146034bc0875d9d583511cf822779"
+  integrity sha512-oyiDQqwKCUFulaDUwz0Kzcmxq9jlLEYdo7IE0KDn0jpCn3g0qhNuvhcvXw0LrLeqDHV9ZbPfc8bwWVT61TYg+Q==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
@@ -7017,7 +7081,7 @@ gatsby-theme-docz@2.0.0-rc.77:
     "@mdx-js/mdx" "^1.1.0"
     "@mdx-js/react" "^1.0.27"
     "@theme-ui/typography" "^0.2.5"
-    babel-plugin-export-metadata "2.0.0-rc.69"
+    babel-plugin-export-metadata "^2.1.0"
     copy-text-to-clipboard "^2.1.0"
     emotion-theming "^10.0.14"
     fs-extra "^8.1.0"
@@ -7037,9 +7101,9 @@ gatsby-theme-docz@2.0.0-rc.77:
     react-feather "^2.0.3"
     react-helmet-async "^1.0.4"
     react-live "^2.1.2"
-    rehype-docz "2.0.0-rc.69"
+    rehype-docz "^2.1.0"
     rehype-slug "^2.0.3"
-    remark-docz "2.0.0-rc.69"
+    remark-docz "^2.1.0"
     remark-frontmatter "^1.3.2"
     theme-ui "^0.2.38"
     typescript "3.5.3"
@@ -9124,7 +9188,7 @@ jss@10.0.0, jss@^10.0.0:
     is-in-browser "^1.1.3"
     tiny-warning "^1.0.2"
 
-jsx-ast-utils@^2.2.1:
+jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.2.3.tgz#8a9364e402448a3ce7f14d357738310d9248054f"
   integrity sha512-EdIHFMm+1BPynpKOpdPqiOsvnIrInRGJD7bzPZdPkjitQEqpdpUuFpq4T0npZFKTiB3RhWFdGN+oqOJIdhDhQA==
@@ -9240,10 +9304,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@>=9.4.3:
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-9.4.3.tgz#f55ad5f94f6e105294bfd6499b23142961f7b982"
-  integrity sha512-PejnI+rwOAmKAIO+5UuAZU9gxdej/ovSEOAY34yMfC3OS4Ac82vCBPzAWLReR9zCPOMqeVwQRaZ3bUBpAsaL2Q==
+lint-staged@>=9.5.0:
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-9.5.0.tgz#290ec605252af646d9b74d73a0fa118362b05a33"
+  integrity sha512-nawMob9cb/G1J98nb8v3VC/E8rcX1rryUYXVZ69aT9kde6YWX+uvNOEHY5yf2gcWcTJGiD0kqXmCnS3oD75GIA==
   dependencies:
     chalk "^2.4.2"
     commander "^2.20.0"
@@ -9304,10 +9368,10 @@ listr@^0.14.3:
     p-map "^2.0.0"
     rxjs "^6.3.3"
 
-load-cfg@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/load-cfg/-/load-cfg-2.0.0-rc.69.tgz#f59285497b91cee703491a75d36402b622468bcf"
-  integrity sha512-tFs2sY1XqFl3k4q193VIVNFDkLCLJDFLCwRb9KHlrGpfDZ9sjNv8hdYuKmJLd9yJR0lbHym20tWmh1N/W2xABw==
+load-cfg@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/load-cfg/-/load-cfg-2.1.0.tgz#230ef6950466df59be934363988d35eee48ce8b9"
+  integrity sha512-gge8ggp7RPNXLgYQzXQ2MRvu3JqUedtO6SjFLufw8ShMK48lRrOh0eyW9sBq/R/We1TXc9YaYHSnkOMzvBvRPg==
   dependencies:
     "@babel/core" "^7.5.5"
     "@babel/preset-env" "^7.5.5"
@@ -10765,7 +10829,7 @@ object.entries@^1.1.0:
     function-bind "^1.1.1"
     has "^1.0.3"
 
-object.fromentries@^2.0.0:
+object.fromentries@^2.0.0, object.fromentries@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.1.tgz#050f077855c7af8ae6649f45c80b16ee2d31e704"
   integrity sha512-PUQv8Hbg3j2QX0IQYv3iAGCbGcu4yY4KQ92/dhA4sFSixBmSmp13UpDLs6jGK8rBtbmhNNIK99LD2k293jpiGA==
@@ -12628,10 +12692,10 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-docgen-actual-name-handler@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/react-docgen-actual-name-handler/-/react-docgen-actual-name-handler-2.0.0-rc.69.tgz#80744db5787ad16c37a899d17f24d673b6ce7559"
-  integrity sha512-mm7dyQMsESZEpPGTZ6CpVwnoNkAKYgazZSnJaPtss1qvR4LlgX3lsP1618hJ/rJCP2QKm9OEfEGy7xpaygc6Fg==
+react-docgen-actual-name-handler@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-actual-name-handler/-/react-docgen-actual-name-handler-2.1.0.tgz#0609e428bad81a7b2557bb2c1c12c370ec784a82"
+  integrity sha512-EHdAke/RQQnoU7Gm1iZDcnBblnBVkA0RQGeLChwG6zSEyFaWN+HYZl8P+naY32vXde+aJt/V/QCi6bNt8hI4Pg==
   dependencies:
     react-docgen "^4.1.1"
     recast "^0.18.1"
@@ -13082,13 +13146,13 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-docz@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/rehype-docz/-/rehype-docz-2.0.0-rc.69.tgz#5171e36d21c408bb62b44bef28c06a06b047a1a4"
-  integrity sha512-AcFi0BFN8tzC8tLU2fpwTQ+p0+HRBa6JOsg6qs7JVOSGAXljbt+byYVm6+wm338P8vzxMLuyvDPuXXO32B5zqA==
+rehype-docz@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-docz/-/rehype-docz-2.1.0.tgz#a8fae72399639f0e8129e8d5fd299c83e4e04ccb"
+  integrity sha512-Bcr4WQxu3cth8BcTj4VPQoVLHuh3LPvNHuh4T+3ObXMJkzfTFe7lJa4xLh/jyWYJ67qEUxJwbjKMYVtqLzV2Ww==
   dependencies:
     brace "^0.11.1"
-    docz-utils "2.0.0-rc.69"
+    docz-utils "^2.1.0"
     hast-util-to-string "^1.0.2"
     jsx-ast-utils "^2.2.1"
     lodash "^4.17.14"
@@ -13119,10 +13183,10 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-docz@2.0.0-rc.69:
-  version "2.0.0-rc.69"
-  resolved "https://registry.yarnpkg.com/remark-docz/-/remark-docz-2.0.0-rc.69.tgz#84a76e06a5c0ba4a38d884b3de50198561a78ad4"
-  integrity sha512-1Iyt9gLdTBEqmVGrIsVgYksB+f//8+ProDMysdxRGNVJKoRqo904QMvFnGGLmIDslR7ff8sLmoqgUBorm/ObvA==
+remark-docz@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/remark-docz/-/remark-docz-2.1.0.tgz#e5ea97ec1922689d6fcd9965d49ae36162709eb3"
+  integrity sha512-5Crfi0xyBEoEJP06eaVZ6FodMWf3SunzL8icubxxqgAaIklgqp9H2hQ6getSe+0VM8yj0P1r2LPrl7GA1PLEPw==
   dependencies:
     "@babel/generator" "^7.5.5"
     "@babel/types" "^7.5.5"
@@ -13424,6 +13488,13 @@ resolve@^1.10.0, resolve@^1.11.0, resolve@^1.12.0, resolve@^1.3.2, resolve@^1.5.
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.12.0.tgz#3fc644a35c84a48554609ff26ec52b66fa577df6"
   integrity sha512-B/dOmuoAik5bKcD6s6nXDCjzUKnaDvdkRyAk6rsmsKLipWj4797iothd7jmmUhWTfinVMU+wc56rYKsit2Qy4w==
+  dependencies:
+    path-parse "^1.0.6"
+
+resolve@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.13.1.tgz#be0aa4c06acd53083505abb35f4d66932ab35d16"
+  integrity sha512-CxqObCX8K8YtAhOBRg+lrcdn+LK+WYOS8tSjqSFbjtrI5PnS63QPhZl4+yKfrU9tdsbMu9Anr/amegT87M9Z6w==
   dependencies:
     path-parse "^1.0.6"
 

@@ -104,7 +104,24 @@ const TextSpan = styled.span`
   line-height: ${Fonts.BUTTON_LINE_HEIGHT};
 `;
 
-const Button = ({ label, type, theme, onClick, icon, style, size }) => {
+const IconSpan = styled.span`
+  display: flex;
+  align-items: center;
+`;
+
+const setButtonContent = (icon, label, size) => {
+  if (!icon) {
+    return <TextSpan size={size}>{label}</TextSpan>;
+  }
+  return (
+    <IconSpan>
+      {icon}
+      <TextSpan icon={icon}>{label}</TextSpan>
+    </IconSpan>
+  );
+};
+
+const Button = ({ label, type, theme, onClick, size, icon }) => {
   const [posX, setPosX] = useState(0);
   const [posY, setPosY] = useState(0);
   const getPos = e => {
@@ -122,21 +139,15 @@ const Button = ({ label, type, theme, onClick, icon, style, size }) => {
       onClick={onClick}
       type={type}
       theme={theme}
-      icon={icon}
-      style={style}
       size={size}
-      css={`
-        ${{ ...style }}
-      `}
+      icon={icon}
     >
       {type === 'filled' && (
         <ParentSpan>
           <StyledSpan posX={posX} posY={posY} />
         </ParentSpan>
       )}
-      <TextSpan size={size} icon={icon}>
-        {label}
-      </TextSpan>
+      {setButtonContent(icon, label, size)}
     </StyledButton>
   );
 };
@@ -148,15 +159,13 @@ Button.propTypes = {
   type: PropTypes.oneOf(['hollow', 'filled', 'disabled']),
   theme: PropTypes.oneOf(['red', 'green']),
   onClick: PropTypes.func.isRequired,
-  icon: PropTypes.string,
   size: PropTypes.oneOf(['large', 'small']),
-  style: PropTypes.shape({})
+  // eslint-disable-next-line react/require-default-props
+  icon: PropTypes.node
 };
 
 Button.defaultProps = {
   type: 'filled',
   theme: 'green',
-  icon: '',
-  size: 'large',
-  style: {}
+  size: 'large'
 };
