@@ -1,0 +1,36 @@
+---
+name: EducatorCard
+date: 2019-11-28
+menu: Composite Components
+---
+import { Playground } from 'docz'
+import EducatorCard from './EducatorCard'
+
+
+# EducatorCard
+## Props
+Accepts 5 Prop
+
+gridColumn - width of card
+
+imageSrc - avatar image source
+
+name - name of educator
+
+isVerified - whether the user is verufied or not
+
+watchMins - Cumulative addition of all the minutes students have watched the educators video
+
+
+
+<Playground>
+
+ <div style={{width: "272px"}}>
+ <EducatorCard
+          watchMins="55M"
+          name="Arjit Jindal"
+          isVerified="true"
+          gridColumn={5}
+        />
+</div>     
+</Playground>
