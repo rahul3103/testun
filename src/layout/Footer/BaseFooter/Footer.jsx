@@ -38,12 +38,12 @@ const FooterLinksWrapper = styled.div`
   grid-column: 8/15;
   justify-content: space-between;
 `;
-const LeftLinksWrapper = styled.div`
+const LeftLinksWrapper = styled.ul`
   display: flex;
   flex-direction: column;
 `;
 
-const RightLinksWrapper = styled.div`
+const RightLinksWrapper = styled.ul`
   display: flex;
   flex-direction: column;
 `;
@@ -207,12 +207,8 @@ const BaseFooter = () => {
           <P2> © 2019 Sorting Hat Technologies</P2>
         </UNInfo>
         <FooterLinksWrapper>
-          <LeftLinksWrapper>
-            <ul>{linksLeft}</ul>
-          </LeftLinksWrapper>
-          <RightLinksWrapper>
-            <ul>{linksRight}</ul>
-          </RightLinksWrapper>
+          <LeftLinksWrapper>{linksLeft}</LeftLinksWrapper>
+          <RightLinksWrapper>{linksRight}</RightLinksWrapper>
         </FooterLinksWrapper>
         <DownloadAppsWrapper>
           <LearnerAppsWrapper>

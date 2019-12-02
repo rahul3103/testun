@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { TextColors, Fonts } from '../../../styleConstants';
 
 const Anchor = styled.a`
-  color: ${TextColors.TEXT_PRIMARY};
+  color: ${TextColors.BLACK};
   line-height: ${Fonts.HEADER_LINE_HEIGHT};
   font-size: ${Fonts.P2};
   font-weight: ${Fonts.REGULAR};
