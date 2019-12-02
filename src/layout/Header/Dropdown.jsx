@@ -2,59 +2,55 @@ import { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import styled, { keyframes } from 'styled-components';
-import { KeyboardArrowDown } from '../../components/Icons';
+import { KeyboardArrowDown, Check, ChevronRight } from '../../components/Icons';
+import { Divider } from '../../components/Base';
 
-const keyFrameOpen = keyframes`
+const keyFrameOpen = height => keyframes`
   0% {
     height: 0px;
   }
   65% {
-    height: 140px;
+    height: ${height + 20}px;
   }
   80% {
-    height: 136px;
+    height: ${height + 10}px;
   }
   100% {
-    height: 126px;
+    height: ${height}px;
   }
 `;
 
-const keyFrameClose = keyframes`
+const keyFrameClose = height => keyframes`
   0% {
     opacity: 1 !important;
   }
   20% {
-    height: 140px;
+    height: ${height + 20}px;
     opacity: 1 !important;
   }
   30% {
-    height: 120px;
+    height: ${height}px;
     opacity: 1 !important;
   }
-  50% {
-    opacity: 0 !important;
-  }
+
   100% {
     height: 0px;
-    opacity: 0 !important;
   }
 `;
 
 const DropDownButton = styled(Button)`
-  &.MuiButtonBase-root {
-    align-self: center;
-    grid-column: 5/9;
-    padding: 14px 20px;
-    border-radius: 8px;
-    border: 1px solid #f0f4f7;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 150%;
-    color: #3c4852;
-  }
-  &.MuiButton-root:hover {
+  align-self: center;
+  grid-column: 5/9;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid #f0f4f7;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #3c4852;
+  :hover {
     background-color: #fff;
-    box-shadow: 0 8px 8px 0 #f0f4f7;
+    border-color: #dde6ed;
   }
   &.MuiButtonBase-root .MuiButton-label {
     display: flex;
@@ -68,14 +64,15 @@ const DropDownButton = styled(Button)`
 
 const StyledMenu = styled(Menu)`
   &.MuiPopover-root .MuiPaper-root {
-    width: 176px;
+    min-width: 233px;
     border: 1px solid #f0f4f7;
     border-radius: 8px;
     margin-top: 12px;
     background-color: #fff;
     box-shadow: 0px 16px 32px #f0f4f7;
     transition: none !important;
-    animation: ${({ open }) => (open ? keyFrameOpen : keyFrameClose)}
+    animation: ${({ open, menuheight }) =>
+        open ? keyFrameOpen(menuheight) : keyFrameClose(menuheight)}
       ${({ open }) => (open ? '350ms' : '300ms')} ease-in-out 0s;
     transform: none !important;
     opacity: 1 !important;
@@ -87,11 +84,47 @@ const StyledArrowDown = styled(KeyboardArrowDown)`
   transform: ${({ open }) => (open ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
+const MenuItem = styled.li`
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+`;
+
+const Label = styled.span`
+  font-size: 14px;
+  line-height: 150%;
+  color: ${({ selected }) => (selected ? '#08bd80' : '#3C4852')};
+  flex-grow: 1;
+  display: block;
+  padding-left: ${({ secondary }) => (secondary ? 0 : '16px')};
+  font-weight: ${({ selected }) => (selected ? 'bold' : 'initial')};
+`;
+
+const Language = styled.span`
+  display: block;
+  font-size: 12px;
+  line-height: 150%;
+  color: #808080;
+  padding-right: 4px;
+`;
+
+const StyledDivider = styled(Divider)`
+  margin: 0 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+`;
+
+const StyledImg = styled.img``;
+
 const Dropdown = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [menuHeight, setMenuHeight] = useState(0);
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
+    const menuWrapper = document.getElementById('goal-selection');
+    const menu = menuWrapper.getElementsByTagName('ul');
+    setMenuHeight(menu[0].clientHeight);
   };
 
   const handleClose = () => {
@@ -108,6 +141,7 @@ const Dropdown = () => {
         IIT JEE
       </DropDownButton>
       <StyledMenu
+        id="goal-selection"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
@@ -116,38 +150,34 @@ const Dropdown = () => {
         getContentAnchorEl={null}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'center'
+          horizontal: 'left'
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'center'
+          horizontal: 'left'
         }}
         variant="menu"
+        menuheight={menuHeight}
       >
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
-        {/* <StyledMenuItem>
-          <ListItemIcon>
-            <SendIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Sent mail" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <DraftsIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Drafts" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </StyledMenuItem> */}
+        <MenuItem>
+          <StyledImg src="static/images/goal.svg" />
+          <Label selected>IIT JEE</Label>
+          <Check size="24px" color="#08bd80" />
+        </MenuItem>
+        <MenuItem>
+          <StyledImg src="static/images/exam.svg" />
+          <Label>Exams</Label>
+        </MenuItem>
+        <StyledDivider />
+        <MenuItem>
+          <Label secondary>Language</Label>
+          <Language>Malyalam</Language>
+          <ChevronRight size="16px" />
+        </MenuItem>
+        <MenuItem>
+          <Label secondary>Manage goals</Label>
+          <ChevronRight size="16px" />
+        </MenuItem>
       </StyledMenu>
     </>
   );
