@@ -21,15 +21,12 @@ const StyledH5 = styled(H5)`
   margin-bottom: ${Spacings.SPACING_1B};
 `;
 
-const TopicGroupCard = ({ label, content, color, gridColumn }) => {
-  return (
-    <TopicGroupCardWrapper gridColumn={gridColumn} color={color}>
-      <StyledH5>{label}</StyledH5>
-      <P2>{content}</P2>
-    </TopicGroupCardWrapper>
-  );
-};
-
+const TopicGroupCard = ({ label, content, color, gridColumn }) => (
+  <TopicGroupCardWrapper gridColumn={gridColumn} color={color}>
+    <StyledH5>{label}</StyledH5>
+    <P2>{content}</P2>
+  </TopicGroupCardWrapper>
+);
 export default TopicGroupCard;
 
 TopicGroupCard.propTypes = {
