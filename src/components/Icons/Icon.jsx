@@ -26,7 +26,7 @@ const Icon = ({
 export default Icon;
 
 Icon.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   path: PropTypes.string.isRequired,
   width: PropTypes.string,
   height: PropTypes.string,
@@ -42,5 +42,6 @@ Icon.defaultProps = {
   className: '',
   width: Spacings.SPACING_3B,
   height: Spacings.SPACING_3B,
+  title: '',
   onClick: () => {}
 };

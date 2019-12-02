@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Logo } from '../../components/Base';
+import { Logo, Divider } from '../../components/Base';
 import Notification from './Notification';
 import SearchTab from './SearchTab';
 import HeaderUser from './HeaderUser';
-import Divider from './Divider';
 import Dropdown from './Dropdown';
 
 const HeaderContainer = styled.header`
@@ -22,6 +21,13 @@ const HeaderParent = styled.div`
   height: 100%;
 `;
 
+const StyledDivider = styled(Divider)`
+  &.MuiDivider-root {
+    margin: auto;
+    height: 40px;
+  }
+`;
+
 const Header = () => (
   <HeaderContainer>
     <HeaderParent>
@@ -29,7 +35,7 @@ const Header = () => (
       <Dropdown />
       <SearchTab />
       <Notification />
-      <Divider />
+      <StyledDivider orientation="vertical" />
       <HeaderUser />
     </HeaderParent>
   </HeaderContainer>
