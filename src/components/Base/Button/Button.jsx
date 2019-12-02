@@ -7,8 +7,8 @@ import {
   BgColors,
   Fonts,
   TextColors,
-  BUTTON_BORDER_WIDTH,
-  BUTTON_BORDER_STYLE
+  PRIMARY_BORDER_WIDTH,
+  SOLID_BORDER_STYLE
 } from '../../../styleConstants';
 
 const getBackgroundColor = {
@@ -27,8 +27,8 @@ const getTextColor = {
 
 const StyledButton = styled.button`
   position: relative;
-  border-width: ${props => props.type !== 'filled' && BUTTON_BORDER_WIDTH};
-  border-style: ${props => props.type !== 'filled' && BUTTON_BORDER_STYLE};
+  border-width: ${props => props.type !== 'filled' && PRIMARY_BORDER_WIDTH};
+  border-style: ${props => props.type !== 'filled' && SOLID_BORDER_STYLE};
   border-color: ${props =>
     props.type !== 'filled' && BorderColors.BORDER_PRIMARY};
   padding: ${props =>
