@@ -12,17 +12,17 @@ import {
 } from '../../../styleConstants';
 
 const getBackgroundColor = {
-  disabled: BgColors.BUTTON_DISABLED,
+  disabled: BgColors.DISABLED,
   hollow: BgColors.WHITE,
-  red: BgColors.BUTTON_THEME_RED,
-  green: BgColors.BUTTON_THEME_GREEN
+  red: BgColors.RED,
+  green: BgColors.GREEN
 };
 
 const getTextColor = {
-  disabled: TextColors.BUTTON_TEXT_DISABLED,
-  filled: TextColors.BUTTON_TEXT_FILLED,
-  red: TextColors.BUTTON_TEXT_RED,
-  green: TextColors.BUTTON_TEXT_GREEN
+  disabled: TextColors.DISABLED,
+  filled: TextColors.FILLED,
+  red: TextColors.RED,
+  green: TextColors.GREEN
 };
 
 const StyledButton = styled.button`

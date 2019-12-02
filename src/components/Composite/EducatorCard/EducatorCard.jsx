@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   padding: ${Spacings.SPACING_6B} ${Spacings.SPACING_4B};
   display: flex;
   box-shadow: 0px ${Spacings.SPACING_4B} ${Spacings.SPACING_8B}
-    ${ShadowColors.EDUCATOR_CARD_SHADOW};
+    ${ShadowColors.PRIMARY_SHADOW};
   border-radius: ${Spacings.SPACING_2B};
 `;
 
@@ -49,9 +49,7 @@ const EducatorCard = ({
       <InfoWrapper>
         <AuthorNameWrapper>
           <H5>{name}</H5>
-          {isVerified && (
-            <VerifiedIcon color={TextColors.VERIFIED_EDUCATOR_ICON} />
-          )}
+          {isVerified && <VerifiedIcon color={TextColors.BLUE} />}
         </AuthorNameWrapper>
         <P2 color="TEXT_SECONDARY">{mins}</P2>
       </InfoWrapper>

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { BgColors, Spacings } from '../../../styleConstants';
-import { Tags, H5, P2 } from '../../Base';
+import { Tags, H5, P2, Avatar, H6, StarRating } from '../../Base';
 
-const StyledPlusCourseCardDetails = styled.div`
+const StyledFreeCourseCardDetails = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,27 +25,51 @@ const CourseTitle = styled(H5)`
   padding-bottom: ${Spacings.SPACING_1B};
 `;
 
-const CourseInfo = styled(P2)`
+const CourseRating = styled.div`
+  display: flex;
   padding-top: ${Spacings.SPACING_1B};
   padding-bottom: ${Spacings.SPACING_1B};
+  align-items: center;
+`;
+
+const Educator = styled.div`
+  display: flex;
+  padding-top: ${Spacings.SPACING_4B};
+`;
+
+const EducatorAvatar = styled(Avatar)`
+  border-radius: ${Spacings.SPACING_1B};
 `;
 
 const EducatorName = styled(P2)`
-  padding-top: ${Spacings.SPACING_2B};
+  margin-left: ${Spacings.SPACING_2B};
+`;
+
+const Rating = styled(StarRating)`
+  margin-left: ${Spacings.SPACING_1B};
+  margin-right: ${Spacings.SPACING_2B};
 `;
 
 const PlusCourseCardDetails = ({ horizontal }) => (
-  <StyledPlusCourseCardDetails horizontal={horizontal}>
+  <StyledFreeCourseCardDetails horizontal={horizontal}>
     <div>
       <LanguageTag type="hollow">English</LanguageTag>
-      <TopicGroupTag type="transparent">Work, Energy & Power</TopicGroupTag>
+      <TopicGroupTag type="disabled">Mathematics</TopicGroupTag>
       <CourseTitle>Course on Determinants and Matrices</CourseTitle>
-      <CourseInfo color="TEXT_SECONDARY">
-        Starts on Oct 23, 2019 • 50 lessons
-      </CourseInfo>
+      <CourseRating>
+        <H6 color="ORANGE">4.9</H6>
+        <Rating />
+        <P2 color="TEXT_SECONDARY">(7 ratings)</P2>
+      </CourseRating>
     </div>
-    <EducatorName>Manoj Chauhan</EducatorName>
-  </StyledPlusCourseCardDetails>
+    <Educator>
+      <EducatorAvatar
+        src="https://edge.uacdn.net/static/thumbnail/user/ba337620490b495eb5984a236bd4c6b8.jpg"
+        size={Spacings.SPACING_4B}
+      />
+      <EducatorName horizontal={horizontal}>Manoj Chauhan</EducatorName>
+    </Educator>
+  </StyledFreeCourseCardDetails>
 );
 
 export default PlusCourseCardDetails;

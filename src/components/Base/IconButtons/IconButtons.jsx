@@ -9,7 +9,7 @@ const StyledIconButton = styled(IconButton)`
   height: ${Spacings.SPACING_8B};
   width: ${Spacings.SPACING_8B};
   box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
-    ${Spacings.SPACING_8B} ${ShadowColors.COURSE_CARD_SHADOW};
+    ${Spacings.SPACING_8B} ${ShadowColors.PRIMARY_SHADOW};
   padding: ${Spacings.SPACING_0B};
   &:hover {
     background-color: ${BgColors.WHITE};
