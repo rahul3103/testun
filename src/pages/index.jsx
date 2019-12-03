@@ -11,7 +11,6 @@ import {
 import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
 import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
-
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
 //   const goals = useSelector(state => state.goals.data);
@@ -51,7 +50,6 @@ class Index extends PureComponent {
     const { leaderboard, users } = this.props;
     return (
       <Layout>
-        <div style={{ gridColumn: 'span 6' }} />
         {leaderboard.KSCGY
           ? leaderboard.KSCGY.results.map(item => {
               const user = users[item.user];
