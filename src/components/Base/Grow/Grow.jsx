@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const GrowDiv = styled.div`
-  flex-grow: ${({ flexGrow }) => flexGrow};
+const Grow = styled.div`
+  flex-grow: ${({ flexGrow }) => flexGrow || 1};
 `;
 
-export default GrowDiv;
+export default Grow;

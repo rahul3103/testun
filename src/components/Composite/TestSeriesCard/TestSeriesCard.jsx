@@ -43,7 +43,7 @@ const TestSeriesCard = ({
         tests
       </TotalTestP2>
       <P2>{testInfo}</P2>
-      <Grow flexGrow={1} />
+      <Grow />
       <Button
         label={buttonLabel}
         onClick={toggleEnroll}
