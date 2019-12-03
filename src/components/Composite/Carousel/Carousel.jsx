@@ -49,7 +49,7 @@ const Carousel = ({ children }) => {
   };
 
   return (
-    <CarouselWrapper className="carousel slide" data-ride="carousel">
+    <CarouselWrapper>
       <CardContainer pos={pos}>{items}</CardContainer>
       <ControlButton onClick={handlePrev} direction="prev">
         <ChevronLeft size="24px" aria-hidden="true" />
