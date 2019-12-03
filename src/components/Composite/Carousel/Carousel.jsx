@@ -34,8 +34,7 @@ const ControlButton = styled(IconButton)`
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 300ms;
   }
-  ${({ direction }) =>
-    direction === 'prev' ? 'left : -16px' : 'right : -16px'}
+  ${({ direction }) => (direction === 'prev' ? 'left' : 'right')}: -16px;
 `;
 
 const Carousel = ({ children }) => {
