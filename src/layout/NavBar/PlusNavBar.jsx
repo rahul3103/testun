@@ -15,14 +15,11 @@ const Selected = styled.div`
   background-color: #fff;
   top: ${({ selectedElPos, selectedEl }) =>
     selectedElPos + (selectedEl === 'H4' ? 10 : 5)}px;
-  transition: all 400ms ease-in ;
+  transition: all 400ms ease-in;
   transition-property: top, height;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #f0f4f7;
   border-radius: 8px;
-  box-shadow: 0 16px 32px 0 #f0f4f7
-}
+  border: 1px solid #f0f4f7;
+  box-shadow: 0 16px 32px 0 #f0f4f7;
 `;
 
 const NavItems = styled.div`

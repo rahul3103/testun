@@ -5,8 +5,9 @@ import { Spacings } from '../../../styleConstants';
 const Thumbnail = styled.div.attrs(props => ({
   className: props.className
 }))`
-  height: ${Spacings.SPACING_38B};
-  background-image: url(${props => props.imgUrl});
+  height: ${({ orientation }) =>
+    orientation !== 'horizontal' && Spacings.SPACING_38B};
+  background-image: url(${({ imgUrl }) => imgUrl});
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -15,5 +16,6 @@ const Thumbnail = styled.div.attrs(props => ({
 export default Thumbnail;
 
 Thumbnail.propTypes = {
-  imgUrl: PropTypes.string.isRequired
+  imgUrl: PropTypes.string.isRequired,
+  orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };

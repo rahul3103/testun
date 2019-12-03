@@ -7,28 +7,28 @@ import {
   BgColors,
   Fonts,
   TextColors,
-  BUTTON_BORDER_WIDTH,
-  BUTTON_BORDER_STYLE
+  PRIMARY_BORDER_WIDTH,
+  SOLID_BORDER_STYLE
 } from '../../../styleConstants';
 
 const getBackgroundColor = {
-  disabled: BgColors.BUTTON_DISABLED,
+  disabled: BgColors.DISABLED,
   hollow: BgColors.WHITE,
-  red: BgColors.BUTTON_THEME_RED,
-  green: BgColors.BUTTON_THEME_GREEN
+  red: BgColors.RED,
+  green: BgColors.GREEN
 };
 
 const getTextColor = {
-  disabled: TextColors.BUTTON_TEXT_DISABLED,
-  filled: TextColors.BUTTON_TEXT_FILLED,
-  red: TextColors.BUTTON_TEXT_RED,
-  green: TextColors.BUTTON_TEXT_GREEN
+  disabled: TextColors.DISABLED,
+  filled: TextColors.FILLED,
+  red: TextColors.RED,
+  green: TextColors.GREEN
 };
 
 const StyledButton = styled.button`
   position: relative;
-  border-width: ${props => props.type !== 'filled' && BUTTON_BORDER_WIDTH};
-  border-style: ${props => props.type !== 'filled' && BUTTON_BORDER_STYLE};
+  border-width: ${props => props.type !== 'filled' && PRIMARY_BORDER_WIDTH};
+  border-style: ${props => props.type !== 'filled' && SOLID_BORDER_STYLE};
   border-color: ${props =>
     props.type !== 'filled' && BorderColors.BORDER_PRIMARY};
   padding: ${props =>

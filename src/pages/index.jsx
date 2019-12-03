@@ -10,7 +10,7 @@ import {
 } from '../redux/actions/educator';
 import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
-import { PaperCard } from '../components/Base';
+import { Paper } from '../components/Base';
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
 //   const goals = useSelector(state => state.goals.data);
@@ -51,7 +51,7 @@ class Index extends PureComponent {
     return (
       <Layout>
         <div style={{ gridColumn: 'span 24' }}>
-          <PaperCard label="Manage Goals" />
+          <Paper />
         </div>
       </Layout>
     );
