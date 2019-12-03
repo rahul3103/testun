@@ -29,13 +29,13 @@ const ControlButton = styled(IconButton)`
   opacity: 0;
   transition: visibility 0s linear 300ms, opacity 300ms;
   top: calc(50% - 16px);
-  ${({ direction }) =>
-    direction === 'prev' ? 'left : -16px' : 'right : -16px'}
   ${CarouselWrapper}:hover & {
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 300ms;
   }
+  ${({ direction }) =>
+    direction === 'prev' ? 'left : -16px' : 'right : -16px'}
 `;
 
 const Carousel = ({ children }) => {
