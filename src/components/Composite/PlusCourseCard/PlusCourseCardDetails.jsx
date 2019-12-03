@@ -10,15 +10,13 @@ const StyledPlusCourseCardDetails = styled.div`
   background-color: ${BgColors.WHITE};
   text-align: left;
   padding: ${Spacings.SPACING_4B}
-    ${({ horizontal }) =>
-      horizontal ? Spacings.SPACING_6B : Spacings.SPACING_4B};
+    ${({ orientation }) =>
+      orientation === 'horizontal' ? Spacings.SPACING_6B : Spacings.SPACING_4B};
 `;
 
 const TopicGroupTag = styled(Tags)`
   margin-left: ${Spacings.SPACING_2B};
 `;
-
-const LanguageTag = styled(Tags)``;
 
 const CourseTitle = styled(H5)`
   padding-top: ${Spacings.SPACING_2B};
@@ -34,10 +32,10 @@ const EducatorName = styled(P2)`
   padding-top: ${Spacings.SPACING_2B};
 `;
 
-const PlusCourseCardDetails = ({ horizontal }) => (
-  <StyledPlusCourseCardDetails horizontal={horizontal}>
+const PlusCourseCardDetails = ({ orientation }) => (
+  <StyledPlusCourseCardDetails orientation={orientation}>
     <div>
-      <LanguageTag type="hollow">English</LanguageTag>
+      <Tags type="hollow">English</Tags>
       <TopicGroupTag type="transparent">Work, Energy & Power</TopicGroupTag>
       <CourseTitle>Course on Determinants and Matrices</CourseTitle>
       <CourseInfo color="TEXT_SECONDARY">
@@ -51,9 +49,9 @@ const PlusCourseCardDetails = ({ horizontal }) => (
 export default PlusCourseCardDetails;
 
 PlusCourseCardDetails.propTypes = {
-  horizontal: PropTypes.bool
+  orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
 PlusCourseCardDetails.defaultProps = {
-  horizontal: false
+  orientation: 'vertical'
 };

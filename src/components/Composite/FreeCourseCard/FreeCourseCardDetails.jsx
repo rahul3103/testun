@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { BgColors, Spacings } from '../../../styleConstants';
-import { Tags, H5, P2, Avatar, H6, StarRating } from '../../Base';
+import { Tags, H5, P2, Avatar, StarRating } from '../../Base';
 
 const StyledFreeCourseCardDetails = styled.div`
   display: flex;
@@ -17,8 +17,6 @@ const StyledFreeCourseCardDetails = styled.div`
 const TopicGroupTag = styled(Tags)`
   margin-left: ${Spacings.SPACING_2B};
 `;
-
-const LanguageTag = styled(Tags)``;
 
 const CourseTitle = styled(H5)`
   padding-top: ${Spacings.SPACING_2B};
@@ -50,16 +48,14 @@ const Rating = styled(StarRating)`
   margin-right: ${Spacings.SPACING_2B};
 `;
 
-const PlusCourseCardDetails = ({ horizontal }) => (
-  <StyledFreeCourseCardDetails horizontal={horizontal}>
+const PlusCourseCardDetails = ({ orientation }) => (
+  <StyledFreeCourseCardDetails orientation={orientation}>
     <div>
-      <LanguageTag type="hollow">English</LanguageTag>
+      <Tags type="hollow">English</Tags>
       <TopicGroupTag type="disabled">Mathematics</TopicGroupTag>
       <CourseTitle>Course on Determinants and Matrices</CourseTitle>
       <CourseRating>
-        <H6 color="ORANGE">4.9</H6>
         <Rating />
-        <P2 color="TEXT_SECONDARY">(7 ratings)</P2>
       </CourseRating>
     </div>
     <Educator>
@@ -67,7 +63,7 @@ const PlusCourseCardDetails = ({ horizontal }) => (
         src="https://edge.uacdn.net/static/thumbnail/user/ba337620490b495eb5984a236bd4c6b8.jpg"
         size={Spacings.SPACING_4B}
       />
-      <EducatorName horizontal={horizontal}>Manoj Chauhan</EducatorName>
+      <EducatorName>Manoj Chauhan</EducatorName>
     </Educator>
   </StyledFreeCourseCardDetails>
 );
@@ -75,9 +71,9 @@ const PlusCourseCardDetails = ({ horizontal }) => (
 export default PlusCourseCardDetails;
 
 PlusCourseCardDetails.propTypes = {
-  horizontal: PropTypes.bool
+  orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
 PlusCourseCardDetails.defaultProps = {
-  horizontal: false
+  orientation: 'vertical'
 };

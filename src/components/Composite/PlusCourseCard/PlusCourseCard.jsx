@@ -6,7 +6,7 @@ import PlusCourseCardDetails from './PlusCourseCardDetails';
 import { Enroll } from '../../Icons';
 
 const StyledPlusCourseCard = styled.div`
-  display: ${({ horizontal }) => horizontal && 'flex'};
+  display: ${({ orientation }) => orientation === 'horizontal' && 'flex'};
   background-color: ${BgColors.WHITE};
   border-radius: ${Spacings.SPACING_2B};
   box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
@@ -31,18 +31,18 @@ const CourseThumbnail = styled(Thumbnail)`
   width: ${Spacings.SPACING_68B};
 `;
 
-const PlusCourseCard = ({ gridColumn, horizontal }) => (
-  <StyledPlusCourseCard gridColumn={gridColumn} horizontal={horizontal}>
+const PlusCourseCard = ({ gridColumn, orientation }) => (
+  <StyledPlusCourseCard gridColumn={gridColumn} orientation={orientation}>
     <CourseThumbnail
       imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png"
-      horizontal={horizontal}
+      orientation={orientation}
     >
       <EnrollButton>
         <Enroll size={Spacings.SPACING_5B} />
       </EnrollButton>
       <TimeTags type="filled">10:30 pm</TimeTags>
     </CourseThumbnail>
-    <PlusCourseCardDetails horizontal={horizontal} />
+    <PlusCourseCardDetails orientation={orientation} />
   </StyledPlusCourseCard>
 );
 
@@ -50,10 +50,10 @@ export default PlusCourseCard;
 
 PlusCourseCard.propTypes = {
   gridColumn: PropTypes.number,
-  horizontal: PropTypes.bool
+  orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
 PlusCourseCard.defaultProps = {
   gridColumn: 6,
-  horizontal: false
+  orientation: 'vertical'
 };

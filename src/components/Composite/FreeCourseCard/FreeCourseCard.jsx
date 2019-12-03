@@ -5,8 +5,8 @@ import { Thumbnail, Tags, IconButton } from '../../Base';
 import FreeCourseCardDetails from './FreeCourseCardDetails';
 import { Save } from '../../Icons';
 
-const StyledPlusCourseCard = styled.div`
-  display: ${({ horizontal }) => horizontal && 'flex'};
+const StyledFreeCourseCard = styled.div`
+  display: ${({ orientation }) => orientation === 'horizontal' && 'flex'};
   background-color: ${BgColors.WHITE};
   border-radius: ${Spacings.SPACING_2B};
   box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_4B}
@@ -31,11 +31,11 @@ const CourseThumbnail = styled(Thumbnail)`
   width: ${Spacings.SPACING_68B};
 `;
 
-const FreeCourseCard = ({ gridColumn, horizontal }) => (
-  <StyledPlusCourseCard gridColumn={gridColumn} horizontal={horizontal}>
+const FreeCourseCard = ({ gridColumn, orientation }) => (
+  <StyledFreeCourseCard gridColumn={gridColumn} orientation={orientation}>
     <CourseThumbnail
       imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png"
-      horizontal={horizontal}
+      orientation={orientation}
     >
       <EnrollButton>
         <Save size={Spacings.SPACING_5B} />
@@ -43,17 +43,17 @@ const FreeCourseCard = ({ gridColumn, horizontal }) => (
       <TimeTags type="filled">48 lessons</TimeTags>
     </CourseThumbnail>
     <FreeCourseCardDetails />
-  </StyledPlusCourseCard>
+  </StyledFreeCourseCard>
 );
 
 export default FreeCourseCard;
 
 FreeCourseCard.propTypes = {
   gridColumn: PropTypes.number,
-  horizontal: PropTypes.bool
+  orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
 FreeCourseCard.defaultProps = {
   gridColumn: 6,
-  horizontal: false
+  orientation: 'vertical'
 };
