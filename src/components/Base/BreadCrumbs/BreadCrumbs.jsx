@@ -8,8 +8,7 @@ const StyledCrumbs = styled.div`
   padding: ${Spacings.SPACING_2B} ${Spacings.SPACING_5B};
   transform: skew(-20deg);
   background: ${BgColors.WHITE};
-  margin-left: ${Spacings.SPACING_2B};
-  margin-right: ${Spacings.SPACING_2B};
+  margin: auto ${Spacings.SPACING_2B};
   border-radius: ${Spacings.SPACING_2B};
   box-shadow: ${Spacings.SPACING_0B} ${Spacings.SPACING_1B}
     ${Spacings.SPACING_4B} ${ShadowColors.PRIMARY_SHADOW};
