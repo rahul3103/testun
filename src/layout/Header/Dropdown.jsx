@@ -109,9 +109,7 @@ const Language = styled.span`
 `;
 
 const StyledDivider = styled(Divider)`
-  margin: 0 16px;
-  margin-top: 8px;
-  margin-bottom: 16px;
+  margin: 8px 16px;
 `;
 
 const StyledImg = styled.img``;

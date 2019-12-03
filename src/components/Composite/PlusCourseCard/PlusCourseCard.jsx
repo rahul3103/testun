@@ -12,6 +12,7 @@ const StyledPlusCourseCard = styled.div`
     ${Spacings.SPACING_8B} ${ShadowColors.COURSE_CARD_SHADOW};
   overflow: hidden;
   grid-column: span ${({ gridColumn }) => `${gridColumn}`};
+  display: inline-block;
 `;
 
 const TimeTags = styled(Tags)`
@@ -26,8 +27,8 @@ const EnrollButton = styled(IconButton)`
   top: ${Spacings.SPACING_4B};
 `;
 
-const PlusCourseCard = ({ gridColumn }) => (
-  <StyledPlusCourseCard gridColumn={gridColumn}>
+const PlusCourseCard = ({ gridColumn, className }) => (
+  <StyledPlusCourseCard gridColumn={gridColumn} className={className}>
     <Thumbnail imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png">
       <EnrollButton>
         <Enroll />
@@ -41,9 +42,11 @@ const PlusCourseCard = ({ gridColumn }) => (
 export default PlusCourseCard;
 
 PlusCourseCard.propTypes = {
-  gridColumn: PropTypes.number
+  gridColumn: PropTypes.number,
+  className: PropTypes.string
 };
 
 PlusCourseCard.defaultProps = {
-  gridColumn: 6
+  gridColumn: 6,
+  className: ''
 };

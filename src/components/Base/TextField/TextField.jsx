@@ -1,7 +1,7 @@
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import styled from 'styled-components';
 
-const UNTextField = styled(OutlinedInput)`
+const TextField = styled(OutlinedInput)`
   &.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-color: green;
   }
@@ -13,4 +13,4 @@ const UNTextField = styled(OutlinedInput)`
   }
 `;
 
-export default UNTextField;
+export default TextField;

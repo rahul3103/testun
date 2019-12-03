@@ -14,3 +14,4 @@ export { default as IconButton } from './IconButtons/IconButtons';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Divider } from './Divider/Divider';
 export { default as Link } from './Link/Link';
+export { default as TextField } from './TextField/TextField';

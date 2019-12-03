@@ -11,3 +11,4 @@ export { default as KeyboardArrowDown } from './KeyboardArrowDown';
 export { default as KeyboardArrowUp } from './KeyboardArrowUp';
 export { default as Check } from './Check';
 export { default as ChevronRight } from './ChevronRight';
+export { default as ChevronLeft } from './ChevronLeft';
