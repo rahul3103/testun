@@ -17,3 +17,4 @@ export { default as StarRating } from './StarRating/StarRating';
 // export { default as UNTextField } from './UNTextField/UNTextField';
 export { default as Divider } from './Divider/Divider';
 export { default as Link } from './Link/Link';
+export { default as BreadCrumbs } from './BreadCrumbs/BreadCrumbs';

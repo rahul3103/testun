@@ -12,12 +12,12 @@ const Container = styled.div`
   background: #f9fafb;
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, sideNav }) => (
   <Container>
     <Header />
     <AppContainer>
-      <PlusNavBar />
-      <Content>{children}</Content>
+      <PlusNavBar display={sideNav} />
+      <Content fullWidth={!sideNav}>{children}</Content>
     </AppContainer>
     <BaseFooter />
   </Container>

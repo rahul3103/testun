@@ -10,7 +10,8 @@ import {
 } from '../redux/actions/educator';
 import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
-import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
+import { PlusCoursePageHeader } from '../components/Composite';
+// import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
 // const Index = () => {
 //   const authors = useSelector(state => state.authors.data);
 //   const goals = useSelector(state => state.goals.data);
@@ -47,10 +48,14 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { leaderboard, users } = this.props;
+    // const { leaderboard, users } = this.props;
     return (
-      <Layout>
-        {leaderboard.KSCGY
+      <Layout sideNav={false}>
+        {/* <div style={{ display: 'flex', gridColumn: 'span 8' }}>
+          <BreadCrumbs tags={tags} />
+        </div> */}
+        <PlusCoursePageHeader />
+        {/* {leaderboard.KSCGY
           ? leaderboard.KSCGY.results.map(item => {
               const user = users[item.user];
               return (
@@ -64,7 +69,7 @@ class Index extends PureComponent {
                 />
               );
             })
-          : null}
+          : null} */}
       </Layout>
     );
   }
