@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { schema } from 'normalizr';
 import { educatorTypes } from '../constants';
 import { paginateAction } from '../../utils';
 import { paginatorListSchema, userSchema } from '../schemas';
@@ -19,7 +20,7 @@ const getEducatorLeaderBoard = (goalUid, resetWithoutEmpty) => {
 export const fetchEducatorLeaderboard = (
   goalUid,
   nextPage,
-  resetWithoutEmpty
+  resetWithoutEmpty = false
 ) => {
   return paginateAction(
     `v1/gamification/educator/leaderboard/?goal_uid=${goalUid}&limit=25`,
@@ -45,7 +46,11 @@ const getFollowingList = (username, resetWithoutEmpty) => {
   };
 };
 
-export const fetchFollowingUsers = (username, nextPage, resetWithoutEmpty) => {
+export const fetchFollowingUsers = (
+  username,
+  nextPage,
+  resetWithoutEmpty = false
+) => {
   return paginateAction(
     `v1/user/${username}/follows/?limit=9&offset=0`,
     getFollowingList(username, resetWithoutEmpty),
@@ -61,5 +66,6 @@ export const fetchProfileInfo = username => dispatch =>
     endpoint: `v1/user/${username}/info`,
     method: 'get',
     username,
-    schema: userSchema
+    schema: new schema.Object({ user: userSchema }),
+    entityType: 'user'
   });

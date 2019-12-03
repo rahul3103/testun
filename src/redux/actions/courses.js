@@ -27,7 +27,11 @@ const getFreeGoalCourses = (goalUid, resetWithoutEmpty) => {
   };
 };
 
-export const fetchFreeGoalCourses = (goalUid, nextPage, resetWithoutEmpty) => {
+export const fetchFreeGoalCourses = (
+  goalUid,
+  nextPage,
+  resetWithoutEmpty = false
+) => {
   return paginateAction(
     `v1/topology/users/${goalUid}/courses/?&limit=25`,
     getFreeGoalCourses(goalUid, resetWithoutEmpty),

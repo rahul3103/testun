@@ -18,3 +18,4 @@ export { default as StarRating } from './StarRating/StarRating';
 export { default as Divider } from './Divider/Divider';
 export { default as Link } from './Link/Link';
 export { default as BreadCrumbs } from './BreadCrumbs/BreadCrumbs';
+export { default as Grow } from './Grow/Grow';
