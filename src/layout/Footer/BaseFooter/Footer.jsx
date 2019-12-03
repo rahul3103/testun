@@ -112,13 +112,13 @@ const BaseFooter = () => {
 
   const linksLeft = linksListLeft.map(link => (
     <StyledList key={link.label}>
-      <Link label={link.label} href={link.href} />
+      <Link href={link.href}>{link.label}</Link>
     </StyledList>
   ));
 
   const linksRight = linksListRight.map(link => (
     <StyledList key={link.label}>
-      <Link label={link.label} href={link.href} />
+      <Link href={link.href}>{link.label}</Link>
     </StyledList>
   ));
 

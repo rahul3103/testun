@@ -8,23 +8,28 @@ const Anchor = styled.a`
   line-height: ${Fonts.HEADER_LINE_HEIGHT};
   font-size: ${Fonts.P2};
   font-weight: ${Fonts.REGULAR};
+  cursor: pointer;
 `;
 
-const StyledLink = ({ href, label, className, prefetch }) => (
+const StyledLink = ({ href, className, prefetch, children, onClick }) => (
   <Link href={href} passHref prefetch={prefetch}>
-    <Anchor className={className}>{label}</Anchor>
+    <Anchor onClick={onClick} className={className}>
+      {children}
+    </Anchor>
   </Link>
 );
 StyledLink.propTypes = {
   href: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  prefetch: PropTypes.bool
+  prefetch: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 StyledLink.defaultProps = {
   className: '',
-  prefetch: false
+  prefetch: false,
+  onClick: () => {}
 };
 
 export default StyledLink;
