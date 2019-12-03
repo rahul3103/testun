@@ -35,7 +35,7 @@ const Index = () => {
   // eslint-disable-next-line no-unused-vars
   const props = useSelectorToStore(mapStateToProps);
   return (
-    <Layout>
+    <Layout sideNav>
       <Carousel>
         <PlusCourseCard />
         <PlusCourseCard />
