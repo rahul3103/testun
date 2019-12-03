@@ -4,24 +4,29 @@ import { BgColors, TextColors, Spacings, Fonts } from '../../../styleConstants';
 
 const styling = {
   filled: {
-    Bg: BgColors.TAG_FILLED,
+    Bg: BgColors.FILLED,
     Text: TextColors.WHITE,
     paddingHorizontal: Spacings.SPACING_2B
   },
   hollow: {
-    Bg: BgColors.BUTTON_DISABLED,
+    Bg: BgColors.DISABLED,
     Text: TextColors.BLACK,
     paddingHorizontal: Spacings.SPACING_6
   },
   transparent: {
     Bg: BgColors.WHITE,
-    Text: TextColors.TRANSPARENT_TAG_TEXT,
+    Text: TextColors.BLUE,
     paddingHorizontal: Spacings.SPACING_0B
   },
   live: {
-    Bg: BgColors.LIVE_TAG,
+    Bg: BgColors.LIVE,
     Text: TextColors.WHITE,
     paddingHorizontal: Spacings.SPACING_2B
+  },
+  disabled: {
+    Bg: BgColors.WHITE,
+    Text: TextColors.TEXT_SECONDARY,
+    paddingHorizontal: Spacings.SPACING_0B
   }
 };
 
@@ -29,7 +34,9 @@ const Tags = styled.span`
   background-color: ${({ type }) => styling[type].Bg};
   color: ${({ type }) => styling[type].Text};
   font-size: ${({ type }) =>
-    type === 'filled' ? Fonts.TAG_FONT_FILLED : Fonts.H6};
+    type === 'transparent' || type === 'hollow' || type === 'disabled'
+      ? Fonts.TAG_FONT_FILLED
+      : Fonts.H6};
   font-weight: ${({ type }) =>
     type === 'filled' || type === 'live' ? Fonts.SEMIBOLD : Fonts.BOLD};
   line-height: ${Fonts.BUTTON_LINE_HEIGHT};
@@ -43,7 +50,7 @@ const Tags = styled.span`
 export default Tags;
 
 Tags.propTypes = {
-  type: PropTypes.oneOf(['filled', 'hollow', 'transparent', 'live'])
+  type: PropTypes.oneOf(['filled', 'hollow', 'transparent', 'live', 'disabled'])
 };
 
 Tags.defaultProps = {

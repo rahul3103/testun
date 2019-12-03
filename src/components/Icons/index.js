@@ -9,5 +9,8 @@ export { default as Search } from './Search';
 export { default as Close } from './Close';
 export { default as KeyboardArrowDown } from './KeyboardArrowDown';
 export { default as KeyboardArrowUp } from './KeyboardArrowUp';
+export { default as Saved } from './Saved';
+export { default as Save } from './Save';
+export { default as StarFilled } from './StarFilled';
 export { default as Check } from './Check';
 export { default as ChevronRight } from './ChevronRight';

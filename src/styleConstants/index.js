@@ -5,8 +5,8 @@ import * as TextColors from './constants/colors/textcolors';
 import * as BorderColors from './constants/colors/bordercolors';
 import * as ShadowColors from './constants/colors/shadowcolors';
 
-export const BUTTON_BORDER_WIDTH = '1px';
-export const BUTTON_BORDER_STYLE = 'solid';
+export const PRIMARY_BORDER_WIDTH = '1px';
+export const SOLID_BORDER_STYLE = 'solid';
 
 export { Fonts, BgColors, TextColors, BorderColors, ShadowColors, Spacings };
 
