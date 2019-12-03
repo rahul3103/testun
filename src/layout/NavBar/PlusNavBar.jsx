@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { H4, H5, Link } from '../../components/Base';
 
@@ -45,7 +46,7 @@ const Item = styled(H5)`
   }
 `;
 
-const PlusNavBar = () => {
+const PlusNavBar = ({ display }) => {
   const [selectedEl, setselectedEl] = useState('H4');
   const [selectedElPos, setselectedElPos] = useState(0);
 
@@ -57,7 +58,7 @@ const PlusNavBar = () => {
   useEffect(() => {
     setselectedEl('H4');
   }, []);
-
+  if (!display) return null;
   return (
     <PlusNavBarWrapper>
       <Selected selectedElPos={selectedElPos} selectedEl={selectedEl} />
@@ -92,3 +93,11 @@ const PlusNavBar = () => {
 };
 
 export default PlusNavBar;
+
+PlusNavBar.propTypes = {
+  display: PropTypes.bool
+};
+
+PlusNavBar.defaultProps = {
+  display: true
+};

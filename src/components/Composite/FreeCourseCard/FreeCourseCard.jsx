@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { BgColors, Spacings, ShadowColors } from '../../../styleConstants';
 import { Thumbnail, Tags, IconButton } from '../../Base';
-import PlusCourseCardDetails from './PlusCourseCardDetails';
-import { Enroll } from '../../Icons';
+import FreeCourseCardDetails from './FreeCourseCardDetails';
+import { Save } from '../../Icons';
 
-const StyledPlusCourseCard = styled.div`
+const StyledFreeCourseCard = styled.div`
   display: ${({ orientation }) => orientation === 'horizontal' && 'flex'};
   background-color: ${BgColors.WHITE};
   border-radius: ${Spacings.SPACING_2B};
@@ -31,35 +31,29 @@ const CourseThumbnail = styled(Thumbnail)`
   width: ${Spacings.SPACING_68B};
 `;
 
-const PlusCourseCard = ({ gridColumn, orientation, className }) => (
-  <StyledPlusCourseCard
-    className={className}
-    gridColumn={gridColumn}
-    orientation={orientation}
-  >
+const FreeCourseCard = ({ gridColumn, orientation }) => (
+  <StyledFreeCourseCard gridColumn={gridColumn} orientation={orientation}>
     <CourseThumbnail
       imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png"
       orientation={orientation}
     >
       <EnrollButton>
-        <Enroll size={Spacings.SPACING_5B} />
+        <Save size={Spacings.SPACING_5B} />
       </EnrollButton>
-      <TimeTags type="filled">10:30 pm</TimeTags>
+      <TimeTags type="filled">48 lessons</TimeTags>
     </CourseThumbnail>
-    <PlusCourseCardDetails orientation={orientation} />
-  </StyledPlusCourseCard>
+    <FreeCourseCardDetails />
+  </StyledFreeCourseCard>
 );
 
-export default PlusCourseCard;
+export default FreeCourseCard;
 
-PlusCourseCard.propTypes = {
+FreeCourseCard.propTypes = {
   gridColumn: PropTypes.number,
-  className: PropTypes.string,
   orientation: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
-PlusCourseCard.defaultProps = {
+FreeCourseCard.defaultProps = {
   gridColumn: 6,
-  className: '',
   orientation: 'vertical'
 };

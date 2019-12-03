@@ -11,18 +11,19 @@ import union from 'lodash/union';
 // Creates a reducer managing pagination, given the action types to handle,
 // and a function telling how to extract the key from an action.
 
-export default function paginate({ types, mapActionToKey, updateReducer }) {
+export default function paginate({ updateReducer, actionType }) {
+  const types = [
+    `${actionType}_REQUEST`,
+    `${actionType}_SUCCESS`,
+    `${actionType}_FAILURE`,
+    'null'
+  ];
   const [requestType, successType, failureType, reset] = types;
   const initialState = {
     isFetching: false,
     next: undefined,
-    pageCount: 0,
-    name: '',
-    loaded: false,
+    total: 0,
     results: [],
-    resultsPage: [],
-    key: undefined,
-    unseen: null,
     resetWithoutEmpty: false
   };
 
@@ -40,55 +41,18 @@ export default function paginate({ types, mapActionToKey, updateReducer }) {
           : state.results;
 
         if (action.resetWithoutEmpty) results = action.result.results;
-
-        let resultsPage = state.resultsPage;
-        if (!resultsPage) {
-          resultsPage = [];
-        }
-        if (action.result) {
-          if (action.result.results) {
-            resultsPage.push({
-              page: state.pageCount ? state.pageCount + 1 : 1,
-              results: action.result.results
-            });
-          } else {
-            resultsPage.push({
-              page: state.pageCount ? state.pageCount + 1 : 1,
-              results: [action.result]
-            });
-          }
-        }
-        if (action.resetWithoutEmpty) {
-          results = action.result.results;
-          resultsPage = [];
-          resultsPage.push({
-            page: 1,
-            results: action.result.results
-          });
-        }
-
         return merge({}, action.resetWithoutEmpty ? {} : state, {
           isFetching: false,
-          loaded: true,
           results,
-          resultsPage,
           next: action.result.next,
-          name: action.result.name,
           total: action.result.count,
           resetWithoutEmpty: action.resetWithoutEmpty
             ? action.resetWithoutEmpty
-            : false,
-          pageCount: action.resetWithoutEmpty
-            ? 1
-            : state.pageCount
-            ? state.pageCount + 1
-            : 1,
-          unseen: action.result.unseen
+            : false
         });
       case failureType:
         return merge({}, state, {
-          isFetching: false,
-          loaded: true
+          isFetching: false
         });
       default:
         return state;
@@ -96,14 +60,11 @@ export default function paginate({ types, mapActionToKey, updateReducer }) {
   }
 
   return function updatePaginationByKey(state = {}, action) {
-    const key = mapActionToKey(action);
+    const key = action.key;
     switch (action.type) {
       case requestType:
       case successType:
       case failureType:
-        /* if (typeof key !== "string") {
-                    throw new Error("Expected key to be a string.");
-                } */
         if (action.resetWithoutEmpty) {
           return {
             ...state,

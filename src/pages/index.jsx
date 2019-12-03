@@ -1,8 +1,8 @@
+/* eslint-disable no-use-before-define */
 /* eslint react/prop-types: 0 */
 
-// import { useSelector } from 'react-redux';
-import { PureComponent } from 'react';
-import { connect } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelectorToStore, useDispatchToStore } from '../utils/customHooks';
 import {
   fetchEducatorLeaderboard,
   fetchFollowingUsers,
@@ -10,75 +10,47 @@ import {
 } from '../redux/actions/educator';
 import { fetchFreeGoalCourses } from '../redux/actions/courses';
 import Layout from '../layout';
-// import EducatorCard from '../components/Composite/EducatorCard/EducatorCard';
 import { Carousel, PlusCourseCard } from '../components/Composite';
 
-// const Index = () => {
-//   const authors = useSelector(state => state.authors.data);
-//   const goals = useSelector(state => state.goals.data);
-//   return (
-//     <Layout>
-//       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(authors)}</div>
-//       Goals
-//       <div style={{ gridColumn: 'span 18' }}>{JSON.stringify(goals)}</div>
-//     </Layout>
-//   );
-// };
+const Index = () => {
+  const dispatch = useDispatchToStore();
+  useEffect(() => {
+    dispatch(fetchEducatorLeaderboard('KSCGY', true));
+    dispatch(fetchFollowingUsers('PriyaPandian', true));
+    dispatch(fetchProfileInfo('PriyaPandian'));
+    dispatch(fetchFreeGoalCourses('KSCGY', true));
+  }, [dispatch]);
+
+  const mapStateToProps = ({ users, courses, paginator }) => {
+    return {
+      users: users.data,
+      courses: courses.data,
+      leaderboard: paginator.educatorLeaderboard
+        ? paginator.educatorLeaderboard.KSCGY
+        : {},
+      profileInfo: users.profileInfo
+    };
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const props = useSelectorToStore(mapStateToProps);
+  return (
+    <Layout>
+      <Carousel>
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+      </Carousel>
+    </Layout>
+  );
+};
+
+export default Index;
 
 // Index.getInitialProps = async ({ store, isServer }) => {
-//   await store.dispatch(fetchFreeCourses());
-//   return { isServer };
+// await store.dispatch(fetchFollowingUsers());
+// return { isServer };
 // };
-
-// export default Index;
-class Index extends PureComponent {
-  componentDidMount() {
-    const {
-      fetchEducatorLeaderboard: fetchEducatorLeaderboardAction,
-      fetchFollowingUsers: fetchFollowingUsersAction,
-      fetchFreeGoalCourses: fetchFreeGoalCoursesAction,
-      fetchProfileInfo: fetchProfileInfoAction
-    } = this.props;
-    // fetchFreeCoursesAction();
-    fetchEducatorLeaderboardAction('KSCGY', true, false);
-    fetchProfileInfoAction('PriyaPandian');
-    fetchFreeGoalCoursesAction('KSCGY', true, false).then(() => {
-      fetchFreeGoalCoursesAction('KSCGY', true, false);
-    });
-    fetchFollowingUsersAction('PriyaPandian', true, true);
-  }
-
-  render() {
-    // const { leaderboard, users } = this.props;
-    return (
-      <Layout>
-        <Carousel>
-          <PlusCourseCard />
-          <PlusCourseCard />
-          <PlusCourseCard />
-          <PlusCourseCard />
-          <PlusCourseCard />
-          <PlusCourseCard />
-        </Carousel>
-      </Layout>
-    );
-  }
-}
-
-const mapDispatchToProps = {
-  fetchEducatorLeaderboard,
-  fetchFollowingUsers,
-  fetchFreeGoalCourses,
-  fetchProfileInfo
-};
-
-const mapStateToProps = ({ users, courses, paginator }) => {
-  return {
-    users: users.data,
-    courses: courses.data,
-    leaderboard: paginator.educatorLeaderboard,
-    profileInfo: users.profileInfo
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
