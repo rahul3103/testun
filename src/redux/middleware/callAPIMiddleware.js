@@ -46,15 +46,21 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
     .then(response => response.json())
     .then(result => {
       let formattedResults = result;
-      if (directPaginatedEntity && !!entityType) {
-        formattedResults = {
-          ...result,
-          results: result.results.map(item => {
-            return {
-              [entityType]: item
-            };
-          })
-        };
+      if (entityType) {
+        if (directPaginatedEntity) {
+          formattedResults = {
+            ...result,
+            results: result.results.map(item => {
+              return {
+                [entityType]: item
+              };
+            })
+          };
+        } else {
+          formattedResults = {
+            [entityType]: result
+          };
+        }
       }
       const normalizedData = normalize(formattedResults, schema);
       next({ ...rest, entities: normalizedData.entities });
