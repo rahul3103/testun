@@ -44,6 +44,23 @@ const Index = () => {
         <PlusCourseCard />
         <PlusCourseCard />
       </Carousel>
+
+      <Carousel>
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+      </Carousel>
+      <Carousel>
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+        <PlusCourseCard />
+      </Carousel>
     </Layout>
   );
 };

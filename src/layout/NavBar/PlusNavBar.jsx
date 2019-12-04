@@ -58,7 +58,9 @@ const PlusNavBar = ({ display }) => {
   useEffect(() => {
     setselectedEl('H4');
   }, []);
+
   if (!display) return null;
+
   return (
     <PlusNavBarWrapper>
       <Selected selectedElPos={selectedElPos} selectedEl={selectedEl} />
@@ -99,5 +101,5 @@ PlusNavBar.propTypes = {
 };
 
 PlusNavBar.defaultProps = {
-  display: true
+  display: false
 };

@@ -14,7 +14,6 @@ const CardContainer = styled.div`
   grid-template-columns: repeat(36, 32px);
   grid-column-gap: 16px;
   overflow: hidden;
-  grid-template-rows: minmax(150px, 1fr);
   & > div {
     transform: ${({ pos }) =>
       (pos && `translate3d(calc(${-100 * pos}% - ${pos * 16}px), 0, 0)`) ||
