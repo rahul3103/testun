@@ -25,8 +25,6 @@ const Index = () => {
 
   const mapStateToProps = ({ users, courses, paginator }) => {
     return {
-      users: users.data,
-      courses: courses.data,
       leaderboard: paginator.educatorLeaderboard,
       freeCourses: paginator.freeGoalCourses,
       profileInfo: users.profileInfo

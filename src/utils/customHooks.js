@@ -19,7 +19,11 @@ const fetchDataFromNormalizer = (data, state) => {
       let i = 0;
       while (i < dataKeys.length) {
         if (dataKeys[i] in tableIndex) {
-          newData = state[tableIndex[dataKeys[i]]].data[data[dataKeys[i]]];
+          newData = {
+            ...newData,
+            [dataKeys[i]]:
+              state[tableIndex[dataKeys[i]]].data[data[dataKeys[i]]]
+          };
         } else {
           newData = {
             ...newData,
