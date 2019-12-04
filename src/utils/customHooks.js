@@ -39,7 +39,7 @@ const fetchDataFromNormalizer = (data, state) => {
 
 export const useSelectorToStore = mapProps => {
   const data = useSelector(mapProps, shallowEqual);
-  const stateData = useSelector(state => state);
+  const stateData = useSelector(state => state); // Hack for denormalization --- Priya/Saurabh #todo
   return fetchDataFromNormalizer(data, stateData);
 };
 
