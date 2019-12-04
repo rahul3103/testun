@@ -11,7 +11,7 @@ const tableIndex = {
   course: 'courses'
 };
 
-const fetchDataFromNormalizer = data => {
+const fetchDataFromNormalizer = (data, state) => {
   let newData = data;
   if (data && typeof data === 'object' && Object.keys(data)) {
     const dataKeys = Object.keys(data);
@@ -19,15 +19,12 @@ const fetchDataFromNormalizer = data => {
       let i = 0;
       while (i < dataKeys.length) {
         if (dataKeys[i] in tableIndex) {
-          newData = {
-            ...data,
-            [dataKeys[i]]: () =>
-              useSelector(
-                state => state[tableIndex[dataKeys[i]]][data[dataKeys[i]]]
-              )
-          };
+          newData = state[tableIndex[dataKeys[i]]].data[data[dataKeys[i]]];
         } else {
-          fetchDataFromNormalizer(data[dataKeys[i]]);
+          newData = {
+            ...newData,
+            [dataKeys[i]]: fetchDataFromNormalizer(newData[dataKeys[i]], state)
+          };
         }
         i++;
       }
@@ -38,7 +35,8 @@ const fetchDataFromNormalizer = data => {
 
 export const useSelectorToStore = mapProps => {
   const data = useSelector(mapProps, shallowEqual);
-  return data;
+  const stateData = useSelector(state => state);
+  return fetchDataFromNormalizer(data, stateData);
 };
 
 export const useDispatchToStore = () => {
