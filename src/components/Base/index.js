@@ -19,3 +19,4 @@ export { default as Link } from './Link/Link';
 export { default as TextField } from './TextField/TextField';
 export { default as BreadCrumbs } from './BreadCrumbs/BreadCrumbs';
 export { default as Grow } from './Grow/Grow';
+export { default as Drawer } from './Drawer/Drawer';
