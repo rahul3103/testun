@@ -21,7 +21,7 @@ export const courseSchema = new schema.Entity(
     processStrategy: value => {
       return {
         ...getEntityData('Course', value),
-        author: getEntityData('User', value.author)
+        user: getEntityData('User', value.author)
       };
     }
   }

@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-use-before-define */
 /* eslint react/prop-types: 0 */
 
@@ -23,17 +25,15 @@ const Index = () => {
 
   const mapStateToProps = ({ users, courses, paginator }) => {
     return {
-      users: users.data,
-      courses: courses.data,
-      leaderboard: paginator.educatorLeaderboard
-        ? paginator.educatorLeaderboard.KSCGY
-        : {},
+      leaderboard: paginator.educatorLeaderboard,
+      freeCourses: paginator.freeGoalCourses,
       profileInfo: users.profileInfo
     };
   };
 
-  // eslint-disable-next-line no-unused-vars
   const props = useSelectorToStore(mapStateToProps);
+  console.log('props----', props);
+
   return (
     <Layout sideNav>
       <Carousel>
