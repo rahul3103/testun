@@ -10,24 +10,33 @@ import {
   fetchFollowingUsers,
   fetchProfileInfo
 } from '../redux/actions/educator';
-import { fetchFreeGoalCourses } from '../redux/actions/courses';
+import {
+  fetchFreeGoalCourses,
+  fetchCourseData
+} from '../redux/actions/courses';
 import Layout from '../layout';
 import { Carousel, PlusCourseCard } from '../components/Composite';
 
 const Index = () => {
   const dispatch = useDispatchToStore();
   useEffect(() => {
-    dispatch(fetchEducatorLeaderboard('KSCGY', true));
+    dispatch(fetchEducatorLeaderboard('KSCGY', true)).then(response => {
+      if (response) {
+        dispatch(fetchEducatorLeaderboard('KSCGY', true));
+      }
+    });
     dispatch(fetchFollowingUsers('PriyaPandian', true));
     dispatch(fetchProfileInfo('PriyaPandian'));
     dispatch(fetchFreeGoalCourses('KSCGY', true));
+    dispatch(fetchCourseData('8QVZEPUP'));
   }, [dispatch]);
 
   const mapStateToProps = ({ users, courses, paginator }) => {
     return {
       leaderboard: paginator.educatorLeaderboard,
       freeCourses: paginator.freeGoalCourses,
-      profileInfo: users.profileInfo
+      profileInfo: users.profileInfo,
+      courseDetails: courses.courseDetails
     };
   };
 
