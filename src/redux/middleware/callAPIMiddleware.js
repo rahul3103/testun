@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import { normalize } from 'normalizr';
+import { cookies } from '../../utils';
 
 const host = 'https://unacademy.com/api/';
 
@@ -36,10 +37,11 @@ const callAPIMiddleware = ({ dispatch, getState }) => next => action => {
     endpoint.indexOf('unacademy.com/') > -1 ? endpoint : `${host}${endpoint}`;
   const queryString = getQueryString(params);
   if (queryString) url = `${url}?${queryString}`;
-
+  const accessToken = cookies.readCookie('accessToken');
   const actionPromise = fetch(url, {
     method,
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
+    headers: { authorization: `Bearer ${accessToken}` }
   });
 
   return actionPromise

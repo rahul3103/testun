@@ -3,3 +3,4 @@ export { default as mergeDeep } from './mergeDeep';
 export { textColorValidator } from './propsValidation';
 export { default as paginateAction } from './paginateAction';
 export { default as paginate } from './paginate';
+export { default as cookies } from './cookies';
