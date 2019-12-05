@@ -46,7 +46,7 @@
       "error",
       {
         "explicitSpread": "off",
-        "exceptions": ["Component", "App", "Icon"]
+        "exceptions": ["Component", "App", "Icon", "Slide"]
       }
     ],
     "react/jsx-curly-brace-presence": [
