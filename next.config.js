@@ -25,7 +25,11 @@ const nextConfig = phase => {
       isDev: phase === PHASE_DEVELOPMENT_SERVER,
       isProd: phase === PHASE_PRODUCTION_BUILD
     },
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/demo' : '',
+    exportPathMap: () => ({
+      '/': { page: '/' },
+      '/demo': { page: '/demo' }
+    }),
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/testun' : '',
     webpack(config) {
       return config;
     }
