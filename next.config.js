@@ -25,6 +25,7 @@ const nextConfig = phase => {
       isDev: phase === PHASE_DEVELOPMENT_SERVER,
       isProd: phase === PHASE_PRODUCTION_BUILD
     },
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/demo' : '',
     webpack(config) {
       return config;
     }
