@@ -1,0 +1,913 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/><meta name="next-head-count" content="2"/><link rel="preload" href="/testun/_next/static/PxEl3sKKuW_XH1VYidjrs/pages/index.js" as="script"/><link rel="preload" href="/testun/_next/static/PxEl3sKKuW_XH1VYidjrs/pages/_app.js" as="script"/><link rel="preload" href="/testun/_next/static/runtime/webpack-08f7b238829422e3b9b2.js" as="script"/><link rel="preload" href="/testun/_next/static/chunks/commons.5037352224df8ea99eb0.js" as="script"/><link rel="preload" href="/testun/_next/static/runtime/main-0d7fc6113f61218d0d6b.js" as="script"/><style id="jss-server-side">.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-edgeStart {
+    margin-left: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+    margin-left: -3px;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+    margin-right: -3px;
+  }
+  .MuiIconButton-colorInherit {
+    color: inherit;
+  }
+  .MuiIconButton-colorPrimary {
+    color: #3f51b5;
+  }
+  .MuiIconButton-colorPrimary:hover {
+    background-color: rgba(63, 81, 181, 0.08);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-colorSecondary {
+    color: #f50057;
+  }
+  .MuiIconButton-colorSecondary:hover {
+    background-color: rgba(245, 0, 87, 0.08);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-sizeSmall {
+    padding: 3px;
+    font-size: 1.125rem;
+  }
+  .MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  .MuiDivider-root {
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  .MuiDivider-absolute {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  .MuiDivider-inset {
+    margin-left: 72px;
+  }
+  .MuiDivider-light {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  .MuiDivider-middle {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .MuiDivider-vertical {
+    width: 1px;
+    height: 100%;
+  }
+  .MuiInputBase-root {
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;;
+    line-height: 1.1875em;
+  }
+  .MuiInputBase-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: default;
+  }
+  .MuiInputBase-multiline {
+    padding: 6px 0 7px;
+  }
+  .MuiInputBase-multiline.MuiInputBase-marginDense {
+    padding-top: 3px;
+  }
+  .MuiInputBase-fullWidth {
+    width: 100%;
+  }
+  .MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 1.1875em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: MuiInputBase-keyframes-auto-fill-cancel;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .MuiInputBase-input::-webkit-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input::-moz-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input:-ms-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input::-ms-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input:focus {
+    outline: 0;
+  }
+  .MuiInputBase-input:invalid {
+    box-shadow: none;
+  }
+  .MuiInputBase-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  .MuiInputBase-input.Mui-disabled {
+    opacity: 1;
+  }
+  .MuiInputBase-input:-webkit-autofill {
+    animation-name: MuiInputBase-keyframes-auto-fill;
+    animation-duration: 5000s;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-webkit-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-moz-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-webkit-input-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-moz-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus:-ms-input-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-ms-input-placeholder {
+    opacity: 0.42;
+  }
+@keyframes MuiInputBase-keyframes-auto-fill {}
+@keyframes MuiInputBase-keyframes-auto-fill-cancel {}
+  .MuiInputBase-inputMarginDense {
+    padding-top: 3px;
+  }
+  .MuiInputBase-inputMultiline {
+    height: auto;
+    resize: none;
+    padding: 0;
+  }
+  .MuiInputBase-inputTypeSearch {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+  }
+  .jss71 {
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transition: padding-left 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,border-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,border-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .jss72 {
+    padding: 0;
+    text-align: left;
+    transition: width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    line-height: 11px;
+  }
+  .MuiOutlinedInput-root {
+    position: relative;
+    border-radius: 4px;
+  }
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.87);
+  }
+@media (hover: none) {
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+}
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #3f51b5;
+    border-width: 2px;
+  }
+  .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #f44336;
+  }
+  .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.26);
+  }
+  .MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #f50057;
+  }
+  .MuiOutlinedInput-adornedStart {
+    padding-left: 14px;
+  }
+  .MuiOutlinedInput-adornedEnd {
+    padding-right: 14px;
+  }
+  .MuiOutlinedInput-multiline {
+    padding: 18.5px 14px;
+  }
+  .MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+  .MuiOutlinedInput-input {
+    padding: 18.5px 14px;
+  }
+  .MuiOutlinedInput-input:-webkit-autofill {
+    border-radius: inherit;
+  }
+  .MuiOutlinedInput-inputMarginDense {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+  }
+  .MuiOutlinedInput-inputMultiline {
+    padding: 0;
+  }
+  .MuiOutlinedInput-inputAdornedStart {
+    padding-left: 0;
+  }
+  .MuiOutlinedInput-inputAdornedEnd {
+    padding-right: 0;
+  }
+  .MuiBadge-root {
+    display: inline-flex;
+    position: relative;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+  .MuiBadge-badge {
+    height: 20px;
+    display: flex;
+    padding: 0 6px;
+    z-index: 1;
+    position: absolute;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    min-width: 20px;
+    box-sizing: border-box;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    align-items: center;
+    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;;
+    font-weight: 500;
+    line-height: 1;
+    align-content: center;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .MuiBadge-colorPrimary {
+    color: #fff;
+    background-color: #3f51b5;
+  }
+  .MuiBadge-colorSecondary {
+    color: #fff;
+    background-color: #f50057;
+  }
+  .MuiBadge-colorError {
+    color: #fff;
+    background-color: #f44336;
+  }
+  .MuiBadge-dot {
+    height: 6px;
+    padding: 0;
+    min-width: 6px;
+  }
+  .MuiBadge-anchorOriginTopRightRectangle {
+    top: 0;
+    right: 0;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+  }
+  .MuiBadge-anchorOriginTopRightRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, -50%);
+  }
+  .MuiBadge-anchorOriginBottomRightRectangle {
+    right: 0;
+    bottom: 0;
+    transform: scale(1) translate(50%, 50%);
+    transform-origin: 100% 100%;
+  }
+  .MuiBadge-anchorOriginBottomRightRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, 50%);
+  }
+  .MuiBadge-anchorOriginTopLeftRectangle {
+    top: 0;
+    left: 0;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+  }
+  .MuiBadge-anchorOriginTopLeftRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  .MuiBadge-anchorOriginBottomLeftRectangle {
+    left: 0;
+    bottom: 0;
+    transform: scale(1) translate(-50%, 50%);
+    transform-origin: 0% 100%;
+  }
+  .MuiBadge-anchorOriginBottomLeftRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, 50%);
+  }
+  .MuiBadge-anchorOriginTopRightCircle {
+    top: 14%;
+    right: 14%;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+  }
+  .MuiBadge-anchorOriginTopRightCircle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, -50%);
+  }
+  .MuiBadge-anchorOriginBottomRightCircle {
+    right: 14%;
+    bottom: 14%;
+    transform: scale(1) translate(50%, 50%);
+    transform-origin: 100% 100%;
+  }
+  .MuiBadge-anchorOriginBottomRightCircle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, 50%);
+  }
+  .MuiBadge-anchorOriginTopLeftCircle {
+    top: 14%;
+    left: 14%;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+  }
+  .MuiBadge-anchorOriginTopLeftCircle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  .MuiBadge-anchorOriginBottomLeftCircle {
+    left: 14%;
+    bottom: 14%;
+    transform: scale(1) translate(-50%, 50%);
+    transform-origin: 0% 100%;
+  }
+  .MuiBadge-anchorOriginBottomLeftCircle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, 50%);
+  }
+  .MuiBadge-invisible {
+    transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiLinearProgress-root {
+    height: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .MuiLinearProgress-colorPrimary {
+    background-color: rgb(182, 188, 226);
+  }
+  .MuiLinearProgress-colorSecondary {
+    background-color: rgb(251, 158, 191);
+  }
+  .MuiLinearProgress-buffer {
+    background-color: transparent;
+  }
+  .MuiLinearProgress-query {
+    transform: rotate(180deg);
+  }
+  .MuiLinearProgress-dashed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: MuiLinearProgress-keyframes-buffer 3s infinite linear;
+    margin-top: 0;
+  }
+  .MuiLinearProgress-dashedColorPrimary {
+    background-size: 10px 10px;
+    background-image: radial-gradient(rgb(182, 188, 226) 0%, rgb(182, 188, 226) 16%, transparent 42%);
+    background-position: 0px -23px;
+  }
+  .MuiLinearProgress-dashedColorSecondary {
+    background-size: 10px 10px;
+    background-image: radial-gradient(rgb(251, 158, 191) 0%, rgb(251, 158, 191) 16%, transparent 42%);
+    background-position: 0px -23px;
+  }
+  .MuiLinearProgress-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    transition: transform 0.2s linear;
+    transform-origin: left;
+  }
+  .MuiLinearProgress-barColorPrimary {
+    background-color: #3f51b5;
+  }
+  .MuiLinearProgress-barColorSecondary {
+    background-color: #f50057;
+  }
+  .MuiLinearProgress-bar1Indeterminate {
+    width: auto;
+    animation: MuiLinearProgress-keyframes-indeterminate1 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  }
+  .MuiLinearProgress-bar1Determinate {
+    transition: transform .4s linear;
+  }
+  .MuiLinearProgress-bar1Buffer {
+    z-index: 1;
+    transition: transform .4s linear;
+  }
+  .MuiLinearProgress-bar2Indeterminate {
+    width: auto;
+    animation: MuiLinearProgress-keyframes-indeterminate2 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation-delay: 1.15s;
+  }
+  .MuiLinearProgress-bar2Buffer {
+    transition: transform .4s linear;
+  }
+@keyframes MuiLinearProgress-keyframes-indeterminate1 {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@keyframes MuiLinearProgress-keyframes-indeterminate2 {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+@keyframes MuiLinearProgress-keyframes-buffer {
+  0% {
+    opacity: 1;
+    background-position: 0px -23px;
+  }
+  50% {
+    opacity: 0;
+    background-position: 0px -23px;
+  }
+  100% {
+    opacity: 1;
+    background-position: -200px -23px;
+  }
+}
+  .MuiButton-root {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .MuiButton-root:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  .MuiButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+  }
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-root:hover.Mui-disabled {
+    background-color: transparent;
+  }
+  .MuiButton-label {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  .MuiButton-text {
+    padding: 6px 8px;
+  }
+  .MuiButton-textPrimary {
+    color: #3f51b5;
+  }
+  .MuiButton-textPrimary:hover {
+    background-color: rgba(63, 81, 181, 0.08);
+  }
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-textSecondary {
+    color: #f50057;
+  }
+  .MuiButton-textSecondary:hover {
+    background-color: rgba(245, 0, 87, 0.08);
+  }
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-outlined {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    padding: 5px 15px;
+  }
+  .MuiButton-outlined.Mui-disabled {
+    border: 1px solid rgba(0, 0, 0, 0.26);
+  }
+  .MuiButton-outlinedPrimary {
+    color: #3f51b5;
+    border: 1px solid rgba(63, 81, 181, 0.5);
+  }
+  .MuiButton-outlinedPrimary:hover {
+    border: 1px solid #3f51b5;
+    background-color: rgba(63, 81, 181, 0.08);
+  }
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-outlinedSecondary {
+    color: #f50057;
+    border: 1px solid rgba(245, 0, 87, 0.5);
+  }
+  .MuiButton-outlinedSecondary:hover {
+    border: 1px solid #f50057;
+    background-color: rgba(245, 0, 87, 0.08);
+  }
+  .MuiButton-outlinedSecondary.Mui-disabled {
+    border: 1px solid rgba(0, 0, 0, 0.26);
+  }
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-contained {
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+  .MuiButton-contained:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+    background-color: #d5d5d5;
+  }
+  .MuiButton-contained.Mui-focusVisible {
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+  }
+  .MuiButton-contained:active {
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+  }
+  .MuiButton-contained.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+}
+  .MuiButton-contained:hover.Mui-disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  .MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #3f51b5;
+  }
+  .MuiButton-containedPrimary:hover {
+    background-color: #303f9f;
+  }
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #3f51b5;
+  }
+}
+  .MuiButton-containedSecondary {
+    color: #fff;
+    background-color: #f50057;
+  }
+  .MuiButton-containedSecondary:hover {
+    background-color: #c51162;
+  }
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #f50057;
+  }
+}
+  .MuiButton-colorInherit {
+    color: inherit;
+    border-color: currentColor;
+  }
+  .MuiButton-textSizeSmall {
+    padding: 4px 5px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-textSizeLarge {
+    padding: 8px 11px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-outlinedSizeSmall {
+    padding: 3px 9px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-outlinedSizeLarge {
+    padding: 7px 21px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-containedSizeSmall {
+    padding: 4px 10px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-containedSizeLarge {
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-fullWidth {
+    width: 100%;
+  }
+  .MuiButton-startIcon {
+    display: inherit;
+    margin-left: -4px;
+    margin-right: 8px;
+  }
+  .MuiButton-startIcon.MuiButton-iconSizeSmall {
+    margin-left: -2px;
+  }
+  .MuiButton-endIcon {
+    display: inherit;
+    margin-left: 8px;
+    margin-right: -4px;
+  }
+  .MuiButton-endIcon.MuiButton-iconSizeSmall {
+    margin-right: -2px;
+  }
+  .MuiButton-iconSizeSmall > *:first-child {
+    font-size: 18px;
+  }
+  .MuiButton-iconSizeMedium > *:first-child {
+    font-size: 20px;
+  }
+  .MuiButton-iconSizeLarge > *:first-child {
+    font-size: 22px;
+  }
+  .MuiPopover-paper {
+    outline: 0;
+    position: absolute;
+    max-width: calc(100% - 32px);
+    min-width: 16px;
+    max-height: calc(100% - 32px);
+    min-height: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .MuiMenu-paper {
+    max-height: calc(100% - 96px);
+    -webkit-overflow-scrolling: touch;
+  }
+  .MuiMenu-list {
+    outline: 0;
+  }</style><style data-styled="" data-styled-version="5.0.0-rc.2">.hxPbdr{font-weight:600;font-size:12px;line-height:150%;margin:0px;color:#3C4852;}
+data-styled.g6[id="H6-sc-1gn2suh-0"]{content:"hxPbdr,"}
+.gXlInx{grid-column:1/5;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}
+data-styled.g14[id="Logo-sc-17t0w6e-0"]{content:"gXlInx,"}
+.iUpWYN{background-color:#F0F4F7;color:#3C4852;font-size:10px;font-weight:bold;line-height:100%;padding:6px 6px;border-radius:4px;display:inline-block;text-transform:uppercase;}
+data-styled.g15[id="Tags-ctt3gx-0"]{content:"iUpWYN,"}
+.hnSArG{background-color:#fff;border-radius:8px;height:32px;width:32px;box-shadow:0px 16px 32px #f0f4f7;padding:0px;}
+.hnSArG:hover{background-color:#fff;}
+data-styled.g17[id="IconButtons__StyledIconButton-sc-160l35g-0"]{content:"hnSArG,"}
+.cAefkZ{height:40px;width:40px;background-image:url('https://edge.uacdn.net/static/thumbnail/user/9ccde2d9973b47d1bc64d98c36eaa987.jpg?q=100&w=512&fm=webp');border-radius:8px;background-size:cover;background-repeat:no-repeat;background-color:#fff;}
+data-styled.g18[id="Avatar-sc-1pabonf-0"]{content:"cAefkZ,"}
+.iPOHtT{color:#3C4852;line-height:150%;font-size:12px;font-weight:normal;cursor:pointer;}
+data-styled.g21[id="Link__Anchor-sc-1n9f3wx-0"]{content:"iPOHtT,"}
+.beEnA{grid-column:19/20;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}
+.beEnA.MuiBadge-root .MuiBadge-badge{background-color:#08BD80;color:#fff;position:absolute;right:12px;}
+data-styled.g29[id="Notification__StyledBadge-sc-1rn3ss5-0"]{content:"beEnA,"}
+.efSjZQ{float:right;width:100%;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}
+.efSjZQ.MuiOutlinedInput-root .MuiInputBase-input{color:#3c4852;font-weight:600;font-size:14px;line-height:150%;padding-left:8px;width:50px;-webkit-transition:width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;transition:width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;}
+.efSjZQ.MuiOutlinedInput-root .MuiInputBase-input::-webkit-input-placeholder{color:#3c4852;opacity:1;font-weight:600;font-size:14px;line-height:150%;}
+.efSjZQ.MuiOutlinedInput-root .MuiInputBase-input::-moz-placeholder{color:#3c4852;opacity:1;font-weight:600;font-size:14px;line-height:150%;}
+.efSjZQ.MuiOutlinedInput-root .MuiInputBase-input:-ms-input-placeholder{color:#3c4852;opacity:1;font-weight:600;font-size:14px;line-height:150%;}
+.efSjZQ.MuiOutlinedInput-root .MuiInputBase-input::placeholder{color:#3c4852;opacity:1;font-weight:600;font-size:14px;line-height:150%;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiInputBase-input{width:100%;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiInputBase-input::-webkit-input-placeholder{color:#808080;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiInputBase-input::-moz-placeholder{color:#808080;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiInputBase-input:-ms-input-placeholder{color:#808080;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiInputBase-input::placeholder{color:#808080;}
+.efSjZQ.MuiOutlinedInput-adornedStart{padding-left:24px;}
+.efSjZQ.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline{border-color:#fff;}
+.efSjZQ:hover.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline{border-color:#fff;}
+.efSjZQ.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{border-color:#f0f4f7;border-width:1px;border-radius:8px;}
+data-styled.g30[id="SearchTab__SearchTextField-d06s9y-0"]{content:"efSjZQ,"}
+.gVKLle{grid-column:11/19;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}
+data-styled.g31[id="SearchTab__MainWrapper-d06s9y-1"]{content:"gVKLle,"}
+.iVUpod{width:24px;height:24px;}
+data-styled.g32[id="SearchTab__SearchIconWrapper-d06s9y-2"]{content:"iVUpod,"}
+.jAwZfO{grid-column:21/25;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+data-styled.g33[id="HeaderUser__StyledDiv-zjqo1z-0"]{content:"jAwZfO,"}
+.dyBbNZ.MuiLinearProgress-root{height:4px;background-color:#f0f4f7;width:105px;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;border-radius:20px;}
+.dyBbNZ.MuiLinearProgress-root .MuiLinearProgress-bar{border-radius:20px;background-color:#08bd80;}
+data-styled.g34[id="HeaderUser__StyledProgress-zjqo1z-1"]{content:"dyBbNZ,"}
+.fgTflA{text-align:center;}
+data-styled.g35[id="HeaderUser__LearnedMinutes-zjqo1z-2"]{content:"fgTflA,"}
+.cvYscT{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;grid-column:5/9;padding:14px 20px;border-radius:8px;border:1px solid #f0f4f7;font-weight:600;font-size:14px;line-height:150%;color:#3c4852;}
+.cvYscT:hover{background-color:#fff;border-color:#dde6ed;}
+.cvYscT.MuiButtonBase-root .MuiButton-label{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;font-weight:600;font-size:14px;line-height:150%;color:#3c4852;}
+data-styled.g36[id="Dropdown__DropDownButton-dal55w-0"]{content:"cvYscT,"}
+.eaECeZ.MuiPopover-root .MuiPaper-root{min-width:233px;border:1px solid #f0f4f7;border-radius:8px;margin-top:12px;background-color:#fff;box-shadow:0px 16px 32px #f0f4f7;-webkit-transition:none !important;transition:none !important;-webkit-animation:emCEmn 300ms ease-in-out 0s;animation:emCEmn 300ms ease-in-out 0s;-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;opacity:1 !important;}
+data-styled.g37[id="Dropdown__StyledMenu-dal55w-1"]{content:"eaECeZ,"}
+.hWRPTd{-webkit-transition:-webkit-transform 400ms ease-in-out;-webkit-transition:transform 400ms ease-in-out;transition:transform 400ms ease-in-out;-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}
+data-styled.g38[id="Dropdown__StyledArrowDown-dal55w-2"]{content:"hWRPTd,"}
+.khdaOU{height:72px;background:#fff;width:100%;box-shadow:0px 16px 32px #f0f4f7;}
+data-styled.g44[id="Header__HeaderContainer-sc-1bd0tkc-0"]{content:"khdaOU,"}
+.gVVWVQ{width:1136px;grid-template-columns:repeat(24,1fr);grid-column-gap:16px;display:grid;margin:auto;height:100%;}
+data-styled.g45[id="Header__HeaderParent-sc-1bd0tkc-1"]{content:"gVVWVQ,"}
+.iyyzZu{background-color:#f0f4f7;}
+.iyyzZu.MuiDivider-root{margin:auto;height:40px;}
+data-styled.g46[id="Header__StyledDivider-sc-1bd0tkc-2"]{content:"iyyzZu,"}
+.krdKns{grid-column:1/7;position:relative;background:#f9fafb;}
+data-styled.g47[id="PlusNavBar__PlusNavBarWrapper-sc-1chblf9-0"]{content:"krdKns,"}
+.gCOHuU{height:44px;width:100%;position:absolute;background-color:#fff;top:10px;-webkit-transition:all 400ms ease-in;transition:all 400ms ease-in;-webkit-transition-property:top,height;transition-property:top,height;border-radius:8px;border:1px solid #f0f4f7;box-shadow:0 16px 32px 0 #f0f4f7;}
+data-styled.g48[id="PlusNavBar__Selected-sc-1chblf9-1"]{content:"gCOHuU,"}
+.jWuGNu{position:absolute;overflow:hidden;width:100%;}
+data-styled.g49[id="PlusNavBar__NavItems-sc-1chblf9-2"]{content:"jWuGNu,"}
+.iNWRMP{font-weight:bold;font-size:20px;line-height:150%;color:#3C4852;margin:0px;padding:8px 16px;margin-top:8px;-webkit-transition:color 400ms ease-in-out;transition:color 400ms ease-in-out;}
+.iNWRMP:hover{color:#08bd80;}
+data-styled.g50[id="PlusNavBar__MainItem-sc-1chblf9-3"]{content:"iNWRMP,"}
+.cglNZH{font-weight:600;font-size:14px;line-height:150%;color:#3C4852;margin:0px;padding:8px 16px;margin-top:4px;-webkit-transition:color 400ms ease-in-out;transition:color 400ms ease-in-out;color:#9aafbf;}
+.cglNZH:hover{color:#08bd80;}
+data-styled.g51[id="PlusNavBar__Item-sc-1chblf9-4"]{content:"cglNZH,"}
+.kldTAk{grid-column:7 / 25;display:grid;grid-template-columns:repeat( 18,1fr );grid-column-gap:16px;grid-auto-rows:max-content;grid-row-gap:16px;}
+data-styled.g52[id="Content-sc-1rzopd1-0"]{content:"kldTAk,"}
+.fQVvqt{width:1136px;background-color:#f9fafb;margin:auto;display:grid;grid-template-columns:repeat(24,1fr);grid-column-gap:16px;grid-row-gap:16px;margin-top:16px;}
+data-styled.g53[id="AppContainer-sc-1334pkg-0"]{content:"fQVvqt,"}
+.ifySXo{min-height:100vh;background:#f9fafb;}
+data-styled.g54[id="layout__Container-yt2anf-0"]{content:"ifySXo,"}
+.ehheid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;background-color:#fff;text-align:left;padding:16px 16px;}
+data-styled.g55[id="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0"]{content:"ehheid,"}
+.DyiVy{background-color:#fff;color:#2D81F7;font-size:10px;font-weight:bold;line-height:100%;padding:6px 0px;border-radius:4px;display:inline-block;text-transform:uppercase;margin-left:8px;}
+data-styled.g56[id="PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1"]{content:"DyiVy,"}
+.dPYEkL{font-weight:600;font-size:14px;line-height:150%;color:#3C4852;margin:0px;padding-top:8px;padding-bottom:4px;}
+data-styled.g57[id="PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2"]{content:"dPYEkL,"}
+.eGfRob{font-weight:normal;font-size:12px;line-height:150%;margin:0px;color:#808080;padding-top:4px;padding-bottom:4px;}
+data-styled.g58[id="PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3"]{content:"eGfRob,"}
+.bkrDdk{font-weight:normal;font-size:12px;line-height:150%;margin:0px;color:#3C4852;padding-top:8px;}
+data-styled.g59[id="PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4"]{content:"bkrDdk,"}
+.fIpkfZ{background-color:#fff;border-radius:8px;box-shadow:0px 16px 32px #f0f4f7;overflow:hidden;grid-column:span 6;}
+data-styled.g60[id="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0"]{content:"fIpkfZ,"}
+.jGLtFB{background-color:#3C4852;color:#fff;font-size:12px;font-weight:600;line-height:100%;padding:6px 8px;border-radius:4px;display:inline-block;text-transform:uppercase;position:absolute;left:16px;bottom:8px;}
+data-styled.g61[id="PlusCourseCard__TimeTags-sc-2hhczh-1"]{content:"jGLtFB,"}
+.eXMEaq{position:absolute;right:16px;top:16px;}
+data-styled.g62[id="PlusCourseCard__EnrollButton-sc-2hhczh-2"]{content:"eXMEaq,"}
+.ktMwUW{height:152px;background-image:url(https://edge.uacdn.net/static/thumbnail/course/cc856ba130f74c9ba77afa3c1f4fbedd.png?q=100&w=512);background-repeat:no-repeat;background-size:cover;position:relative;width:272px;}
+data-styled.g63[id="PlusCourseCard__CourseThumbnail-sc-2hhczh-3"]{content:"ktMwUW,"}
+.izSzQp{grid-column:span 18;position:relative;}
+data-styled.g92[id="Carousel__CarouselWrapper-sc-1owlrrs-0"]{content:"izSzQp,"}
+.wsngz{display:grid;grid-template-columns:repeat(36,32px);grid-column-gap:16px;overflow:hidden;}
+.wsngz > div{-webkit-transform:initial;-ms-transform:initial;transform:initial;-webkit-transition:-webkit-transform 400ms ease-in;-webkit-transition:transform 400ms ease-in;transition:transform 400ms ease-in;}
+data-styled.g93[id="Carousel__CardContainer-sc-1owlrrs-1"]{content:"wsngz,"}
+.jugdUD{position:absolute;visibility:hidden;opacity:0;-webkit-transition:visibility 0s linear 300ms,opacity 300ms;transition:visibility 0s linear 300ms,opacity 300ms;top:calc(50% - 16px);left:-16px;}
+.Carousel__CarouselWrapper-sc-1owlrrs-0:hover .jugdUD{visibility:visible;opacity:1;-webkit-transition:visibility 0s linear 0s,opacity 300ms;transition:visibility 0s linear 0s,opacity 300ms;}
+.fusXey{position:absolute;visibility:hidden;opacity:0;-webkit-transition:visibility 0s linear 300ms,opacity 300ms;transition:visibility 0s linear 300ms,opacity 300ms;top:calc(50% - 16px);right:-16px;}
+.Carousel__CarouselWrapper-sc-1owlrrs-0:hover .fusXey{visibility:visible;opacity:1;-webkit-transition:visibility 0s linear 0s,opacity 300ms;transition:visibility 0s linear 0s,opacity 300ms;}
+data-styled.g94[id="Carousel__ControlButton-sc-1owlrrs-2"]{content:"jugdUD,fusXey,"}
+html{line-height:1.15;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+main{display:block;}
+h1{font-size:2em;margin:0.67em 0;}
+hr{box-sizing:content-box;height:0;overflow:visible;}
+pre{font-family:monospace,monospace;font-size:1em;}
+a{background-color:transparent;}
+abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}
+b,strong{font-weight:bolder;}
+code,kbd,samp{font-family:monospace,monospace;font-size:1em;}
+small{font-size:80%;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sub{bottom:-0.25em;}
+sup{top:-0.5em;}
+img{border-style:none;}
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button,select{text-transform:none;}
+button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;}
+button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;}
+button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText;}
+fieldset{padding:0.35em 0.75em 0.625em;}
+legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}
+progress{vertical-align:baseline;}
+textarea{overflow:auto;}
+[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;}
+[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;}
+[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}
+[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}
+details{display:block;}
+summary{display:list-item;}
+template{display:none;}
+[hidden]{display:none;}
+data-styled.g97[id="sc-global-hlFVNR1"]{content:"sc-global-hlFVNR1,"}
+@-webkit-keyframes emCEmn{0%{opacity:1 !important;}20%{height:20px;opacity:1 !important;}30%{height:0px;opacity:1 !important;}100%{height:0px;}}
+@keyframes emCEmn{0%{opacity:1 !important;}20%{height:20px;opacity:1 !important;}30%{height:0px;opacity:1 !important;}100%{height:0px;}}
+data-styled.g98[id="sc-keyframes-emCEmn"]{content:"emCEmn,"}
+@font-face{font-family:"UN-Font";src:url("/static/fonts/AvertaStd-Regular.otf");}
+@font-face{font-family:"UN-Font";font-weight:bold;src:url("/static/fonts/AvertaStd-Bold.otf");}
+@font-face{font-family:"UN-Font";font-weight:600;src:url("/static/fonts/AvertaStd-SemiBold.otf");}
+*{font-kerning:none;text-rendering:optimizeLegibility;box-sizing:border-box;word-break:break-word;outline:none;-webkit-text-decoration:none;text-decoration:none;margin:0;-webkit-font-smoothing:antialiased;font-family:UN-Font,-apple-system,BlinkMacSystemFont,sans-serif;}
+::selection{color:#3C4852;background:rgba(8,189,128,0.4);}
+data-styled.g99[id="sc-global-eJNKxh1"]{content:"sc-global-eJNKxh1,"}
+</style></head><body><div id="__next"><div class="layout__Container-yt2anf-0 ifySXo"><header class="Header__HeaderContainer-sc-1bd0tkc-0 khdaOU"><div class="Header__HeaderParent-sc-1bd0tkc-1 gVVWVQ"><img src="static/images/logo.svg" alt="Company Logo" class="Logo-sc-17t0w6e-0 gXlInx"/><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined Dropdown__DropDownButton-dal55w-0 cvYscT" tabindex="0" type="button"><span class="MuiButton-label">IIT JEE<span class="MuiButton-endIcon MuiButton-iconSizeMedium"><svg width="16px" height="16px" viewBox="0 0 32 32" class="Dropdown__StyledArrowDown-dal55w-2 hWRPTd"><title>KeyboardArrowDown</title><path d="M15.92 20.813c-0.001 0-0.003 0-0.005 0-0.275 0-0.523-0.112-0.702-0.293l-8-8c-0.196-0.183-0.318-0.443-0.318-0.732 0-0.552 0.448-1 1-1 0.289 0 0.549 0.122 0.731 0.318l0.001 0.001 7.293 7.293 7.293-7.293c0.178-0.166 0.418-0.268 0.682-0.268 0.552 0 1 0.448 1 1 0 0.264-0.102 0.504-0.269 0.682l0.001-0.001-8 8c-0.179 0.181-0.427 0.293-0.702 0.293-0.002 0-0.003 0-0.005 0h0z" fill="#3C4852"></path></svg></span></span></button><div class="SearchTab__MainWrapper-d06s9y-1 gVKLle"><div class="MuiInputBase-root MuiOutlinedInput-root SearchTab__SearchTextField-d06s9y-0 efSjZQ MuiInputBase-adornedStart MuiOutlinedInput-adornedStart"><div class="SearchTab__SearchIconWrapper-d06s9y-2 iVUpod"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Search</title><path d="M27.373 25.96l-5.467-5.467c1.394-1.682 2.24-3.863 2.24-6.241 0-0.004 0-0.009 0-0.013v0.001c-0.008-5.468-4.438-9.899-9.906-9.907h-0.001c-5.471 0-9.907 4.435-9.907 9.907s4.435 9.907 9.907 9.907v0 0c0.004 0 0.008 0 0.013 0 2.378 0 4.559-0.846 6.257-2.253l-0.016 0.013 5.467 5.467c0.181 0.181 0.431 0.292 0.707 0.292s0.526-0.112 0.707-0.292v0c0.181-0.181 0.292-0.431 0.292-0.707s-0.112-0.526-0.292-0.707v0zM14.24 22.147c-4.363-0.005-7.898-3.543-7.898-7.907 0-2.181 0.883-4.156 2.312-5.587l-0 0c1.417-1.433 3.383-2.32 5.556-2.32 0.011 0 0.021 0 0.032 0h-0.002c4.367 0 7.907 3.54 7.907 7.907s-3.54 7.907-7.907 7.907v0z" fill="#3C4852"></path></svg></div><input type="text" placeholder="Search" value="" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"/><fieldset aria-hidden="true" style="padding-left:8px" class="jss71 MuiOutlinedInput-notchedOutline"><legend class="jss72" style="width:0"><span>&#8203;</span></legend></fieldset></div></div><span class="MuiBadge-root Notification__StyledBadge-sc-1rn3ss5-0 beEnA"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>NotificationBell</title><path d="M26.307 20c-0.742-0.755-1.261-1.732-1.449-2.822l-0.005-0.032-1.333-7.227c-0.662-3.593-3.771-6.279-7.507-6.279s-6.844 2.686-7.499 6.232l-0.007 0.047-1.333 7.253c-0.206 1.114-0.733 2.081-1.48 2.827l-0 0c-0.515 0.502-0.839 1.199-0.853 1.971l-0 0.003v1.040c0.008 1.61 1.31 2.912 2.919 2.92h3.667c0.473 2.123 2.341 3.686 4.573 3.686s4.1-1.563 4.567-3.655l0.006-0.031h3.667c1.61-0.008 2.912-1.31 2.92-2.919v-1.041c-0.014-0.775-0.338-1.471-0.853-1.973l-0.001-0.001zM16 27.667c-0.003 0-0.007 0-0.011 0-1.122 0-2.083-0.694-2.476-1.675l-0.006-0.018h5c-0.4 1-1.36 1.693-2.483 1.693-0.008 0-0.017-0-0.025-0h0.001zM25.16 23.053c0 0.508-0.412 0.92-0.92 0.92v0h-16.48c-0.508 0-0.92-0.412-0.92-0.92v0-1.040c0.021-0.232 0.124-0.436 0.28-0.586l0-0c1.022-1.027 1.736-2.36 1.994-3.85l0.006-0.043 1.333-7.24c0.5-2.645 2.793-4.618 5.547-4.618s5.046 1.973 5.541 4.583l0.006 0.035 1.333 7.227c0.264 1.537 0.978 2.875 2.001 3.907l-0.001-0.001c0.156 0.151 0.259 0.355 0.28 0.583l0 0.004z" fill="#3C4852"></path></svg><span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle">4</span></span><hr class="MuiDivider-root Divider__UNDivider-sc-1gqd89q-0 Header__StyledDivider-sc-1bd0tkc-2 iyyzZu MuiDivider-vertical"/><div class="HeaderUser__StyledDiv-zjqo1z-0 jAwZfO"><div class="HeaderUser__LearnedMinutes-zjqo1z-2 fgTflA"><h6 color="BLACK" class="H6-sc-1gn2suh-0 hxPbdr">12 minutes today</h6><div class="MuiLinearProgress-root MuiLinearProgress-colorPrimary HeaderUser__StyledProgress-zjqo1z-1 dyBbNZ MuiLinearProgress-determinate" role="progressbar" aria-valuenow="50"><div class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate" style="transform:translateX(-50%)"></div></div></div><div width="40px" height="40px" src="https://edge.uacdn.net/static/thumbnail/user/9ccde2d9973b47d1bc64d98c36eaa987.jpg?q=100&amp;w=512&amp;fm=webp" class="Avatar-sc-1pabonf-0 cAefkZ"></div></div></div></header><div class="AppContainer-sc-1334pkg-0 fQVvqt"><div class="PlusNavBar__PlusNavBarWrapper-sc-1chblf9-0 krdKns"><div class="PlusNavBar__Selected-sc-1chblf9-1 gCOHuU"></div><div class="PlusNavBar__NavItems-sc-1chblf9-2 jWuGNu"><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h4 color="BLACK" class="H4-sc-1i4prm5-0 PlusNavBar__MainItem-sc-1chblf9-3 iNWRMP">Plus</h4></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h5 color="BLACK" class="H5-ozdkiq-0 PlusNavBar__Item-sc-1chblf9-4 cglNZH">My schedule</h5></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h5 color="BLACK" class="H5-ozdkiq-0 PlusNavBar__Item-sc-1chblf9-4 cglNZH">Enrolled courses</h5></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h5 color="BLACK" class="H5-ozdkiq-0 PlusNavBar__Item-sc-1chblf9-4 cglNZH">Topics</h5></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h5 color="BLACK" class="H5-ozdkiq-0 PlusNavBar__Item-sc-1chblf9-4 cglNZH">Test series</h5></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h4 color="BLACK" class="H4-sc-1i4prm5-0 PlusNavBar__MainItem-sc-1chblf9-3 iNWRMP">Special classes</h4></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h4 color="BLACK" class="H4-sc-1i4prm5-0 PlusNavBar__MainItem-sc-1chblf9-3 iNWRMP">Free courses</h4></a><a class="Link__Anchor-sc-1n9f3wx-0 iPOHtT" href="/"><h5 color="BLACK" class="H5-ozdkiq-0 PlusNavBar__Item-sc-1chblf9-4 cglNZH">My library</h5></a></div></div><div class="Content-sc-1rzopd1-0 kldTAk"><div class="Carousel__CarouselWrapper-sc-1owlrrs-0 izSzQp"><div class="Carousel__CardContainer-sc-1owlrrs-1 wsngz"><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div></div><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 jugdUD" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M20.813 8.080c0 0.001 0 0.003 0 0.005 0 0.275-0.112 0.523-0.293 0.702l-7.293 7.293 7.293 7.293c0.196 0.183 0.318 0.443 0.318 0.732 0 0.552-0.448 1-1 1-0.289 0-0.549-0.122-0.731-0.318l-0.001-0.001-8-8c-0.181-0.181-0.292-0.431-0.292-0.707s0.112-0.526 0.292-0.707v0l8-8c0.181-0.181 0.431-0.292 0.707-0.292s0.526 0.112 0.707 0.292v0c0.181 0.179 0.293 0.427 0.293 0.702 0 0.002 0 0.003 0 0.005v-0z" fill="#3C4852"></path></svg></span></button><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 fusXey" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M11.187 23.92c0-0.001 0-0.003 0-0.005 0-0.275 0.112-0.523 0.293-0.702l7.293-7.293-7.293-7.293c-0.166-0.178-0.268-0.418-0.268-0.682 0-0.552 0.448-1 1-1 0.264 0 0.504 0.102 0.682 0.269l-0.001-0.001 8 8c0.181 0.181 0.292 0.431 0.292 0.707s-0.112 0.526-0.292 0.707v0l-8 8c-0.181 0.181-0.431 0.292-0.707 0.292s-0.526-0.112-0.707-0.292v0c-0.181-0.179-0.293-0.427-0.293-0.702 0-0.002 0-0.003 0-0.005v0z" fill="#3C4852"></path></svg></span></button></div><div class="Carousel__CarouselWrapper-sc-1owlrrs-0 izSzQp"><div class="Carousel__CardContainer-sc-1owlrrs-1 wsngz"><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div></div><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 jugdUD" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M20.813 8.080c0 0.001 0 0.003 0 0.005 0 0.275-0.112 0.523-0.293 0.702l-7.293 7.293 7.293 7.293c0.196 0.183 0.318 0.443 0.318 0.732 0 0.552-0.448 1-1 1-0.289 0-0.549-0.122-0.731-0.318l-0.001-0.001-8-8c-0.181-0.181-0.292-0.431-0.292-0.707s0.112-0.526 0.292-0.707v0l8-8c0.181-0.181 0.431-0.292 0.707-0.292s0.526 0.112 0.707 0.292v0c0.181 0.179 0.293 0.427 0.293 0.702 0 0.002 0 0.003 0 0.005v-0z" fill="#3C4852"></path></svg></span></button><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 fusXey" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M11.187 23.92c0-0.001 0-0.003 0-0.005 0-0.275 0.112-0.523 0.293-0.702l7.293-7.293-7.293-7.293c-0.166-0.178-0.268-0.418-0.268-0.682 0-0.552 0.448-1 1-1 0.264 0 0.504 0.102 0.682 0.269l-0.001-0.001 8 8c0.181 0.181 0.292 0.431 0.292 0.707s-0.112 0.526-0.292 0.707v0l-8 8c-0.181 0.181-0.431 0.292-0.707 0.292s-0.526-0.112-0.707-0.292v0c-0.181-0.179-0.293-0.427-0.293-0.702 0-0.002 0-0.003 0-0.005v0z" fill="#3C4852"></path></svg></span></button></div><div class="Carousel__CarouselWrapper-sc-1owlrrs-0 izSzQp"><div class="Carousel__CardContainer-sc-1owlrrs-1 wsngz"><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div><div class="PlusCourseCard__StyledPlusCourseCard-sc-2hhczh-0 fIpkfZ" orientation="vertical"><div orientation="vertical" class="Thumbnail-g8hufe-0 PlusCourseCard__CourseThumbnail-sc-2hhczh-3 ktMwUW"><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG PlusCourseCard__EnrollButton-sc-2hhczh-2 eXMEaq" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="20px" height="20px" viewBox="0 0 32 32" class=""><title>Enroll</title><path d="M6.667 10.333h18.667c0.552 0 1-0.448 1-1s-0.448-1-1-1v0h-18.667c-0.552 0-1 0.448-1 1s0.448 1 1 1v0zM14 21.667h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM14 15h-7.333c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h7.333c0.552 0 1-0.448 1-1s-0.448-1-1-1v0zM25.333 18.213h-2.453v-2.467c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 2.467h-2.467c-0.552 0-1 0.448-1 1s0.448 1 1 1v0h2.467v2.453c0 0.552 0.448 1 1 1s1-0.448 1-1v0-2.453h2.453c0.552 0 1-0.448 1-1s-0.448-1-1-1v0z" fill="#3C4852"></path></svg></span></button><span type="filled" class="Tags-ctt3gx-0 PlusCourseCard__TimeTags-sc-2hhczh-1 jGLtFB">10:30 pm</span></div><div orientation="vertical" class="PlusCourseCardDetails__StyledPlusCourseCardDetails-sc-1a6lfa5-0 ehheid"><div><span type="hollow" class="Tags-ctt3gx-0 iUpWYN">English</span><span type="transparent" class="Tags-ctt3gx-0 PlusCourseCardDetails__TopicGroupTag-sc-1a6lfa5-1 DyiVy">Work, Energy &amp; Power</span><h5 color="BLACK" class="H5-ozdkiq-0 PlusCourseCardDetails__CourseTitle-sc-1a6lfa5-2 dPYEkL">Course on Determinants and Matrices</h5><p color="TEXT_SECONDARY" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__CourseInfo-sc-1a6lfa5-3 eGfRob">Starts on Oct 23, 2019 • 50 lessons</p></div><p color="BLACK" class="P2-sc-6jrkt9-0 PlusCourseCardDetails__EducatorName-sc-1a6lfa5-4 bkrDdk">Manoj Chauhan</p></div></div></div><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 jugdUD" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M20.813 8.080c0 0.001 0 0.003 0 0.005 0 0.275-0.112 0.523-0.293 0.702l-7.293 7.293 7.293 7.293c0.196 0.183 0.318 0.443 0.318 0.732 0 0.552-0.448 1-1 1-0.289 0-0.549-0.122-0.731-0.318l-0.001-0.001-8-8c-0.181-0.181-0.292-0.431-0.292-0.707s0.112-0.526 0.292-0.707v0l8-8c0.181-0.181 0.431-0.292 0.707-0.292s0.526 0.112 0.707 0.292v0c0.181 0.179 0.293 0.427 0.293 0.702 0 0.002 0 0.003 0 0.005v-0z" fill="#3C4852"></path></svg></span></button><button class="MuiButtonBase-root MuiIconButton-root IconButtons__StyledIconButton-sc-160l35g-0 hnSArG Carousel__ControlButton-sc-1owlrrs-2 fusXey" tabindex="0" type="button"><span class="MuiIconButton-label"><svg width="24px" height="24px" viewBox="0 0 32 32" class=""><title>Right</title><path d="M11.187 23.92c0-0.001 0-0.003 0-0.005 0-0.275 0.112-0.523 0.293-0.702l7.293-7.293-7.293-7.293c-0.166-0.178-0.268-0.418-0.268-0.682 0-0.552 0.448-1 1-1 0.264 0 0.504 0.102 0.682 0.269l-0.001-0.001 8 8c0.181 0.181 0.292 0.431 0.292 0.707s-0.112 0.526-0.292 0.707v0l-8 8c-0.181 0.181-0.431 0.292-0.707 0.292s-0.526-0.112-0.707-0.292v0c-0.181-0.179-0.293-0.427-0.293-0.702 0-0.002 0-0.003 0-0.005v0z" fill="#3C4852"></path></svg></span></button></div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"dataManager":"[]","props":{"isServer":true,"initialState":{"courses":{"data":{}},"users":{"data":{},"profileInfo":{}},"goals":{"data":{}},"paginator":{"educatorLeaderboard":{},"profileFollowing":{},"freeGoalCourses":{}}},"initialProps":{"pageProps":{}}},"page":"/","query":{},"buildId":"PxEl3sKKuW_XH1VYidjrs","assetPrefix":"/testun","nextExport":true}</script><script nomodule="" src="/testun/_next/static/runtime/polyfills-29b7810566e8516cb3f7.js"></script><script async="" data-next-page="/" src="/testun/_next/static/PxEl3sKKuW_XH1VYidjrs/pages/index.js"></script><script async="" data-next-page="/_app" src="/testun/_next/static/PxEl3sKKuW_XH1VYidjrs/pages/_app.js"></script><script src="/testun/_next/static/runtime/webpack-08f7b238829422e3b9b2.js" async=""></script><script src="/testun/_next/static/chunks/commons.5037352224df8ea99eb0.js" async=""></script><script src="/testun/_next/static/runtime/main-0d7fc6113f61218d0d6b.js" async=""></script></body></html>
