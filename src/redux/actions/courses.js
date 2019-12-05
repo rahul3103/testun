@@ -1,5 +1,6 @@
+import { schema } from 'normalizr';
 import { courseTypes } from '../constants';
-import { paginatorListSchema } from '../schemas';
+import { paginatorListSchema, courseSchema } from '../schemas';
 import { paginateAction } from '../../utils';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -39,4 +40,15 @@ export const fetchFreeGoalCourses = (
     goalUid,
     resetWithoutEmpty
   )(nextPage);
+};
+
+export const fetchCourseData = courseUid => dispatch => {
+  dispatch({
+    type: courseTypes.FETCH_COURSE_INFO,
+    endpoint: `v1/collection/${courseUid}/`,
+    method: 'get',
+    courseUid,
+    schema: new schema.Object({ course: courseSchema }),
+    entityType: 'course'
+  });
 };

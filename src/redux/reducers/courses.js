@@ -11,6 +11,13 @@ const reducer = (state = initialState, action) => {
       ...state,
       data: mergeDeep(action.data, state.data)
     },
+    [`${courseTypes.FETCH_COURSE_INFO}_SUCCESS`]: {
+      ...state,
+      courseDetails: {
+        ...state.courseDetails,
+        [action.courseUid]: action.result
+      }
+    },
     default: state
   };
 
