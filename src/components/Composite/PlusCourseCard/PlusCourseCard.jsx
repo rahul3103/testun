@@ -38,7 +38,7 @@ const PlusCourseCard = ({ gridColumn, orientation, className }) => (
     orientation={orientation}
   >
     <CourseThumbnail
-      imgUrl="https://edge.uacdn.net/static/thumbnail/course/691fec73fda14269b41a084b44143891.png"
+      imgUrl="https://edge.uacdn.net/static/thumbnail/course/cc856ba130f74c9ba77afa3c1f4fbedd.png?q=100&w=512"
       orientation={orientation}
     >
       <EnrollButton>

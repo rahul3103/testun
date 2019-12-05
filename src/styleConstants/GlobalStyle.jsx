@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-family: UN-Font, -apple-system, BlinkMacSystemFont, sans-serif;
   }
+  ::selection {
+    color: #3C4852;
+    background: rgba(8,189,128,0.4);
+  }
 `;
 
 export default GlobalStyle;
