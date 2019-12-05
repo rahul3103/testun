@@ -32,6 +32,7 @@ const NavItems = styled.div`
 const MainItem = styled(H4)`
   padding: 8px 16px;
   margin-top: 8px;
+  transition: color 400ms ease-in-out;
   :hover {
     color: #08bd80;
   }
@@ -40,6 +41,7 @@ const MainItem = styled(H4)`
 const Item = styled(H5)`
   padding: 8px 16px;
   margin-top: 4px;
+  transition: color 400ms ease-in-out;
   color: #9aafbf;
   :hover {
     color: #08bd80;

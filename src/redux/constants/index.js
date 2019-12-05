@@ -15,8 +15,3 @@ export const educatorTypes = {
 export const goalTypes = {
   UPDATE_GOALS: 'UPDATE_GOALS'
 };
-
-export const drawerTypes = {
-  OPEN_DRAWER: 'OPEN_DRAWER',
-  CLOSE_DRAWER: 'CLOSE_DRAWER'
-};
