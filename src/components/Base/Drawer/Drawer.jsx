@@ -2,10 +2,6 @@ import styled from 'styled-components';
 import Drawer from '@material-ui/core/Drawer';
 import PropTypes from 'prop-types';
 
-import { useSelector } from 'react-redux';
-import { useDispatchToStore } from '../../../utils/customHooks';
-import { closeDrawer } from '../../../redux/actions/others';
-
 const StyledDrawer = styled(Drawer)`
   &.MuiDrawer-root .MuiPaper-root {
     background-color: #fcfcfc;
@@ -26,24 +22,17 @@ const Close = styled.img`
   cursor: pointer;
 `;
 
-const UNDrawer = ({ children }) => {
-  const drawerState = useSelector(state => state.others.drawerState);
-  const dispatch = useDispatchToStore();
-  const closeDrawerAction = () => dispatch(closeDrawer());
-
-  return (
-    <StyledDrawer anchor="right" open={drawerState} onClose={closeDrawerAction}>
-      <Close
-        src="/static/images/close-circle.svg"
-        onClick={closeDrawerAction}
-      />
-      {children}
-    </StyledDrawer>
-  );
-};
+const UNDrawer = ({ children, drawerState, onClose }) => (
+  <StyledDrawer anchor="right" open={drawerState} onClose={onClose}>
+    <Close src="/static/images/close-circle.svg" onClick={onClose} />
+    {children}
+  </StyledDrawer>
+);
 
 export default UNDrawer;
 
 UNDrawer.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  drawerState: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 };
