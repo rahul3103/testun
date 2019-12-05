@@ -1,3 +1,10 @@
+### Install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
+
+```
+brew install yarn
+
+```
+
 ### Clone git repo
 
 ```sh
